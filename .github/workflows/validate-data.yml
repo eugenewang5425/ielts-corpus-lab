@@ -1,0 +1,29 @@
+name: Validate public corpus data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "scripts/validate_public_data.py"
+      - ".github/workflows/validate-data.yml"
+  pull_request:
+    paths:
+      - "data/**"
+      - "scripts/validate_public_data.py"
+      - ".github/workflows/validate-data.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate JSON coverage and schema
+        run: python scripts/validate_public_data.py

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
   <title>IELTS Corpus Lab｜雅思语料实验室</title>
-  <meta name="description" content="分来源、分科目、可审计的雅思四科词频、写作分类与当季口语题库。">
+  <meta name="description" content="分来源、分科目、可审计的雅思四科词频、写作分类，以及含回答思路、模板和示范回答的口语练习库。">
   <link rel="canonical" href="https://eugenewang5425.github.io/ielts-corpus-lab/">
   <link rel="icon" href="favicon.svg">
   <meta property="og:title" content="IELTS Corpus Lab｜雅思语料实验室">
@@ -14,8 +14,9 @@
   <meta property="og:url" content="https://eugenewang5425.github.io/ielts-corpus-lab/">
   <meta property="og:image" content="https://eugenewang5425.github.io/ielts-corpus-lab/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="overrides.css?v=3">
+  <script src="app.js?v=3" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -24,7 +25,7 @@
       <a href="#words">四科词频</a><a href="#speaking">口语题库</a><a href="#writing">写作分类</a>
       <a href="#coverage">阅读·听力</a><a href="#sources">来源审计</a><a href="#method">方法</a>
     </nav>
-    <span class="status">更新至 2026-08-25</span>
+    <span class="status" id="data-status">正在读取在线数据</span>
   </header>
 
   <main>
@@ -56,8 +57,9 @@
     </section>
 
     <section class="view page" data-view="speaking" hidden>
-      <header class="page-head"><p class="eyebrow">Joe-style integrated bank</p><h1>口语主题整合</h1><p>把同一主题下的 Part 1、Part 2、Part 3 结构归一，按时间、地区与来源层级整理。</p></header>
-      <div class="notice"><b>当前时间口径</b><span>2026 年 1–8 月；Joe 中国大陆 5–8 月材料单独标为“用户提供”，不冒充官方发布。</span></div>
+      <header class="page-head"><p class="eyebrow">Topic → Question → Answer</p><h1>口语主题与示范回答</h1><p>先点主题查看问题，再点问题展开回答思路、可替换模板、示范回答和本题常用词。</p></header>
+      <div class="notice"><b>当前时间口径</b><span>2026 年 1–8 月；Joe 中国大陆 5–8 月材料只作为来源索引。公开练习问答为本站原创，不冒充官方或第三方原题。</span></div>
+      <div id="data-version" class="data-version" aria-live="polite"></div>
       <div class="toolbar"><div id="part-tabs" class="tabs"></div><label class="check"><input id="current-only" type="checkbox" checked> 只看 2026 当季</label><form id="topic-search" class="inline-search"><input placeholder="Music / technology" aria-label="搜索口语主题"><button>搜索</button></form></div>
       <div id="topic-note" class="note"></div><div id="topic-grid" class="topic-grid"></div><div id="topic-pages" class="pager"></div>
     </section>
@@ -82,10 +84,22 @@
       <article><h2>1. 统计单元</h2><p>一篇阅读文章、一份听力转写、一条口语题目或一条写作题目作为一个文档。完全相同的本地 PDF 抽取文本按哈希去重。</p></article>
       <article><h2>2. 基础词与噪声</h2><p>剔除 a、to、the 等功能词、数字词、题目指令、听力转写标记，以及 chart / graph / describe 等题型模板词。</p></article>
       <article><h2>3. 排名指标</h2><div class="formula"><div><b>Occurrence</b><p>语料内总出现次数。</p></div><div><b>Document frequency</b><p>至少出现一次的文档数。</p></div><div><b>Per 10k</b><p>每一万学习词中的出现次数。</p></div><div><b>Confidence</b><p>综合文档覆盖与独立来源数。</p></div></div></article>
-      <article><h2>4. 版权边界</h2><p>公共网站只发布聚合词频、主题索引、来源元数据和链接，不复制受版权保护的剑桥文章、音频、图片、答案或第三方完整题库。</p></article>
+      <article><h2>4. 学习内容</h2><p>每个口语主题包含按 Part 分类的原创练习问题。点击问题可查看中文回答思路、英文可替换模板、示范回答和常用词。它们用于训练组织答案的能力，不代表 IELTS 官方题目。</p></article>
+      <article><h2>5. 在线数据库与更新</h2><p>公开数据以版本化 JSON 存放在 GitHub 仓库中，网页每次打开都会先读取最新版本清单，再加载对应的统计库和练习问答库。更新 <code>main</code> 分支后，GitHub Pages 会把同一快照提供给所有访客。</p></article>
+      <article><h2>6. 版权边界</h2><p>公共网站发布聚合词频、主题索引、来源元数据和本站原创练习，不复制受版权保护的剑桥文章、音频、图片、答案或 Joe 等第三方完整题库。</p></article>
     </section>
   </main>
   <footer><span>IELTS Corpus Lab · GitHub Pages 公共镜像</span><a href="#method">查看统计方法</a></footer>
+  <div id="topic-dialog" class="dialog-shell" role="dialog" aria-modal="true" aria-labelledby="topic-dialog-title" hidden>
+    <div class="dialog-panel">
+      <header class="dialog-head">
+        <div><p class="eyebrow">Topic practice lab</p><h2 id="topic-dialog-title"></h2><div id="topic-dialog-meta" class="dialog-meta"></div></div>
+        <button id="topic-dialog-close" class="dialog-close" aria-label="关闭主题详情">×</button>
+      </header>
+      <div id="topic-dialog-note" class="dialog-notice"></div>
+      <div id="question-list" class="question-list"></div>
+    </div>
+  </div>
   <div id="loading" class="loading">正在载入语料统计…</div>
 </body>
 </html>

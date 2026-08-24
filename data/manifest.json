@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "dataVersion": "20260824-184007",
+  "generatedAt": "2026-08-24T18:40:07.830673+00:00",
+  "files": {
+    "corpus": "data/corpus.json",
+    "questions": "data/questions.json"
+  },
+  "counts": {
+    "documents": 13824,
+    "topics": 832,
+    "practiceQuestions": 5249
+  },
+  "repository": "https://github.com/eugenewang5425/ielts-corpus-lab",
+  "updateModel": "Versioned public JSON snapshot on GitHub Pages. The client fetches the manifest without cache and then loads matching data files."
+}
