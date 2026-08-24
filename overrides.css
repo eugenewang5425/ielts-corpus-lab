@@ -1,3 +1,154 @@
 .dialog-shell[hidden] {
   display: none !important;
 }
+
+.topic .topic-aliases {
+  margin-top: 10px;
+  color: #7b8884;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.dialog-mode {
+  margin: 22px clamp(20px, 5vw, 48px) 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #b9c6c0;
+}
+
+.dialog-mode button {
+  padding: 15px 18px;
+  border: 0;
+  border-right: 1px solid #b9c6c0;
+  background: #fffdf8;
+  color: #4d5c57;
+  cursor: pointer;
+}
+
+.dialog-mode button:last-child {
+  border-right: 0;
+}
+
+.dialog-mode button.active {
+  background: #0e6655;
+  color: white;
+}
+
+.dialog-mode b {
+  margin-left: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.source-controls {
+  margin-bottom: 12px;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  background: #fffdf8;
+  border: 1px solid #d8ded8;
+}
+
+.source-controls .inline-search {
+  flex: 1 1 280px;
+}
+
+.source-result-note,
+.practice-note {
+  margin: 0 0 16px;
+  color: #61706c;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.practice-note {
+  padding: 14px 16px;
+  background: #fff6e7;
+  border-left: 4px solid #d89435;
+}
+
+.source-question .question-toggle em {
+  display: block;
+  margin-top: 9px;
+  color: #74827d;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.source-citations {
+  display: grid;
+  gap: 8px;
+}
+
+.source-citations > div {
+  padding: 11px 12px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  background: white;
+  border: 1px solid #d8ded8;
+}
+
+.source-citations > div > span {
+  padding: 5px 7px;
+  background: #e6f1ed;
+  color: #094b3f;
+  font-size: 10px;
+}
+
+.source-citations p {
+  margin: 0;
+}
+
+.source-citations p b,
+.source-citations p small {
+  display: block;
+}
+
+.source-citations p b {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.source-citations p small {
+  color: #74827d;
+  font-size: 10px;
+}
+
+.source-citations a {
+  color: #0e6655;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.load-more {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #0e6655;
+  background: transparent;
+  color: #0e6655;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .dialog-mode {
+    margin: 16px 14px 0;
+  }
+
+  .dialog-mode button {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .source-controls .tabs {
+    width: 100%;
+  }
+
+  .source-citations > div {
+    grid-template-columns: 1fr;
+  }
+}

@@ -209,9 +209,11 @@ def build_topic(topic: dict[str, object]) -> dict[str, object]:
 
 def main() -> None:
     corpus_path = DATA_DIR / "corpus.json"
+    speaking_path = DATA_DIR / "speaking.json"
     corpus = json.loads(corpus_path.read_text(encoding="utf-8"))
+    speaking = json.loads(speaking_path.read_text(encoding="utf-8"))
     generated_at = datetime.now(timezone.utc).isoformat()
-    topics = {topic["id"]: build_topic(topic) for topic in corpus["topics"]}
+    topics = {topic["id"]: build_topic(topic) for topic in speaking["topics"]}
     question_count = sum(len(topic["questions"]) for topic in topics.values())
     question_bank = {
         "meta": {
@@ -233,10 +235,12 @@ def main() -> None:
         "schemaVersion": 2,
         "dataVersion": version,
         "generatedAt": generated_at,
-        "files": {"corpus": "data/corpus.json", "questions": "data/questions.json"},
+        "files": {"corpus": "data/corpus.json", "speaking": "data/speaking.json", "questions": "data/questions.json"},
         "counts": {
             "documents": corpus["meta"]["documentCount"],
             "topics": len(topics),
+            "sourceQuestions": speaking["meta"]["uniqueQuestionCount"],
+            "sourceQuestionOccurrences": speaking["meta"]["sourceQuestionOccurrences"],
             "practiceQuestions": question_count,
         },
         "repository": "https://github.com/eugenewang5425/ielts-corpus-lab",

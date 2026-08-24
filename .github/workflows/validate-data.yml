@@ -5,12 +5,12 @@ on:
     branches: [main]
     paths:
       - "data/**"
-      - "scripts/validate_public_data.py"
+      - "scripts/**"
       - ".github/workflows/validate-data.yml"
   pull_request:
     paths:
       - "data/**"
-      - "scripts/validate_public_data.py"
+      - "scripts/**"
       - ".github/workflows/validate-data.yml"
   workflow_dispatch:
 
