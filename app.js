@@ -38,6 +38,19 @@ function renderWords(){
   $('#word-body').innerHTML=rows.map(r=>`<tr><td><span class="rank">#${r.rank}</span><b>${esc(r.display)}</b></td><td>${fmt(r.occurrenceCount)}</td><td>${fmt(r.documentFrequency)} <small>(${(r.documentCoverage*100).toFixed(1)}%)</small></td><td>${r.normalizedPer10k.toFixed(2)}</td><td>${r.sourceCount}</td><td><span class="badge ${esc(r.confidence)}">${esc(confidenceZh[r.confidence])}</span></td></tr>`).join('')||'<tr><td colspan="6">没有匹配的词。</td></tr>';
   pager($('#word-pages'),wordState.page,all.length,50,p=>{wordState.page=p;renderWords()});
 }
+function clearTopicHover(){
+  const grid=$('#topic-grid');if(!grid)return;grid.querySelectorAll('.topic.hover-main,.topic.hover-peer').forEach(card=>{card.classList.remove('hover-main','hover-peer');card.style.removeProperty('flex-basis')});
+}
+function setupTopicHover(){
+  const grid=$('#topic-grid');if(!grid||!matchMedia('(hover: hover) and (pointer: fine)').matches)return;
+  grid.onpointerleave=clearTopicHover;
+  grid.querySelectorAll('.topic').forEach(card=>card.onpointerenter=()=>{
+    if(expandedTopicId)return;clearTopicHover();
+    const top=card.getBoundingClientRect().top;const row=[...grid.querySelectorAll('.topic')].filter(item=>Math.abs(item.getBoundingClientRect().top-top)<3);if(row.length<2)return;
+    const gap=parseFloat(getComputedStyle(grid).columnGap)||14;const available=grid.clientWidth-gap*(row.length-1)-4;const mainRatio=row.length>=3?.46:.62;const mainWidth=available*mainRatio;const peerWidth=(available-mainWidth)/(row.length-1);
+    row.forEach(item=>{const main=item===card;item.classList.add(main?'hover-main':'hover-peer');item.style.flexBasis=`${main?mainWidth:peerWidth}px`});
+  });
+}
 function renderTopics(){
   buttonTabs($('#part-tabs'),[['','全部 Part'],['Part 1','Part 1'],['Part 2','Part 2'],['Part 3','Part 3']],topicState.part,v=>{expandedTopicId='';activeTopicId='';topicState.part=v;topicState.page=1;renderTopics()});
   $('#current-only').checked=topicState.current;$('#current-only').onchange=e=>{expandedTopicId='';activeTopicId='';topicState.current=e.target.checked;topicState.page=1;renderTopics()};$('#topic-search input').value=topicState.q;$('#topic-search').onsubmit=e=>{e.preventDefault();expandedTopicId='';activeTopicId='';topicState.q=e.target.querySelector('input').value.trim().toLowerCase();topicState.page=1;renderTopics()};
@@ -45,6 +58,7 @@ function renderTopics(){
   $('#topic-note').textContent=`匹配 ${fmt(all.length)} 个合并主题；${topicState.part||'全部 Part'} 只展示对应的准备题，来源材料放在展开后的参考区。`;
   $('#topic-grid').innerHTML=rows.map(r=>{const practice=questionBank.topics[r.id];const prepared=(practice?.questions||[]).filter(question=>!topicState.part||question.part===topicState.part);const aliasText=r.aliases.slice(0,3).join(' · ');const partLabel=topicState.part||r.partStructure;return `<article class="topic" data-topic-id="${esc(r.id)}"><div class="topic-meta"><span>${esc(r.titleZh)}</span><span>${esc(partLabel)}</span></div><h2>${esc(r.title)}</h2><p>${fmt(prepared.length)} 道准备题 · 含回答思路、模板与示范</p>${aliasText?`<p class="topic-aliases">合并：${esc(aliasText)}${r.aliases.length>3?` 等 ${r.aliases.length} 个标题`:''}</p>`:''}${tags([speakingThemeZh[r.primaryTheme]||r.primaryTheme,'练习优先'])}<button class="topic-open" data-topic-id="${esc(r.id)}" aria-expanded="false">展开练习 <span aria-hidden="true">＋</span></button></article>`}).join('')||'<p>没有匹配主题。</p>';
   $('#topic-grid').querySelectorAll('.topic-open').forEach(button=>button.onclick=()=>toggleInlineTopic(button.dataset.topicId,button));
+  setupTopicHover();
   pager($('#topic-pages'),topicState.page,all.length,36,p=>{expandedTopicId='';activeTopicId='';topicState.page=p;renderTopics()});
 }
 function animateTopicLayout(update){
@@ -54,6 +68,7 @@ function animateTopicLayout(update){
 function toggleInlineTopic(topicId,trigger){
   const topic=speakingData.topics.find(item=>item.id===topicId);if(!topic)return;
   const update=()=>{
+    clearTopicHover();
     const previous=$('.topic.expanded');if(previous){previous.classList.remove('expanded');const previousButton=previous.querySelector('.topic-open');if(previousButton){previousButton.setAttribute('aria-expanded','false');previousButton.innerHTML='展开练习 <span aria-hidden="true">＋</span>'}previous.querySelector('.topic-inline-detail')?.remove()}
     if(expandedTopicId===topicId){expandedTopicId='';activeTopicId='';return}
     expandedTopicId=topicId;activeTopicId=topicId;dialogMode='practice';sourceViewState={part:topicState.part,current:topicState.current,q:'',limit:30};
@@ -61,7 +76,7 @@ function toggleInlineTopic(topicId,trigger){
     card.insertAdjacentHTML('beforeend',`<section class="topic-inline-detail" aria-label="${esc(topic.title)} 学习内容"><div class="topic-inline-inner"><div class="inline-intro"><div><p class="eyebrow">Prepared practice first</p><h3>${esc(topicState.part||'全部 Part')} · ${esc(topic.titleZh)}</h3><p>先练习我们准备的问题与答案；需要核对题目出处时再打开“来源参考”。</p></div></div><div id="topic-dialog-mode" class="dialog-mode" aria-label="题目内容类型"></div><div id="question-list" class="question-list"></div></div></section>`);
     renderDialogMode();requestAnimationFrame(()=>card.querySelector('.topic-inline-detail')?.classList.add('ready'));setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'start'}),460);
   };
-  if(document.startViewTransition)document.startViewTransition(update);else animateTopicLayout(update);
+  animateTopicLayout(update);
 }
 function sourceGuide(part){
   if(part==='Part 1')return {ideas:['第一句直接回答，不要复述题目','补充一个真实的小例子或习惯','用 because 解释原因，控制在 2–4 句'],template:'I’d say ___. For example, ___. I feel this way mainly because ___.'};
