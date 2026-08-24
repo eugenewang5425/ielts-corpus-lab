@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <title>IELTS Corpus Lab｜雅思语料实验室</title>
+  <meta name="description" content="分来源、分科目、可审计的雅思四科词频、写作分类与当季口语题库。">
+  <link rel="canonical" href="https://eugenewang5425.github.io/ielts-corpus-lab/">
+  <link rel="icon" href="favicon.svg">
+  <meta property="og:title" content="IELTS Corpus Lab｜雅思语料实验室">
+  <meta property="og:description" content="先看语料覆盖，再相信高频。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eugenewang5425.github.io/ielts-corpus-lab/">
+  <meta property="og:image" content="https://eugenewang5425.github.io/ielts-corpus-lab/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">I</span><span>IELTS Corpus Lab</span></a>
+    <nav aria-label="主导航">
+      <a href="#words">四科词频</a><a href="#speaking">口语题库</a><a href="#writing">写作分类</a>
+      <a href="#coverage">阅读·听力</a><a href="#sources">来源审计</a><a href="#method">方法</a>
+    </nav>
+    <span class="status">更新至 2026-08-25</span>
+  </header>
+
+  <main>
+    <section class="view" data-view="home">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Evidence-first IELTS study database</p>
+          <h1>先看语料覆盖，<br>再相信“高频”。</h1>
+          <p class="lead">听说读写分开计算；官方公开题、剑桥派生词汇、考生回忆与预测材料分层标注。每个排名同时报告出现次数、文档频率、每万词频率与来源构成。</p>
+          <form id="hero-search" class="search"><input name="q" placeholder="搜索单词，例如 environment" aria-label="搜索单词"><button>开始查询</button></form>
+          <div id="hero-stats" class="hero-stats"></div>
+        </div>
+        <aside class="dark-card"><p class="eyebrow">Corpus health</p><h2>数据不是越多越可信</h2><strong>分层可审计</strong><p>Reading / Listening 已扩到现有全部可解析材料，但没有完整合法的剑桥原题库，因此不会标成“完整剑雅频率”。</p><a href="#coverage">查看覆盖 →</a></aside>
+      </div>
+      <div class="section-head"><div><p class="eyebrow">Coverage</p><h2>四科统计体量</h2></div><p>预测题、派生笔记与官方样题不会混成同一个“官方”标签。</p></div>
+      <div id="home-coverage" class="metric-grid"></div>
+    </section>
+
+    <section class="view page" data-view="words" hidden>
+      <header class="page-head"><p class="eyebrow">Four-skill word explorer</p><h1>听说读写词频</h1><p>文档频率防止单篇重复刷榜；每万词频率让不同大小的语料可以比较。</p></header>
+      <div class="toolbar">
+        <div id="skill-tabs" class="tabs"></div>
+        <div id="scope-tabs" class="tabs small"></div>
+        <form id="word-search" class="inline-search"><input placeholder="输入单词" aria-label="输入单词"><button>搜索</button></form>
+      </div>
+      <div id="word-note" class="note"></div>
+      <div class="table-wrap"><table><thead><tr><th>排名 / 单词</th><th>出现</th><th>覆盖文档</th><th>每万词</th><th>来源</th><th>可信度</th></tr></thead><tbody id="word-body"></tbody></table></div>
+      <div id="word-pages" class="pager"></div>
+    </section>
+
+    <section class="view page" data-view="speaking" hidden>
+      <header class="page-head"><p class="eyebrow">Joe-style integrated bank</p><h1>口语主题整合</h1><p>把同一主题下的 Part 1、Part 2、Part 3 结构归一，按时间、地区与来源层级整理。</p></header>
+      <div class="notice"><b>当前时间口径</b><span>2026 年 1–8 月；Joe 中国大陆 5–8 月材料单独标为“用户提供”，不冒充官方发布。</span></div>
+      <div class="toolbar"><div id="part-tabs" class="tabs"></div><label class="check"><input id="current-only" type="checkbox" checked> 只看 2026 当季</label><form id="topic-search" class="inline-search"><input placeholder="Music / technology" aria-label="搜索口语主题"><button>搜索</button></form></div>
+      <div id="topic-note" class="note"></div><div id="topic-grid" class="topic-grid"></div><div id="topic-pages" class="pager"></div>
+    </section>
+
+    <section class="view page" data-view="writing" hidden>
+      <header class="page-head"><p class="eyebrow">Writing taxonomy</p><h1>大小作文分类与主题</h1><p>“近三年”只统计能识别为 2024–2026 的记录，不把未知年份硬塞进趋势。</p></header>
+      <div id="writing-content"></div>
+    </section>
+
+    <section class="view page" data-view="coverage" hidden>
+      <header class="page-head"><p class="eyebrow">Reading & Listening audit</p><h1>阅读与听力语料覆盖</h1><p>这是对旧版“小样本词表”的直接修正，但仍不会把预测题等同于官方真题。</p></header>
+      <div id="lr-coverage" class="metric-grid two"></div>
+      <article class="truth"><p class="eyebrow">Cambridge boundary</p><h2>现在还不能叫“完整剑桥雅思题库”</h2><p>现有 C4–C16 同义替换/词汇派生资料只记作 <code>cambridge_derived</code>。后续可私有导入合法购买的书籍计算聚合值；公共站仍不会复制文章、音频、图片和答案。</p></article>
+    </section>
+
+    <section class="view page" data-view="sources" hidden>
+      <header class="page-head"><p class="eyebrow">Provenance ledger</p><h1>来源审计</h1><p>逐项记录发布方、时期、科目、规模、可靠性权重与公开权限。</p></header><div id="source-list" class="source-list"></div>
+    </section>
+
+    <section class="view page prose" data-view="method" hidden>
+      <header class="page-head"><p class="eyebrow">Transparent methodology</p><h1>统计方法与版权边界</h1></header>
+      <article><h2>1. 统计单元</h2><p>一篇阅读文章、一份听力转写、一条口语题目或一条写作题目作为一个文档。完全相同的本地 PDF 抽取文本按哈希去重。</p></article>
+      <article><h2>2. 基础词与噪声</h2><p>剔除 a、to、the 等功能词、数字词、题目指令、听力转写标记，以及 chart / graph / describe 等题型模板词。</p></article>
+      <article><h2>3. 排名指标</h2><div class="formula"><div><b>Occurrence</b><p>语料内总出现次数。</p></div><div><b>Document frequency</b><p>至少出现一次的文档数。</p></div><div><b>Per 10k</b><p>每一万学习词中的出现次数。</p></div><div><b>Confidence</b><p>综合文档覆盖与独立来源数。</p></div></div></article>
+      <article><h2>4. 版权边界</h2><p>公共网站只发布聚合词频、主题索引、来源元数据和链接，不复制受版权保护的剑桥文章、音频、图片、答案或第三方完整题库。</p></article>
+    </section>
+  </main>
+  <footer><span>IELTS Corpus Lab · GitHub Pages 公共镜像</span><a href="#method">查看统计方法</a></footer>
+  <div id="loading" class="loading">正在载入语料统计…</div>
+</body>
+</html>
