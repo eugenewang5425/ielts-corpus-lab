@@ -46,7 +46,7 @@ function setupTopicHover(){
   grid.onpointerleave=clearTopicHover;
   grid.querySelectorAll('.topic').forEach(card=>card.onpointerenter=()=>{
     if(expandedTopicId)return;clearTopicHover();
-    const top=card.getBoundingClientRect().top;const row=[...grid.querySelectorAll('.topic')].filter(item=>Math.abs(item.getBoundingClientRect().top-top)<3);if(row.length<2)return;
+    const cards=[...grid.querySelectorAll('.topic')];const columns=matchMedia('(max-width: 640px)').matches?1:matchMedia('(max-width: 980px)').matches?2:3;const index=cards.indexOf(card);const rowStart=Math.floor(index/columns)*columns;const row=cards.slice(rowStart,rowStart+columns);if(row.length<2)return;
     const gap=parseFloat(getComputedStyle(grid).columnGap)||14;const available=grid.clientWidth-gap*(row.length-1)-4;const mainRatio=row.length>=3?.46:.62;const mainWidth=available*mainRatio;const peerWidth=(available-mainWidth)/(row.length-1);
     row.forEach(item=>{const main=item===card;item.classList.add(main?'hover-main':'hover-peer');item.style.flexBasis=`${main?mainWidth:peerWidth}px`});
   });
