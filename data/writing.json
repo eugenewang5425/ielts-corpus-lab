@@ -1,0 +1,735 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "contentVersion": "20260825-writing-1",
+    "contentLabel": "本站原创写作练习",
+    "academicOnly": true,
+    "exerciseCount": 14,
+    "task1Count": 8,
+    "task2Count": 6,
+    "copyrightNoteZh": "题目、图表数据、示意图、分析和范文均为本站原创练习；官方材料仅用于核对考试格式与评分维度。范文用于拆解结构，不代表官方分数。",
+    "referenceSources": [
+      {
+        "name": "IELTS Academic Writing test format",
+        "publisher": "IELTS",
+        "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing"
+      },
+      {
+        "name": "IELTS Academic sample test questions",
+        "publisher": "IELTS",
+        "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+      },
+      {
+        "name": "IELTS Writing Band Descriptors",
+        "publisher": "IELTS",
+        "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf"
+      },
+      {
+        "name": "Free IELTS Academic Writing practice tests",
+        "publisher": "British Council",
+        "url": "https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/academic/writing"
+      }
+    ]
+  },
+  "criteria": [
+    {
+      "id": "task",
+      "titleZh": "任务回应",
+      "officialTask1": "Task Achievement",
+      "officialTask2": "Task Response",
+      "descriptionZh": "Task 1 选择并准确概括主要特征；Task 2 回答题目全部要求，并用相关理由和例子发展立场。"
+    },
+    {
+      "id": "coherence",
+      "titleZh": "连贯与衔接",
+      "officialTask1": "Coherence and Cohesion",
+      "officialTask2": "Coherence and Cohesion",
+      "descriptionZh": "信息按清楚逻辑分段，指代和连接自然，不为了连接词而连接。"
+    },
+    {
+      "id": "lexical",
+      "titleZh": "词汇资源",
+      "officialTask1": "Lexical Resource",
+      "officialTask2": "Lexical Resource",
+      "descriptionZh": "使用准确、适合语境的词和搭配，避免机械重复与生硬炫词。"
+    },
+    {
+      "id": "grammar",
+      "titleZh": "语法范围与准确性",
+      "officialTask1": "Grammatical Range and Accuracy",
+      "officialTask2": "Grammatical Range and Accuracy",
+      "descriptionZh": "组合简单句与复杂句，控制主谓一致、时态、冠词、标点和从句边界。"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "task1-line-metro",
+      "task": "Task 1",
+      "type": "line/trend",
+      "titleZh": "折线图：两条地铁线路客流",
+      "titleEn": "Metro passenger trends",
+      "topic": "transport-cities-housing",
+      "timeMinutes": 20,
+      "minimumWords": 150,
+      "question": "The line graph below shows the number of passenger journeys made on two metro lines in the city of Norchester between 2010 and 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "visual": {
+        "type": "line",
+        "title": "Passenger journeys on two metro lines",
+        "unit": "millions of journeys",
+        "labels": ["2010", "2015", "2020", "2024"],
+        "series": [
+          {"name": "Line A", "values": [42, 58, 76, 91]},
+          {"name": "Line B", "values": [70, 68, 61, 55]}
+        ]
+      },
+      "overviewZh": "Line A 的客流持续且显著上升，最终超过 Line B；Line B 则缓慢下降。最大变化是两条线路的领先关系在 2015 至 2020 年间逆转。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "改写对象、单位、地点和时间，不解释原因。"},
+        {"headingZh": "概览", "contentZh": "写两条总体趋势和交叉关系，不堆全部数字。"},
+        {"headingZh": "细节一", "contentZh": "按时间说明 Line A 从 42 上升到 91，突出增幅。"},
+        {"headingZh": "细节二", "contentZh": "说明 Line B 从 70 降到 55，并比较起点、终点和反超区间。"}
+      ],
+      "templateEn": [
+        "The line graph compares [measure] for [groups] in [place] from [start year] to [end year].",
+        "Overall, [group A] rose markedly, whereas [group B] followed a downward trend. A further notable feature is that [key comparison].",
+        "Starting at [figure], [group A] increased to [figure] before reaching [figure]. By contrast, [group B] changed from [figure] to [figure]."
+      ],
+      "vocabulary": [
+        {"word": "rise steadily", "meaningZh": "稳定上升"},
+        {"word": "overtake", "meaningZh": "超过、反超"},
+        {"word": "stand at", "meaningZh": "数值为"},
+        {"word": "by contrast", "meaningZh": "相比之下"},
+        {"word": "respectively", "meaningZh": "分别地"},
+        {"word": "a widening gap", "meaningZh": "不断扩大的差距"}
+      ],
+      "modelAnswer": [
+        "The line graph compares the annual number of passenger journeys made on Metro Lines A and B in Norchester from 2010 to 2024, measured in millions.",
+        "Overall, use of Line A increased substantially throughout the period, while the figure for Line B declined gradually. Although Line B was clearly the busier route at the beginning, Line A overtook it between 2015 and 2020 and finished far ahead.",
+        "In 2010, Line A carried 42 million passenger journeys, which was 28 million fewer than the 70 million recorded on Line B. Usage of Line A then rose to 58 million in 2015 and continued to climb rapidly, reaching 76 million in 2020. By 2024, the figure had grown to 91 million, more than double its starting level.",
+        "Line B followed the opposite pattern. Its passenger total slipped only slightly, from 70 million in 2010 to 68 million five years later. The decline then became more noticeable, with journeys falling to 61 million in 2020 and 55 million by the end of the period. Consequently, the initial 28-million lead held by Line B had become a 36-million advantage for Line A in 2024."
+      ],
+      "criterionNotes": {
+        "task": "概览直接抓住一升一降、反超和终点差距；细节包含关键数字而非逐点抄写。",
+        "coherence": "先概览，再分别描述两条线，比较关系贯穿细节段。",
+        "lexical": "trend、overtake、slip、reach 等词与数据变化准确搭配。",
+        "grammar": "使用 while、although 和分词结构，但句子边界清楚。"
+      }
+    },
+    {
+      "id": "task1-bar-graduates",
+      "task": "Task 1",
+      "type": "bar/column",
+      "titleZh": "柱状图：毕业生去向",
+      "titleEn": "Graduate destinations",
+      "topic": "education",
+      "timeMinutes": 20,
+      "minimumWords": 150,
+      "question": "The bar chart below compares the destinations of graduates from three universities in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "visual": {
+        "type": "bar",
+        "title": "Destinations of graduates in 2025",
+        "unit": "percent",
+        "labels": ["North University", "Central University", "South University"],
+        "series": [
+          {"name": "Employment", "values": [68, 55, 74]},
+          {"name": "Further study", "values": [25, 35, 18]},
+          {"name": "Unemployed", "values": [7, 10, 8]}
+        ]
+      },
+      "overviewZh": "三所大学多数毕业生都直接就业；South University 的就业比例最高，Central University 的深造和失业比例均最高。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "说明比较三所大学、三类去向和 2025 年比例。"},
+        {"headingZh": "概览", "contentZh": "就业在所有学校占主导；指出两个最高值。"},
+        {"headingZh": "细节一", "contentZh": "比较就业比例：South 74%、North 68%、Central 55%。"},
+        {"headingZh": "细节二", "contentZh": "合并比较深造和失业，避免把每根柱子单独写一句。"}
+      ],
+      "templateEn": [
+        "The bar chart compares the proportions of [people] who entered [categories] at [institutions/time].",
+        "Overall, [dominant category] accounted for the largest share in every group, while [smallest category] was consistently the least common outcome.",
+        "At [x]%, [group] recorded the highest figure for [category], followed by [comparison]."
+      ],
+      "vocabulary": [
+        {"word": "account for", "meaningZh": "占据比例"},
+        {"word": "the dominant outcome", "meaningZh": "主要去向"},
+        {"word": "a corresponding figure", "meaningZh": "对应数值"},
+        {"word": "by comparison", "meaningZh": "比较而言"},
+        {"word": "the smallest proportion", "meaningZh": "最小比例"},
+        {"word": "percentage points", "meaningZh": "百分点"}
+      ],
+      "modelAnswer": [
+        "The bar chart compares the percentages of graduates from North, Central and South Universities who entered employment, continued their studies or remained unemployed in 2025.",
+        "Overall, employment was by far the most common destination at all three institutions, whereas unemployment accounted for the smallest proportion. South University had the highest employment rate, while Central University recorded the largest shares for both further study and unemployment.",
+        "At South University, 74% of graduates found work, six percentage points more than the figure for North University. Central University had a noticeably lower employment rate of 55%. Nevertheless, a majority of graduates from every institution moved directly into jobs.",
+        "The pattern for further education was almost the reverse. More than a third of Central University graduates, or 35%, pursued additional study, compared with 25% at North University and only 18% at South University. Unemployment levels were much lower and varied within a narrow range. Central again had the highest proportion, at 10%, while the corresponding figures for South and North were 8% and 7% respectively. Thus, the difference between the highest and lowest unemployment rates was just three percentage points."
+      ],
+      "criterionNotes": {
+        "task": "用主导类别和极值构成概览，并覆盖三校三类数据。",
+        "coherence": "按就业与非就业两组信息组织，而不是逐学校机械罗列。",
+        "lexical": "percentage points 用于比例之差，percent 用于原始比例。",
+        "grammar": "比较级、最高级和 whereas 结构准确。"
+      }
+    },
+    {
+      "id": "task1-pie-heating",
+      "task": "Task 1",
+      "type": "pie/proportion",
+      "titleZh": "饼图：家庭供暖能源",
+      "titleEn": "Household heating sources",
+      "topic": "environment-energy",
+      "timeMinutes": 20,
+      "minimumWords": 150,
+      "question": "The pie charts below show the sources of energy used for household heating in Bellford in 2000 and 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "visual": {
+        "type": "pie",
+        "title": "Energy used for household heating",
+        "panels": [
+          {"title": "2000", "segments": [{"label": "Gas", "value": 45}, {"label": "Coal", "value": 30}, {"label": "Electricity", "value": 15}, {"label": "Renewables", "value": 10}]},
+          {"title": "2025", "segments": [{"label": "Gas", "value": 30}, {"label": "Coal", "value": 10}, {"label": "Electricity", "value": 25}, {"label": "Renewables", "value": 35}]}
+        ]
+      },
+      "overviewZh": "供暖能源明显从煤和天然气转向电力与可再生能源；可再生能源从最小来源变成最大来源，煤炭降幅最大。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "改写两个年份、地点和供暖能源占比。"},
+        {"headingZh": "概览", "contentZh": "指出化石能源下降、低碳能源上升和排名变化。"},
+        {"headingZh": "细节一", "contentZh": "组合写 gas 与 coal：合计从 75% 降至 40%。"},
+        {"headingZh": "细节二", "contentZh": "组合写 electricity 与 renewables：合计从 25% 升至 60%。"}
+      ],
+      "templateEn": [
+        "The two pie charts illustrate how [total] was divided among [categories] in [years].",
+        "Overall, there was a clear shift away from [old categories] towards [new categories].",
+        "Together, [A] and [B] represented [figure] in [year], but this combined share changed to [figure] by [year]."
+      ],
+      "vocabulary": [
+        {"word": "make up", "meaningZh": "组成、占据"},
+        {"word": "combined share", "meaningZh": "合计占比"},
+        {"word": "a marked shift", "meaningZh": "明显转变"},
+        {"word": "by contrast", "meaningZh": "相比之下"},
+        {"word": "triple", "meaningZh": "增至三倍"},
+        {"word": "fossil fuels", "meaningZh": "化石燃料"}
+      ],
+      "modelAnswer": [
+        "The two pie charts compare the proportions of four energy sources used to heat homes in Bellford in 2000 and 2025.",
+        "Overall, household heating shifted considerably away from fossil fuels towards electricity and renewable energy. Gas was the largest source in 2000, but renewables became the leading option by 2025. Coal experienced the sharpest decline.",
+        "In 2000, gas supplied 45% of household heating energy and coal contributed a further 30%. Together, these two fossil fuels therefore accounted for three quarters of the total. Electricity represented 15%, while renewable sources made up the remaining 10%, the smallest share that year.",
+        "By 2025, the proportion supplied by gas had fallen by 15 percentage points to 30%. Coal use decreased even more dramatically, from 30% to just 10%, meaning that the combined fossil-fuel share dropped to 40%. In contrast, renewables more than tripled to 35% and became the largest individual source. Electricity also grew, although less sharply, reaching one quarter of the total. As a result, electricity and renewables together provided 60% of household heating energy in 2025, compared with only 25% at the start."
+      ],
+      "criterionNotes": {
+        "task": "把四个类别组合成化石能源与低碳能源，概览清楚呈现结构变化。",
+        "coherence": "两个细节段分别处理下降组和上升组。",
+        "lexical": "share、account for、triple 和 percentage points 使用准确。",
+        "grammar": "过去时统一，比较结构完整。"
+      }
+    },
+    {
+      "id": "task1-table-student-spending",
+      "task": "Task 1",
+      "type": "table",
+      "titleZh": "表格：大学生月度支出",
+      "titleEn": "Monthly student spending",
+      "topic": "work-economy",
+      "timeMinutes": 20,
+      "minimumWords": 150,
+      "question": "The table below shows the average monthly spending of university students in three cities in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "visual": {
+        "type": "table",
+        "title": "Average monthly student spending in 2025 (dollars)",
+        "headers": ["Category", "Riverport", "Hillford", "Coaston"],
+        "rows": [["Rent", 520, 430, 610], ["Food", 210, 230, 220], ["Transport", 60, 90, 70], ["Leisure", 110, 80, 130]]
+      },
+      "overviewZh": "Coaston 的总支出最高，Hillford 最低；租金在三城都是最大开支，也是城市总差距的主要来源，食品支出则非常接近。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "交代平均月支出、三座城市、四类开支和美元单位。"},
+        {"headingZh": "概览", "contentZh": "比较总量与最大类别，指出租金拉开差距。"},
+        {"headingZh": "细节一", "contentZh": "写 rent 与总支出：Coaston 最高、Hillford 最低。"},
+        {"headingZh": "细节二", "contentZh": "写 food、transport、leisure 的相似与例外。"}
+      ],
+      "templateEn": [
+        "The table presents average expenditure on [categories] among [groups] in [time/place].",
+        "Overall, [group] spent the most in total, largely because of [category], while [group] had the lowest overall outlay.",
+        "Spending on [category] was relatively similar, ranging from [low] to [high]."
+      ],
+      "vocabulary": [
+        {"word": "monthly outlay", "meaningZh": "月度支出"},
+        {"word": "by far the largest item", "meaningZh": "远为最大开支项"},
+        {"word": "range from ... to ...", "meaningZh": "范围从……到……"},
+        {"word": "largely attributable to", "meaningZh": "主要归因于"},
+        {"word": "a modest difference", "meaningZh": "较小差异"},
+        {"word": "combined total", "meaningZh": "合计总额"}
+      ],
+      "modelAnswer": [
+        "The table compares the average amounts that university students in Riverport, Hillford and Coaston spent each month on rent, food, transport and leisure in 2025. All figures are given in dollars.",
+        "Overall, students in Coaston had the highest total monthly expenditure, while those in Hillford spent the least. Rent was by far the largest item in every city and was mainly responsible for the difference in overall costs. Food expenditure, by contrast, was quite similar across the three locations.",
+        "Students in Coaston paid $610 per month for rent, compared with $520 in Riverport and $430 in Hillford. When all four categories are combined, monthly spending stood at $1,030 in Coaston and $900 in Riverport, whereas the total for Hillford was lower at $830. Coaston's higher figure was also supported by the greatest leisure expenditure, at $130.",
+        "Food costs varied only slightly, ranging from $210 in Riverport to $230 in Hillford, with Coaston in between at $220. Transport showed a different pattern: Hillford students spent the most, at $90, while the figures for Coaston and Riverport were $70 and $60 respectively. Riverport's leisure spending of $110 was $30 higher than Hillford's but $20 below the amount recorded in Coaston."
+      ],
+      "criterionNotes": {
+        "task": "先自行合计三城总支出，再选择租金和相近项目作为主特征。",
+        "coherence": "按高差异项目与低差异项目分组。",
+        "lexical": "outlay、expenditure、item 轮换但含义稳定。",
+        "grammar": "比较句和 whereas 从句控制准确。"
+      }
+    },
+    {
+      "id": "task1-map-library",
+      "task": "Task 1",
+      "type": "map/plan",
+      "titleZh": "地图题：公共图书馆改造",
+      "titleEn": "Public library redevelopment",
+      "topic": "transport-cities-housing",
+      "timeMinutes": 20,
+      "minimumWords": 150,
+      "question": "The plans below show Westbridge Public Library in 2010 and its proposed layout for 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "visual": {
+        "type": "map",
+        "title": "Westbridge Public Library",
+        "panels": [
+          {"title": "2010", "grid": [["Staff office", "Book shelves", "Book shelves"], ["Entrance", "Service desk", "Reading area"], ["Storage", "Computers", "Children's room"]]},
+          {"title": "Proposed 2025", "grid": [["Café", "Book shelves", "Study pods"], ["Entrance", "Self-service", "Community hall"], ["Toilets", "Digital lab", "Children's room"]]}
+        ]
+      },
+      "overviewZh": "图书馆将从以藏书和人工服务为主的空间，改成更数字化、多功能的社区设施；入口和儿童室保留，但大部分功能区被替换或重新配置。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "说明比较 2010 现状与 2025 规划。"},
+        {"headingZh": "概览", "contentZh": "概括数字化、社区化、自助化，并指出保留项目。"},
+        {"headingZh": "细节一", "contentZh": "按北侧和中央区域写 staff office、books、desk 的变化。"},
+        {"headingZh": "细节二", "contentZh": "按南侧写 storage、computers、children's room 的变化。"}
+      ],
+      "templateEn": [
+        "The plans compare the layout of [place] in [year] with the proposed arrangement for [year].",
+        "Overall, the site is expected to become more [general change], although [unchanged features] will remain in place.",
+        "The former [feature] in the [location] will be replaced by [new feature], while [feature] will be converted into [new use]."
+      ],
+      "vocabulary": [
+        {"word": "be converted into", "meaningZh": "被改造成"},
+        {"word": "be replaced by", "meaningZh": "被……替代"},
+        {"word": "remain in place", "meaningZh": "保留原位"},
+        {"word": "in the north-western corner", "meaningZh": "在西北角"},
+        {"word": "be relocated", "meaningZh": "被迁移"},
+        {"word": "a multipurpose facility", "meaningZh": "多功能设施"}
+      ],
+      "modelAnswer": [
+        "The two plans compare the internal arrangement of Westbridge Public Library in 2010 with the layout proposed for 2025.",
+        "Overall, the library is expected to change from a mainly book-based facility into a more digital and multipurpose community space. Most areas will be replaced or redesigned, although the entrance and children's room will remain in their original positions.",
+        "In 2010, the northern side contained a staff office in the west and two areas of book shelves across the centre and east. Under the proposal, the office will be converted into a café, the central shelves will be retained, and the shelves in the north-east will make way for individual study pods. In the middle of the building, visitors will still enter from the west, but the staffed service desk will be replaced by self-service machines. The reading area on the eastern side will become a community hall.",
+        "Further changes are planned in the south. The storage room in the south-west corner will be removed and toilets will be installed there. The existing computer area will be upgraded to a digital lab. By contrast, the children's room in the south-east will be the only functional area, apart from the entrance, to stay unchanged."
+      ],
+      "criterionNotes": {
+        "task": "概览总结整体用途变化和保留项目，细节覆盖所有九个区域。",
+        "coherence": "按北部、中部、南部分区，而不是在两个年份之间来回跳。",
+        "lexical": "replace、convert、retain、install 区分不同变化关系。",
+        "grammar": "规划使用 will be，2010 状态使用过去时。"
+      }
+    },
+    {
+      "id": "task1-process-paper",
+      "task": "Task 1",
+      "type": "process",
+      "titleZh": "流程图：废纸再生",
+      "titleEn": "Recycled paper production",
+      "topic": "environment-energy",
+      "timeMinutes": 20,
+      "minimumWords": 150,
+      "question": "The diagram below shows how used office paper is recycled into new paper products. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "visual": {
+        "type": "process",
+        "title": "Recycling used office paper",
+        "stages": ["Collection", "Sorting", "Shredding and pulping", "Cleaning and de-inking", "Pressing and drying", "Rolling and packaging"]
+      },
+      "overviewZh": "这是一个六阶段的线性人造流程，从收集废纸开始，以新纸卷包装结束；中段通过分拣、制浆和脱墨清除不合格材料与杂质。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "改写废旧办公纸被制成新纸产品。"},
+        {"headingZh": "概览", "contentZh": "写六阶段、线性、起点终点和关键转化。"},
+        {"headingZh": "细节一", "contentZh": "前三步：收集、分拣、加水粉碎成纸浆。"},
+        {"headingZh": "细节二", "contentZh": "后三步：清洁脱墨、压干、卷制包装。"}
+      ],
+      "templateEn": [
+        "The diagram illustrates the process by which [input] is transformed into [output].",
+        "Overall, this is a [linear/cyclical] process consisting of [number] main stages, beginning with [start] and ending with [finish].",
+        "Once [stage] has been completed, the material is [passive verb] before being [next passive verb]."
+      ],
+      "vocabulary": [
+        {"word": "undergo", "meaningZh": "经历某过程"},
+        {"word": "be fed into", "meaningZh": "被送入设备"},
+        {"word": "pulp", "meaningZh": "纸浆；制成纸浆"},
+        {"word": "remove impurities", "meaningZh": "去除杂质"},
+        {"word": "subsequently", "meaningZh": "随后"},
+        {"word": "the finished product", "meaningZh": "成品"}
+      ],
+      "modelAnswer": [
+        "The diagram illustrates how discarded office paper is processed to produce new rolls of paper.",
+        "Overall, recycling office paper is a linear, six-stage procedure. It begins with the collection of used material and ends when the finished paper is rolled and packaged. The central stages are designed to separate unsuitable items and remove ink and other impurities from the paper fibres.",
+        "First, used office paper is collected from workplaces and transported to a recycling facility. It is then sorted, during which plastic, heavily contaminated sheets and other inappropriate materials are removed. The accepted paper is shredded into small pieces and mixed with water so that it forms a wet pulp.",
+        "Next, this pulp passes through a cleaning and de-inking stage. Screens filter out remaining solid impurities, while ink is separated from the paper fibres. Once cleaned, the pulp is spread into a thin, even layer and pressed to remove most of its water. It is subsequently heated and dried as it moves through a set of rollers. In the final stage, the continuous sheet of new paper is wound into large rolls, which are cut or packaged before being sent to manufacturers and offices for reuse."
+      ],
+      "criterionNotes": {
+        "task": "概览写出线性、六阶段、起终点和中段净化功能。",
+        "coherence": "按真实顺序分为原料准备和净化成型两段。",
+        "lexical": "pulp、fibres、de-ink、impurities 为流程所需的准确词。",
+        "grammar": "以一般现在时和被动语态为主，避免主语不断重复 people。"
+      }
+    },
+    {
+      "id": "task1-mixed-bike",
+      "task": "Task 1",
+      "type": "mixed/multiple visuals",
+      "titleZh": "混合图：共享单车使用与满意度",
+      "titleEn": "Bike-share use and satisfaction",
+      "topic": "transport-cities-housing",
+      "timeMinutes": 20,
+      "minimumWords": 150,
+      "question": "The charts below show the number of monthly bike-share trips in Easton and the percentage of users satisfied with the service from 2021 to 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "visual": {
+        "type": "mixed",
+        "title": "Easton bike-share scheme",
+        "labels": ["2021", "2022", "2023", "2024"],
+        "bars": {"name": "Monthly trips", "unit": "thousands", "values": [22, 29, 41, 48]},
+        "line": {"name": "Satisfied users", "unit": "percent", "values": [62, 68, 75, 79]}
+      },
+      "overviewZh": "月均骑行量和满意度四年间都持续上升；骑行量增幅更大，超过翻倍，而满意度提高 17 个百分点。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "分别交代柱图的出行量和折线的满意度。"},
+        {"headingZh": "概览", "contentZh": "概括两项均上升，并比较相对增幅。"},
+        {"headingZh": "细节一", "contentZh": "写 trips 从 22,000 到 48,000，2022–2023 增幅最大。"},
+        {"headingZh": "细节二", "contentZh": "写 satisfaction 从 62% 到 79%，增幅逐渐放缓。"}
+      ],
+      "templateEn": [
+        "The bar chart presents [measure A], while the line graph shows [measure B] over the same period.",
+        "Overall, both indicators increased, although the rise in [A] was proportionally greater than that in [B].",
+        "As [A] climbed from [figure] to [figure], [B] also moved upward from [figure] to [figure]."
+      ],
+      "vocabulary": [
+        {"word": "an upward trend", "meaningZh": "上升趋势"},
+        {"word": "more than double", "meaningZh": "超过翻倍"},
+        {"word": "percentage-point increase", "meaningZh": "百分点增幅"},
+        {"word": "in parallel", "meaningZh": "同步地"},
+        {"word": "the sharpest rise", "meaningZh": "最大增幅"},
+        {"word": "growth moderated", "meaningZh": "增速放缓"}
+      ],
+      "modelAnswer": [
+        "The bar chart shows the average number of bike-share trips made each month in Easton between 2021 and 2024, while the line graph presents the proportion of users who were satisfied with the scheme.",
+        "Overall, both usage and satisfaction rose every year. The number of journeys increased more dramatically, more than doubling across the period, whereas satisfaction grew by 17 percentage points. The sharpest annual rise in trips occurred between 2022 and 2023.",
+        "In 2021, Easton's bike-share bicycles were used for an average of 22,000 trips per month. This figure climbed moderately to 29,000 in 2022 before jumping by 12,000 to 41,000 the following year. Growth then continued at a slower pace, and monthly usage reached a peak of 48,000 trips in 2024.",
+        "User satisfaction followed a similar but steadier upward path. The proportion of satisfied customers stood at 62% in 2021 and increased by six percentage points in 2022. It then reached 75% in 2023. By the final year, 79% of users reported being satisfied, four points above the previous figure. Thus, the service attracted substantially more journeys while also achieving a consistent improvement in users' views."
+      ],
+      "criterionNotes": {
+        "task": "同时覆盖两个图，不把 48,000 和 79% 放在同一量纲直接比较。",
+        "coherence": "概览比较趋势，细节段分别处理不同指标。",
+        "lexical": "more than doubling 与 percentage points 精确表达两类变化。",
+        "grammar": "while 从句清楚区分两张图的对象。"
+      }
+    },
+    {
+      "id": "task1-system-rainwater",
+      "task": "Task 1",
+      "type": "diagram/system/other",
+      "titleZh": "系统图：住宅雨水回收",
+      "titleEn": "Domestic rainwater system",
+      "topic": "environment-energy",
+      "timeMinutes": 20,
+      "minimumWords": 150,
+      "question": "The diagram below shows how rainwater is collected and reused in an eco-friendly house. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "visual": {
+        "type": "system",
+        "title": "Rainwater collection and reuse",
+        "stages": ["Roof catchment", "Gutter", "Mesh filter", "Underground tank", "Pump"],
+        "outputs": ["Toilets and laundry", "Garden irrigation", "Overflow soakaway"]
+      },
+      "overviewZh": "系统先在屋顶收集并过滤雨水，再储存在地下水箱，通过水泵分配给室内非饮用用途和花园；多余水量进入渗水区。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "改写住宅雨水的收集、储存和再利用系统。"},
+        {"headingZh": "概览", "contentZh": "概括收集—过滤—储存—分配四部分和三个出口。"},
+        {"headingZh": "细节一", "contentZh": "从屋顶顺水流写到 mesh filter 和 underground tank。"},
+        {"headingZh": "细节二", "contentZh": "从 pump 写两个再利用支路和 overflow 安全出口。"}
+      ],
+      "templateEn": [
+        "The diagram illustrates how [resource] is collected, treated and distributed within [system].",
+        "Overall, the system has [number] main phases: [phase list]. It supplies [uses], while excess [resource] is directed to [outlet].",
+        "After passing through [component], the water is stored in [component], from which it is pumped to [destinations]."
+      ],
+      "vocabulary": [
+        {"word": "catchment surface", "meaningZh": "集水面"},
+        {"word": "flow through", "meaningZh": "流经"},
+        {"word": "storage tank", "meaningZh": "储水箱"},
+        {"word": "non-potable use", "meaningZh": "非饮用用途"},
+        {"word": "excess water", "meaningZh": "多余水量"},
+        {"word": "be diverted to", "meaningZh": "被分流至"}
+      ],
+      "modelAnswer": [
+        "The diagram illustrates the system used to collect rainwater and reuse it in an environmentally friendly home.",
+        "Overall, the system consists of four main phases: collection, filtration, storage and redistribution. The treated rainwater is used for two non-drinking purposes inside and outside the house, while any excess water is diverted to a soakaway.",
+        "Initially, rainfall lands on the sloping roof, which acts as the main catchment surface. The water runs into a gutter positioned along the lower edge of the roof and is carried down a pipe. Before entering storage, it passes through a mesh filter. This component removes leaves and other solid material, allowing cleaner water to flow into a large tank buried beneath the house.",
+        "A pump then draws water from the underground tank and sends it back towards the property. One branch supplies toilets and the washing machine, so treated rainwater replaces mains water for these non-potable indoor uses. A second pipe carries water to the garden irrigation system. If prolonged rainfall causes the tank to reach capacity, an overflow pipe directs the surplus to a soakaway in the garden, where it can gradually enter the ground instead of flooding the property."
+      ],
+      "criterionNotes": {
+        "task": "概览识别四个功能阶段和主要、溢流出口。",
+        "coherence": "沿水流方向写，读者无需反复查看图也能还原系统。",
+        "lexical": "catchment、filter、non-potable、overflow 为系统图的精确表达。",
+        "grammar": "一般现在时、被动语态和 where/which 从句配合。"
+      }
+    },
+    {
+      "id": "task2-opinion-university",
+      "task": "Task 2",
+      "type": "agree-disagree/opinion",
+      "titleZh": "观点题：大学应重实践还是理论",
+      "titleEn": "Practical skills versus theory",
+      "topic": "education",
+      "timeMinutes": 40,
+      "minimumWords": 250,
+      "question": "Some people believe that universities should focus mainly on practical job skills rather than theoretical knowledge. To what extent do you agree or disagree?",
+      "overviewZh": "立场：不同意把理论替换成纯职业训练；更合理的是以理论建立可迁移能力，再通过项目和实习连接就业。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "改写争议并给出明确立场：理论为核心，实践负责迁移。"},
+        {"headingZh": "主体一", "contentZh": "理论帮助毕业生理解原理、适应技术变化，而非只会当前工具。"},
+        {"headingZh": "主体二", "contentZh": "实践项目、实验室和实习验证知识并培养协作，但不应挤掉基础课程。"},
+        {"headingZh": "结论", "contentZh": "重申融合模式优于二选一。"}
+      ],
+      "templateEn": [
+        "While it is understandable that [opposing view], I [agree/disagree] because [reason 1] and [reason 2].",
+        "The strongest reason for retaining [position] is that [main idea]. This matters because [development]. For example, [specific illustration].",
+        "Admittedly, [concession]. However, [rebuttal and boundary].",
+        "In conclusion, [direct answer]. Universities should therefore [practical recommendation]."
+      ],
+      "vocabulary": [
+        {"word": "transferable knowledge", "meaningZh": "可迁移知识"},
+        {"word": "short-lived technical routine", "meaningZh": "短期技术流程"},
+        {"word": "apply principles", "meaningZh": "运用原理"},
+        {"word": "work-integrated learning", "meaningZh": "产学结合学习"},
+        {"word": "curriculum", "meaningZh": "课程体系"},
+        {"word": "strike a balance", "meaningZh": "取得平衡"}
+      ],
+      "modelAnswer": [
+        "Universities are increasingly expected to improve their graduates' employment prospects, leading some people to argue that practical job training should replace much of the theoretical content in degree programmes. Although students need opportunities to apply what they learn, I disagree that vocational skills should become the main focus of university education.",
+        "The central value of a university is that it teaches knowledge which remains useful when particular tools and occupations change. A software package, laboratory procedure or marketing platform may be replaced within a few years, whereas an understanding of statistics, scientific principles or human behaviour allows graduates to evaluate new methods. An engineering student who merely memorises the operation of current equipment may perform well in an entry-level role, but one who understands the underlying physics is better prepared to diagnose unfamiliar problems and design safer systems. Theory therefore supports long-term adaptability rather than only a student's first job.",
+        "This does not mean that degree courses should be disconnected from professional practice. Projects, clinical placements, fieldwork and internships can reveal whether students are able to use academic concepts under real constraints. They also develop communication, teamwork and time management, which cannot be learned fully from lectures. However, these activities are most productive when they are integrated with, rather than substituted for, rigorous academic study. For instance, a data-science placement has greater educational value if the student can explain why a model fails instead of simply running software supplied by an employer.",
+        "In conclusion, universities should not choose between theory and employability. Their priority should remain the development of durable knowledge and critical thinking, supported by carefully designed practical experiences that help students transfer those abilities to the workplace."
+      ],
+      "criterionNotes": {
+        "task": "首段直接回应 extent，两个主体段分别论证理论价值和实践边界。",
+        "coherence": "让步不改变立场，并通过 this does not mean 自然承接。",
+        "lexical": "employability、adaptability、integrated 等词服务论证而非炫词。",
+        "grammar": "条件、定语和让步结构有变化，同时保持可读性。"
+      }
+    },
+    {
+      "id": "task2-discuss-finance",
+      "task": "Task 2",
+      "type": "discuss-both-views",
+      "titleZh": "双方讨论：谁来教孩子理财",
+      "titleEn": "Teaching children about money",
+      "topic": "children-family",
+      "timeMinutes": 40,
+      "minimumWords": 250,
+      "question": "Some people think schools should teach children how to manage money, while others believe this is the responsibility of parents. Discuss both views and give your own opinion.",
+      "overviewZh": "双方都有独特作用：学校保证系统和公平，父母提供日常情境；观点是学校教授共同基础，家庭用真实决定持续练习。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "交代两方并给观点：共同责任、分工不同。"},
+        {"headingZh": "主体一", "contentZh": "学校能覆盖所有儿童，系统教授预算、利息、风险和消费者权益。"},
+        {"headingZh": "主体二", "contentZh": "父母可在零花钱、购物和储蓄中即时示范，但家庭知识与资源不均。"},
+        {"headingZh": "结论", "contentZh": "学校打底，家长强化。"}
+      ],
+      "templateEn": [
+        "Those who favour [view A] argue that [reason], whereas supporters of [view B] emphasise [reason]. I believe [your position].",
+        "On the one hand, [view A] has the advantage of [benefit]. [Explain and exemplify].",
+        "On the other hand, [view B] is persuasive because [benefit]. Nevertheless, [limitation].",
+        "In my view, the most effective arrangement is [combined solution]."
+      ],
+      "vocabulary": [
+        {"word": "financial literacy", "meaningZh": "金融素养"},
+        {"word": "household budget", "meaningZh": "家庭预算"},
+        {"word": "compound interest", "meaningZh": "复利"},
+        {"word": "consumer rights", "meaningZh": "消费者权益"},
+        {"word": "unequal access", "meaningZh": "不平等的获取机会"},
+        {"word": "reinforce a lesson", "meaningZh": "强化所学"}
+      ],
+      "modelAnswer": [
+        "As young people encounter online shopping, digital payments and advertising at an increasingly early age, there is debate about whether schools or parents should teach them to manage money. Both settings offer important advantages, but I believe schools should provide a common foundation which parents then reinforce through everyday decisions.",
+        "Supporters of school-based financial education point out that it can reach children regardless of their family background. A structured course can introduce budgeting, saving, borrowing, compound interest and consumer rights in a logical sequence. Teachers can also use neutral examples and simulations, allowing pupils to make mistakes without risking real money. This is especially valuable for children whose parents lack confidence with finance or have little time to discuss it. Without lessons at school, existing inequalities in financial knowledge may simply pass from one generation to the next.",
+        "However, parents are able to turn abstract principles into repeated habits. They can involve children in comparing prices, planning a weekly food budget or deciding how much pocket money to save. These real choices make consequences visible: spending everything immediately means waiting for a future purchase, while regular saving gradually creates more options. Parents also understand their child's maturity and can introduce responsibility at an appropriate pace. The weakness of relying entirely on families is that adults differ greatly in both financial knowledge and willingness to teach.",
+        "In my opinion, the two roles should be complementary. Schools should guarantee that every student understands essential concepts and can recognise financial risks. Parents should then give children controlled opportunities to practise those concepts at home. This division combines equal access with realistic experience and is more reliable than assigning the responsibility to either group alone."
+      ],
+      "criterionNotes": {
+        "task": "双方观点获得相近篇幅，个人观点在引言和结论一致。",
+        "coherence": "每段先回答为什么，再给场景和局限。",
+        "lexical": "financial literacy、budgeting、consumer rights 构成主题词链。",
+        "grammar": "while、regardless of、without 等结构准确表达关系。"
+      }
+    },
+    {
+      "id": "task2-outweigh-remote-work",
+      "task": "Task 2",
+      "type": "advantages-disadvantages/outweigh",
+      "titleZh": "利弊权衡：远程办公",
+      "titleEn": "The expansion of remote work",
+      "topic": "work-economy",
+      "timeMinutes": 40,
+      "minimumWords": 250,
+      "question": "Working from home has become common in many industries. Do the advantages of this development outweigh the disadvantages?",
+      "overviewZh": "判断：在具备明确制度和线下协作机会时，节省通勤、扩大就业和提高自主性的优势大于隔离与沟通成本。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "给出明确权衡结论，不只说有利有弊。"},
+        {"headingZh": "主体一", "contentZh": "承认缺点：新人学习、非正式沟通、孤独和边界模糊。"},
+        {"headingZh": "主体二", "contentZh": "说明更强优势：时间、地区机会、残障包容、专注和成本。"},
+        {"headingZh": "结论", "contentZh": "重申优势更大，并给混合工作和管理条件。"}
+      ],
+      "templateEn": [
+        "Although [development] creates [main disadvantage], I believe its benefits, particularly [A] and [B], are more substantial.",
+        "The principal drawback is [problem]. This can lead to [effect], especially for [group].",
+        "Nevertheless, the advantages are broader. First, [benefit and development]. Second, [benefit and example].",
+        "Overall, the benefits outweigh the costs provided that [necessary condition]."
+      ],
+      "vocabulary": [
+        {"word": "commuting burden", "meaningZh": "通勤负担"},
+        {"word": "geographical barrier", "meaningZh": "地域障碍"},
+        {"word": "informal knowledge transfer", "meaningZh": "非正式知识传递"},
+        {"word": "social isolation", "meaningZh": "社交隔离"},
+        {"word": "asynchronous communication", "meaningZh": "异步沟通"},
+        {"word": "hybrid arrangement", "meaningZh": "混合办公安排"}
+      ],
+      "modelAnswer": [
+        "Remote work has moved from a limited employee benefit to a normal arrangement in many knowledge-based occupations. While this shift can weaken social contact and make coordination more difficult, I believe its advantages outweigh these problems when organisations manage it deliberately.",
+        "The disadvantages are genuine. New employees may learn more slowly when they cannot observe experienced colleagues or ask spontaneous questions. Teams can also lose the informal conversations through which minor misunderstandings are corrected before they become expensive mistakes. At an individual level, some home workers experience loneliness or find it difficult to separate work from personal time. These issues are particularly serious when companies simply close offices without redesigning communication, training and workload expectations.",
+        "Nevertheless, remote work produces wider and more measurable benefits. Eliminating a daily commute gives employees time for sleep, family responsibilities or exercise, while reducing transport costs and congestion. It also removes geographical barriers from recruitment. A person living in a smaller town, caring for a relative or managing a physical disability can compete for roles that were previously accessible only near major business centres. Employers, meanwhile, can recruit from a larger talent pool and use office space more efficiently. For tasks requiring sustained concentration, a quiet home environment may also be more productive than an open-plan workplace.",
+        "Most disadvantages can be reduced through planned hybrid days, mentoring sessions, clear response times and regular social contact. The benefits, by contrast, arise from fundamental savings in travel and broader access to employment. I therefore conclude that remote work is a positive development overall, provided that workers retain suitable equipment, managerial support and opportunities for face-to-face collaboration."
+      ],
+      "criterionNotes": {
+        "task": "明确判断 outweigh，并比较缺点可缓解、优点更结构性的差异。",
+        "coherence": "先完整承认缺点，再用 nevertheless 进入权重更高的优势。",
+        "lexical": "coordination、geographical barriers、talent pool 与工作主题紧密。",
+        "grammar": "条件句和 while/when/provided that 准确表达边界。"
+      }
+    },
+    {
+      "id": "task2-positive-social-news",
+      "task": "Task 2",
+      "type": "positive-negative development",
+      "titleZh": "积极或消极：社交媒体新闻",
+      "titleEn": "News through social media",
+      "topic": "technology-media",
+      "timeMinutes": 40,
+      "minimumWords": 250,
+      "question": "More people now get their news from social media rather than printed newspapers. Is this a positive or negative development?",
+      "overviewZh": "判断：可及性和即时性是优势，但算法放大失实信息、削弱共同事实基础，因此总体偏消极；解决方向是来源透明和媒体素养。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "承认便利，给出总体消极的判断。"},
+        {"headingZh": "主体一", "contentZh": "积极面：快速、低成本、地方与弱势声音可传播。"},
+        {"headingZh": "主体二", "contentZh": "更严重消极面：速度压过核查、算法奖励情绪、用户困在信息茧房。"},
+        {"headingZh": "结论", "contentZh": "说明负面为何权重更高，并提出改善条件。"}
+      ],
+      "templateEn": [
+        "The shift from [old medium] to [new medium] has improved [benefit], but I regard it as a largely [positive/negative] development because [decisive reason].",
+        "On the positive side, [benefit]. This enables [group] to [effect].",
+        "The more serious concern is [harm]. Since [mechanism], users may [consequence].",
+        "For these reasons, the trend is [judgement], unless [safeguard]."
+      ],
+      "vocabulary": [
+        {"word": "editorial verification", "meaningZh": "编辑核查"},
+        {"word": "algorithmic feed", "meaningZh": "算法信息流"},
+        {"word": "misleading claim", "meaningZh": "误导性说法"},
+        {"word": "information bubble", "meaningZh": "信息茧房"},
+        {"word": "source transparency", "meaningZh": "来源透明度"},
+        {"word": "media literacy", "meaningZh": "媒体素养"}
+      ],
+      "modelAnswer": [
+        "Social platforms have become a primary gateway to current events, particularly for younger audiences, while printed newspaper circulation continues to decline. Although social media makes news faster and more accessible, I consider this a mainly negative development because its distribution systems often reward attention rather than accuracy.",
+        "There are clear advantages to receiving news through social networks. Updates can reach people within minutes, often without a subscription, and users can follow local reporters, specialist organisations and witnesses directly. This can give visibility to events that a national newspaper might overlook. During an emergency, rapid posts may also help residents locate transport changes, shelters or medical support. In addition, readers can compare reporting from different countries instead of depending on a single publication.",
+        "However, the same speed creates pressure to publish before information has been verified. A dramatic but false claim can be shared thousands of times before a correction appears, and the correction rarely receives equal attention. Platform algorithms intensify this problem because content that provokes fear or anger tends to generate more interaction. Users may therefore see repeated versions of what they already believe and mistake popularity for evidence. Printed newspapers are not free from bias, but identifiable editors and correction procedures provide clearer responsibility than an anonymous account or recycled video clip.",
+        "Overall, wider access does not compensate for damage to the reliability of public information. The trend could become more positive if platforms labelled original sources, reduced the reach of demonstrably false posts and supported independent fact-checking. Schools and news organisations should also teach media literacy. Until such safeguards are normal, obtaining most news through social media is a negative development."
+      ],
+      "criterionNotes": {
+        "task": "判断始终为 mainly negative，同时公平讨论积极面。",
+        "coherence": "用同一机制链解释算法、情绪传播和错误信念。",
+        "lexical": "verification、algorithms、correction procedures 比泛用 bad news 更准确。",
+        "grammar": "让步和原因从句支撑判断，不堆短句。"
+      }
+    },
+    {
+      "id": "task2-two-part-city-migration",
+      "task": "Task 2",
+      "type": "two-part/direct questions",
+      "titleZh": "双问题：年轻人迁往大城市",
+      "titleEn": "Young people moving to cities",
+      "topic": "transport-cities-housing",
+      "timeMinutes": 40,
+      "minimumWords": 250,
+      "question": "In many countries, young people are leaving small towns and moving to large cities. Why is this happening? What measures could encourage more young adults to remain in smaller communities?",
+      "overviewZh": "原因是机会集中而非单纯偏爱城市；措施应把优质工作、教育、交通和数字基础设施带到小城，而不是宣传乡村生活。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "同时概括原因与解决方向。"},
+        {"headingZh": "主体一", "contentZh": "回答 why：高技能岗位、大学、社交文化与公共服务集中。"},
+        {"headingZh": "主体二", "contentZh": "回答 measures：分布式就业、远程枢纽、职业教育、交通住房和创业支持。"},
+        {"headingZh": "结论", "contentZh": "重申选择取决于机会是否可比较。"}
+      ],
+      "templateEn": [
+        "This movement is mainly driven by [cause 1] and [cause 2]. To address it, governments should [solution direction].",
+        "The first reason is [cause]. In smaller communities, [development], whereas large cities [contrast].",
+        "An effective response would combine [measure A] with [measure B]. This would [mechanism and result].",
+        "Young adults are more likely to stay when [final condition]."
+      ],
+      "vocabulary": [
+        {"word": "opportunity gap", "meaningZh": "机会差距"},
+        {"word": "regional employer", "meaningZh": "地区雇主"},
+        {"word": "digital infrastructure", "meaningZh": "数字基础设施"},
+        {"word": "vocational partnership", "meaningZh": "职业教育合作"},
+        {"word": "business incubator", "meaningZh": "创业孵化器"},
+        {"word": "retain young residents", "meaningZh": "留住年轻居民"}
+      ],
+      "modelAnswer": [
+        "The movement of young adults from small towns to major cities is often described as a lifestyle choice, but it is more fundamentally a response to unequal opportunities. Employment and education are the main forces behind this migration, and smaller communities will retain more residents only if they offer credible routes to skilled work and an independent adult life.",
+        "Large cities concentrate universities, specialist training and employers in fast-growing sectors. A graduate interested in biotechnology, finance or digital design may find few suitable positions in a small town, whereas a city offers several possible employers and clearer career progression. Cities also provide frequent public transport, larger social networks and a wider range of cultural activities. For a young person who cannot drive or who wants to meet peers with similar interests, these services make urban life considerably easier. Moving is therefore a rational response to an opportunity gap rather than a rejection of one's home community.",
+        "Policies should narrow that gap. Governments can offer tax incentives for firms that establish stable regional offices, but support should be tied to skilled, long-term jobs rather than temporary relocation. Reliable broadband and shared remote-working hubs would allow residents to work for national companies without leaving their town. Local colleges could also design vocational courses with nearby employers so that training leads directly to vacancies. Finally, affordable rental housing, regular transport to regional centres and small-business grants would make it easier for young adults to build both a career and a social life locally.",
+        "In conclusion, young people move because cities currently provide a denser package of work, learning and services. Smaller towns cannot reverse this trend through promotional campaigns alone; they need sustained investment that gives residents comparable opportunities and genuine reasons to stay."
+      ],
+      "criterionNotes": {
+        "task": "两个问号分别由一个主体段完整回答，措施与原因一一对应。",
+        "coherence": "原因形成 opportunity gap，方案围绕缩小 gap 展开。",
+        "lexical": "regional offices、remote-working hubs、vocational courses 具体可执行。",
+        "grammar": "who/that 条件和 rather than 对比结构准确。"
+      }
+    },
+    {
+      "id": "task2-causes-waste",
+      "task": "Task 2",
+      "type": "causes-problems-solutions",
+      "titleZh": "原因与解决：城市生活垃圾增加",
+      "titleEn": "Growing household waste",
+      "topic": "environment-energy",
+      "timeMinutes": 40,
+      "minimumWords": 250,
+      "question": "Many cities are producing increasing amounts of household waste. What are the main causes of this problem, and what solutions can governments and individuals adopt?",
+      "overviewZh": "成因是一次性包装、低维修成本和按数量刺激的消费；解决需要生产者责任、按量收费、维修体系和个人减少源头浪费。",
+      "plan": [
+        {"headingZh": "引言", "contentZh": "概括消费系统和家庭选择共同导致，并提出双方行动。"},
+        {"headingZh": "主体一", "contentZh": "原因：包装、电商、廉价替换、食物计划不足。"},
+        {"headingZh": "主体二", "contentZh": "政府：生产者责任、押金制、按量收费、分类和维修基础设施。"},
+        {"headingZh": "主体三或结论", "contentZh": "个人：重复使用、维修、二手和规划采购；强调政策改变默认选项。"}
+      ],
+      "templateEn": [
+        "The growth in [problem] stems mainly from [cause A] and [cause B]. A combination of [government action] and [individual action] is required.",
+        "One major cause is [cause]. Because [mechanism], households [result].",
+        "Governments can address this by [policy]. This would make [actor] responsible for [effect].",
+        "Individuals should also [action], although their choices become easier when [system condition]."
+      ],
+      "vocabulary": [
+        {"word": "single-use packaging", "meaningZh": "一次性包装"},
+        {"word": "planned obsolescence", "meaningZh": "计划性淘汰"},
+        {"word": "producer responsibility", "meaningZh": "生产者责任"},
+        {"word": "deposit-return scheme", "meaningZh": "押金返还制度"},
+        {"word": "pay-as-you-throw fee", "meaningZh": "按垃圾量收费"},
+        {"word": "waste prevention", "meaningZh": "源头减废"}
+      ],
+      "modelAnswer": [
+        "Household waste is rising in many urban areas even where recycling services have expanded. The main causes are product and packaging systems that favour disposal, together with patterns of consumption that make replacement easier than reuse. Governments must change the incentives facing producers and households, while individuals can reduce waste at the point of purchase.",
+        "A major cause is the growth of single-use packaging. Online deliveries, takeaway meals and individually wrapped goods create material that is discarded within minutes. At the same time, inexpensive furniture and electronics are often difficult to repair because spare parts are unavailable or repairs cost nearly as much as a new product. Food waste adds another substantial stream when households buy without planning, misunderstand date labels or reject visually imperfect produce. In each case, convenience is cheap for the consumer but expensive for the city's waste system.",
+        "Governments can respond by making manufacturers responsible for the full life of their products. Producer-responsibility rules should require companies to fund collection and recycling, while repairability standards can ensure that parts and manuals remain available. Deposit-return schemes for containers and pay-as-you-throw charges for mixed rubbish would give households a financial reason to avoid unnecessary waste. Cities must also provide reliable separate collection for food, recyclable materials and residual waste; rules have little effect if residents lack practical facilities.",
+        "Individuals can support these measures by carrying reusable containers, choosing durable and repairable goods, buying second-hand items and planning meals before shopping. However, personal effort is most effective when low-waste choices are convenient and affordable. Reducing urban rubbish therefore requires prevention at every stage, from product design to household disposal, rather than relying on recycling alone."
+      ],
+      "criterionNotes": {
+        "task": "原因、政府方案和个人方案全部回答，且每项方案对应具体机制。",
+        "coherence": "从产品设计到家庭处置形成完整因果链。",
+        "lexical": "producer responsibility、repairability、residual waste 具体而自然。",
+        "grammar": "because、while、if 和 rather than 清楚表达因果与条件。"
+      }
+    }
+  ]
+}

@@ -17,6 +17,7 @@ def main() -> None:
     corpus = load("corpus.json")
     speaking = load("speaking.json")
     questions = load("questions.json")
+    writing = load("writing.json")
 
     topic_ids = [topic["id"] for topic in speaking["topics"]]
     assert len(topic_ids) == len(set(topic_ids)), "duplicate merged topic id"
@@ -51,18 +52,44 @@ def main() -> None:
             assert question["vocabulary"]
 
     assert len(question_ids) == len(set(question_ids)), "duplicate practice question id"
+
+    writing_ids: list[str] = []
+    for exercise in writing["exercises"]:
+        writing_ids.append(exercise["id"])
+        assert exercise["task"] in {"Task 1", "Task 2"}
+        assert exercise["question"].strip()
+        assert exercise["timeMinutes"] in {20, 40}
+        assert exercise["minimumWords"] in {150, 250}
+        assert len(exercise["plan"]) >= 4
+        assert len(exercise["templateEn"]) >= 3
+        assert len(exercise["vocabulary"]) >= 6
+        assert len(exercise["modelAnswer"]) >= 4
+        word_count = len(" ".join(exercise["modelAnswer"]).split())
+        assert word_count >= exercise["minimumWords"], f"short writing model for {exercise['id']}"
+        assert set(exercise["criterionNotes"]) == {"task", "coherence", "lexical", "grammar"}
+        if exercise["task"] == "Task 1":
+            assert exercise.get("visual"), f"missing Task 1 visual for {exercise['id']}"
+        else:
+            assert not exercise.get("visual"), f"unexpected Task 2 visual for {exercise['id']}"
+
+    assert len(writing_ids) == len(set(writing_ids)), "duplicate writing exercise id"
+    assert writing["meta"]["exerciseCount"] == len(writing_ids)
+    assert writing["meta"]["task1Count"] == sum(item["task"] == "Task 1" for item in writing["exercises"])
+    assert writing["meta"]["task2Count"] == sum(item["task"] == "Task 2" for item in writing["exercises"])
     assert manifest["counts"]["topics"] == len(topic_ids)
     assert manifest["counts"]["sourceQuestions"] == len(source_question_ids)
     assert manifest["counts"]["practiceQuestions"] == len(question_ids)
+    assert manifest["counts"]["writingExercises"] == len(writing_ids)
     assert questions["meta"]["practiceQuestionCount"] == len(question_ids)
     assert manifest["files"] == {
         "corpus": "data/corpus.json",
         "speaking": "data/speaking.json",
         "questions": "data/questions.json",
+        "writing": "data/writing.json",
     }
     print(
         f"Validated {len(topic_ids)} merged topics, {len(source_question_ids)} source questions "
-        f"and {len(question_ids)} practice questions."
+        f"{len(question_ids)} speaking practice questions and {len(writing_ids)} writing exercises."
     )
 
 
