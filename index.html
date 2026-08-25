@@ -14,9 +14,9 @@
   <meta property="og:url" content="https://eugenewang5425.github.io/ielts-corpus-lab/">
   <meta property="og:image" content="https://eugenewang5425.github.io/ielts-corpus-lab/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="styles.css?v=8">
-  <link rel="stylesheet" href="overrides.css?v=8">
-  <script src="app.js?v=8" defer></script>
+  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="overrides.css?v=9">
+  <script src="app.js?v=9" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -72,6 +72,16 @@
     <section class="view page" data-view="coverage" hidden>
       <header class="page-head"><p class="eyebrow">Reading & Listening audit</p><h1>阅读与听力语料覆盖</h1><p>这是对旧版“小样本词表”的直接修正，但仍不会把预测题等同于官方真题。</p></header>
       <div id="lr-coverage" class="metric-grid two"></div>
+      <section class="chunk-library" aria-labelledby="chunk-title">
+        <div class="section-head"><div><p class="eyebrow">Evidence → meaning → usage</p><h2 id="chunk-title">阅读与听力词块</h2></div><p>不是把相邻单词机械拼在一起：先保留语料中真实出现的连续词块，再补充中文释义、搭配骨架和本站原创例句。</p></div>
+        <div class="notice chunk-notice"><b>怎样看统计</b><span id="chunk-method"></span></div>
+        <div class="chunk-toolbar">
+          <div id="chunk-skill-tabs" class="tabs" aria-label="选择阅读或听力"></div>
+          <div id="chunk-category-tabs" class="chunk-category-tabs" aria-label="筛选词块类别"></div>
+        </div>
+        <div id="chunk-summary" class="chunk-summary" aria-live="polite"></div>
+        <div id="chunk-grid" class="chunk-grid"></div>
+      </section>
       <article class="truth"><p class="eyebrow">Cambridge boundary</p><h2>现在还不能叫“完整剑桥雅思题库”</h2><p>现有 C4–C16 同义替换/词汇派生资料只记作 <code>cambridge_derived</code>。后续可私有导入合法购买的书籍计算聚合值；公共站仍不会复制文章、音频、图片和答案。</p></article>
     </section>
 
@@ -84,10 +94,11 @@
       <article><h2>1. 统计单元</h2><p>一篇阅读文章、一份听力转写、一条口语题目或一条写作题目作为一个文档。完全相同的本地 PDF 抽取文本按哈希去重。</p></article>
       <article><h2>2. 基础词与噪声</h2><p>剔除 a、to、the 等功能词、数字词、题目指令、听力转写标记，以及 chart / graph / describe 等题型模板词。</p></article>
       <article><h2>3. 排名指标</h2><div class="formula"><div><b>Occurrence</b><p>语料内总出现次数。</p></div><div><b>Document frequency</b><p>至少出现一次的文档数。</p></div><div><b>Per 10k</b><p>每一万学习词中的出现次数。</p></div><div><b>Confidence</b><p>综合文档覆盖与独立来源数。</p></div></div></article>
-      <article><h2>4. 口语主题合并</h2><p>把每条来源记录拆成独立的 Part 1、Part 2、Part 3 问题，再通过受控主题词典归入规范主题。文本相同的问题合并为一题，但保留全部来源引用；相近主题通过人工别名表合并，例如 Music、Singing 和 Music event。</p></article>
-      <article><h2>5. 练习优先与来源参考</h2><p>主题展开后默认进入“准备的问题与示范”，包含思路、模板、示范回答和常用词；“来源参考”只在需要核对出处时打开，保留来源、时期、地区和链接，但不在主题卡上突出庞大的来源题目数量。</p></article>
-      <article><h2>6. 在线数据库与更新</h2><p>公开数据以版本化 JSON 存放在 GitHub 仓库中。网页先读取最新版本清单，再加载统计库、合并口语库和练习问答库；更新 <code>main</code> 后，GitHub Pages 会向所有访客提供同一快照。</p></article>
-      <article><h2>7. 版权与准确性边界</h2><p>来源题目的所有权归标注的发布方或贡献者；本站只进行主题归类、文本去重和来源整理。剑桥文章、音频、图片及答案仍不公开复制。考生回忆与非官方汇编可能存在遗漏或措辞误差，应结合来源等级判断。</p></article>
+      <article><h2>4. 阅读与听力词块</h2><p>词块按大小写归一后的连续词序列精确计数，同时报告出现次数、文档覆盖和来源集合。高可信需覆盖约 12% 的统计单元并跨至少两个来源集合；覆盖不足或只见于单一材料层的词块降为中或探索。释义、搭配骨架和例句为本站原创学习内容，不复制原题长句。</p></article>
+      <article><h2>5. 口语主题合并</h2><p>把每条来源记录拆成独立的 Part 1、Part 2、Part 3 问题，再通过受控主题词典归入规范主题。文本相同的问题合并为一题，但保留全部来源引用；相近主题通过人工别名表合并，例如 Music、Singing 和 Music event。</p></article>
+      <article><h2>6. 练习优先与来源参考</h2><p>主题展开后默认进入“准备的问题与示范”，包含思路、模板、示范回答和常用词；“来源参考”只在需要核对出处时打开，保留来源、时期、地区和链接，但不在主题卡上突出庞大的来源题目数量。</p></article>
+      <article><h2>7. 在线数据库与更新</h2><p>公开数据以版本化 JSON 存放在 GitHub 仓库中。网页先读取最新版本清单，再加载统计库、词块库、合并口语库和练习问答库；更新 <code>main</code> 后，GitHub Pages 会向所有访客提供同一快照。</p></article>
+      <article><h2>8. 版权与准确性边界</h2><p>来源题目的所有权归标注的发布方或贡献者；本站只进行主题归类、文本去重和来源整理。剑桥文章、音频、图片及答案仍不公开复制。考生回忆与非官方汇编可能存在遗漏或措辞误差，应结合来源等级判断。</p></article>
     </section>
   </main>
   <footer><span>IELTS Corpus Lab · GitHub Pages 公共镜像</span><a href="#method">查看统计方法</a></footer>

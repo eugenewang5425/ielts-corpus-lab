@@ -18,6 +18,7 @@ def main() -> None:
     speaking = load("speaking.json")
     questions = load("questions.json")
     writing = load("writing.json")
+    chunks = load("chunks.json")
 
     topic_ids = [topic["id"] for topic in speaking["topics"]]
     assert len(topic_ids) == len(set(topic_ids)), "duplicate merged topic id"
@@ -76,20 +77,50 @@ def main() -> None:
     assert writing["meta"]["exerciseCount"] == len(writing_ids)
     assert writing["meta"]["task1Count"] == sum(item["task"] == "Task 1" for item in writing["exercises"])
     assert writing["meta"]["task2Count"] == sum(item["task"] == "Task 2" for item in writing["exercises"])
+    chunk_ids: list[str] = []
+    for chunk in chunks["chunks"]:
+        chunk_ids.append(chunk["id"])
+        assert chunk["skill"] in {"Reading", "Listening"}
+        assert chunk["phrase"].strip()
+        assert chunk["meaningZh"].strip()
+        assert chunk["frame"].strip()
+        assert chunk["usageZh"].strip()
+        assert chunk["exampleEn"].strip()
+        assert chunk["exampleZh"].strip()
+        assert chunk["contentLabel"] == "本站原创例句"
+        assert chunk["occurrenceCount"] >= chunk["documentFrequency"] >= 1
+        assert 0 < chunk["documentCoverage"] <= 1
+        assert sum(chunk["sourceMix"].values()) == chunk["occurrenceCount"]
+        assert chunk["sourceCount"] >= 1
+        assert chunk["confidence"] in {"high", "medium", "exploratory"}
+    assert len(chunk_ids) == len(set(chunk_ids)), "duplicate chunk id"
+    assert chunks["meta"]["chunkCount"] == len(chunk_ids)
+    assert {stat["skill"] for stat in chunks["skillStats"]} == {"Reading", "Listening"}
+    assert sum(stat["chunkCount"] for stat in chunks["skillStats"]) == len(chunk_ids)
+    coverage_by_skill = {row["skill"]: row for row in corpus["coverage"]}
+    for stat in chunks["skillStats"]:
+        coverage = coverage_by_skill[stat["skill"]]
+        assert stat["documents"] == coverage["documents"]
+        assert stat["filteredTokenCount"] == coverage["filteredTokens"]
+        assert stat["sourceCount"] == coverage["sources"]
+        assert stat["sourceGroups"] == coverage["sourceGroups"]
     assert manifest["counts"]["topics"] == len(topic_ids)
     assert manifest["counts"]["sourceQuestions"] == len(source_question_ids)
     assert manifest["counts"]["practiceQuestions"] == len(question_ids)
     assert manifest["counts"]["writingExercises"] == len(writing_ids)
+    assert manifest["counts"]["chunks"] == len(chunk_ids)
     assert questions["meta"]["practiceQuestionCount"] == len(question_ids)
     assert manifest["files"] == {
         "corpus": "data/corpus.json",
         "speaking": "data/speaking.json",
         "questions": "data/questions.json",
         "writing": "data/writing.json",
+        "chunks": "data/chunks.json",
     }
     print(
         f"Validated {len(topic_ids)} merged topics, {len(source_question_ids)} source questions "
-        f"{len(question_ids)} speaking practice questions and {len(writing_ids)} writing exercises."
+        f"{len(question_ids)} speaking practice questions, {len(writing_ids)} writing exercises "
+        f"and {len(chunk_ids)} Reading/Listening chunks."
     )
 
 

@@ -1,0 +1,1434 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-25T08:26:56.365823+00:00",
+  "meta": {
+    "titleZh": "阅读与听力词块库",
+    "contentLabel": "统计证据 + 本站原创学习内容",
+    "sourceFile": "corpus_dedup.csv + 本地资料去重 PDF",
+    "sourceLayers": [
+      "official_public",
+      "cambridge_derived",
+      "third_party_prediction"
+    ],
+    "chunkCount": 64,
+    "copyrightNoteZh": "词块次数来自去重语料；释义、搭配骨架和例句由本站原创整理，不复制原题长句。"
+  },
+  "methodology": {
+    "countUnitZh": "按大小写归一后的连续词序列精确计数；同一统计单元内可重复出现。",
+    "coverageZh": "文档覆盖表示至少出现一次该词块的统计单元占比。",
+    "confidenceZh": "高可信需覆盖约 12% 的统计单元且跨至少两个来源集合；覆盖 3 个及以上但未跨来源为中，其余为探索。完整原题与派生资料分层统计。"
+  },
+  "skillStats": [
+    {
+      "skill": "Reading",
+      "documents": 35,
+      "sourceCount": 2,
+      "filteredTokenCount": 41320,
+      "sourceGroups": [
+        "official_public",
+        "third_party_prediction"
+      ],
+      "chunkCount": 26,
+      "categories": [
+        {
+          "name": "关系与论证",
+          "count": 8
+        },
+        {
+          "name": "研究与证据",
+          "count": 8
+        },
+        {
+          "name": "范围与数量",
+          "count": 4
+        },
+        {
+          "name": "结构与过程",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "skill": "Listening",
+      "documents": 42,
+      "sourceCount": 3,
+      "filteredTokenCount": 36002,
+      "sourceGroups": [
+        "cambridge_derived",
+        "official_public",
+        "third_party_prediction"
+      ],
+      "chunkCount": 38,
+      "categories": [
+        {
+          "name": "互动与澄清",
+          "count": 8
+        },
+        {
+          "name": "安排与流程",
+          "count": 10
+        },
+        {
+          "name": "意向与选择",
+          "count": 5
+        },
+        {
+          "name": "时间与方位",
+          "count": 8
+        },
+        {
+          "name": "学习与活动",
+          "count": 5
+        },
+        {
+          "name": "服务与设施",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "id": "listening-i-d-like-to",
+      "skill": "Listening",
+      "phrase": "i'd like to",
+      "category": "互动与澄清",
+      "meaningZh": "我想要……",
+      "frame": "I'd like to + verb",
+      "usageZh": "比 I want to 更礼貌，常用于预订、咨询和报名。",
+      "exampleEn": "I'd like to reserve a place on the afternoon tour.",
+      "exampleZh": "我想预订下午参观的一个名额。",
+      "occurrenceCount": 30,
+      "documentFrequency": 22,
+      "documentCoverage": 0.52381,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 27,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-interested-in",
+      "skill": "Listening",
+      "phrase": "interested in",
+      "category": "意向与选择",
+      "meaningZh": "对……感兴趣",
+      "frame": "be interested in + noun/-ing",
+      "usageZh": "用于筛选活动、地点、课程或服务偏好。",
+      "exampleEn": "Are you interested in joining the photography workshop?",
+      "exampleZh": "你有兴趣参加摄影工作坊吗？",
+      "occurrenceCount": 41,
+      "documentFrequency": 21,
+      "documentCoverage": 0.5,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 35,
+        "official_public": 6
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-first-of-all",
+      "skill": "Listening",
+      "phrase": "first of all",
+      "category": "互动与澄清",
+      "meaningZh": "首先",
+      "frame": "First of all, + first step",
+      "usageZh": "结构路标，预示流程或清单的第一项。",
+      "exampleEn": "First of all, please check the reference number.",
+      "exampleZh": "首先，请核对参考编号。",
+      "occurrenceCount": 20,
+      "documentFrequency": 16,
+      "documentCoverage": 0.380952,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 18,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-make-sure",
+      "skill": "Listening",
+      "phrase": "make sure",
+      "category": "互动与澄清",
+      "meaningZh": "确认；确保",
+      "frame": "make sure + clause",
+      "usageZh": "提示说话人正在核对条件、时间或必要步骤。",
+      "exampleEn": "Please make sure the form includes your reference number.",
+      "exampleZh": "请确认表格中包含你的参考编号。",
+      "occurrenceCount": 28,
+      "documentFrequency": 15,
+      "documentCoverage": 0.357143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 26,
+        "cambridge_derived": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-as-well-as",
+      "skill": "Listening",
+      "phrase": "as well as",
+      "category": "安排与流程",
+      "meaningZh": "以及；除……之外还",
+      "frame": "A as well as B",
+      "usageZh": "表示附加信息，主信息通常位于词块前。",
+      "exampleEn": "The centre provides study rooms as well as computer access.",
+      "exampleZh": "该中心除提供电脑使用外，还提供自习室。",
+      "occurrenceCount": 18,
+      "documentFrequency": 15,
+      "documentCoverage": 0.357143,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 14,
+        "official_public": 3,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-due-to",
+      "skill": "Listening",
+      "phrase": "due to",
+      "category": "安排与流程",
+      "meaningZh": "由于",
+      "frame": "due to + noun phrase",
+      "usageZh": "常用于解释变更、延误或取消的原因。",
+      "exampleEn": "The afternoon session was cancelled due to low demand.",
+      "exampleZh": "下午场因需求不足而取消。",
+      "occurrenceCount": 19,
+      "documentFrequency": 14,
+      "documentCoverage": 0.333333,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 15,
+        "cambridge_derived": 4
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-next-week",
+      "skill": "Listening",
+      "phrase": "next week",
+      "category": "时间与方位",
+      "meaningZh": "下周",
+      "frame": "by/until/next week",
+      "usageZh": "结合介词辨别是截止时间还是发生时间。",
+      "exampleEn": "The new timetable will be available next week.",
+      "exampleZh": "新时间表将在下周公布。",
+      "occurrenceCount": 17,
+      "documentFrequency": 12,
+      "documentCoverage": 0.285714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 13,
+        "official_public": 4
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-next-to",
+      "skill": "Listening",
+      "phrase": "next to",
+      "category": "时间与方位",
+      "meaningZh": "紧挨着",
+      "frame": "A is next to B",
+      "usageZh": "地图题核心相邻关系，比 near 更精确。",
+      "exampleEn": "The information desk is next to the main entrance.",
+      "exampleZh": "服务台紧挨着主入口。",
+      "occurrenceCount": 16,
+      "documentFrequency": 10,
+      "documentCoverage": 0.238095,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 12,
+        "official_public": 3,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-focus-on",
+      "skill": "Listening",
+      "phrase": "focus on",
+      "category": "安排与流程",
+      "meaningZh": "重点关注",
+      "frame": "focus on + topic/task",
+      "usageZh": "课程、讲座和研究介绍中的主题定位词块。",
+      "exampleEn": "The second lecture will focus on urban transport.",
+      "exampleZh": "第二场讲座将重点讨论城市交通。",
+      "occurrenceCount": 11,
+      "documentFrequency": 10,
+      "documentCoverage": 0.238095,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 7,
+        "cambridge_derived": 3,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-would-you-like",
+      "skill": "Listening",
+      "phrase": "would you like",
+      "category": "互动与澄清",
+      "meaningZh": "您想要……吗",
+      "frame": "Would you like + noun/to do",
+      "usageZh": "礼貌提供选项，答案常紧跟其后。",
+      "exampleEn": "Would you like a single room or a double room?",
+      "exampleZh": "您想要单人间还是双人间？",
+      "occurrenceCount": 12,
+      "documentFrequency": 9,
+      "documentCoverage": 0.214286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 10,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-a-variety-of",
+      "skill": "Listening",
+      "phrase": "a variety of",
+      "category": "安排与流程",
+      "meaningZh": "多种；各种",
+      "frame": "a variety of + plural noun",
+      "usageZh": "预示后面会列举多个服务、课程或设施。",
+      "exampleEn": "The club offers a variety of weekend activities.",
+      "exampleZh": "俱乐部提供多种周末活动。",
+      "occurrenceCount": 11,
+      "documentFrequency": 9,
+      "documentCoverage": 0.214286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 10,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-responsible-for",
+      "skill": "Listening",
+      "phrase": "responsible for",
+      "category": "安排与流程",
+      "meaningZh": "负责……",
+      "frame": "be responsible for + noun/-ing",
+      "usageZh": "识别人物、部门或设施的职责分工。",
+      "exampleEn": "The course tutor is responsible for marking the final project.",
+      "exampleZh": "课程导师负责批改期末项目。",
+      "occurrenceCount": 11,
+      "documentFrequency": 9,
+      "documentCoverage": 0.214286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 10,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-can-i-help-you",
+      "skill": "Listening",
+      "phrase": "can i help you",
+      "category": "互动与澄清",
+      "meaningZh": "我能帮您吗",
+      "frame": "Can I help you + ?",
+      "usageZh": "服务场景常见开场，提示接下来会提出需求。",
+      "exampleEn": "Can I help you with the booking today?",
+      "exampleZh": "今天的预订需要我帮忙吗？",
+      "occurrenceCount": 9,
+      "documentFrequency": 8,
+      "documentCoverage": 0.190476,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 7,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-go-for",
+      "skill": "Listening",
+      "phrase": "go for",
+      "category": "意向与选择",
+      "meaningZh": "选择",
+      "frame": "go for + option",
+      "usageZh": "口语中常表示在几个方案中作出选择。",
+      "exampleEn": "I'll go for the standard membership this time.",
+      "exampleZh": "这次我选择标准会员。",
+      "occurrenceCount": 8,
+      "documentFrequency": 7,
+      "documentCoverage": 0.166667,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-hoping-to",
+      "skill": "Listening",
+      "phrase": "hoping to",
+      "category": "意向与选择",
+      "meaningZh": "希望做……",
+      "frame": "be hoping to + verb",
+      "usageZh": "表示计划但尚未最终确定。",
+      "exampleEn": "We're hoping to open the new study area in June.",
+      "exampleZh": "我们希望六月开放新的学习区。",
+      "occurrenceCount": 7,
+      "documentFrequency": 7,
+      "documentCoverage": 0.166667,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-made-up-of",
+      "skill": "Listening",
+      "phrase": "made up of",
+      "category": "学习与活动",
+      "meaningZh": "由……组成",
+      "frame": "be made up of + components",
+      "usageZh": "听结构说明时用于预测后续列举。",
+      "exampleEn": "The programme is made up of four short modules.",
+      "exampleZh": "该项目由四个短模块组成。",
+      "occurrenceCount": 7,
+      "documentFrequency": 7,
+      "documentCoverage": 0.166667,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "cambridge_derived": 3,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-a-bit-about",
+      "skill": "Listening",
+      "phrase": "a bit about",
+      "category": "互动与澄清",
+      "meaningZh": "一点关于……的信息",
+      "frame": "tell/ask + a bit about + topic",
+      "usageZh": "提示后面将展开主题背景或服务说明。",
+      "exampleEn": "Let me tell you a bit about the training programme.",
+      "exampleZh": "让我简单介绍一下培训项目。",
+      "occurrenceCount": 6,
+      "documentFrequency": 6,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-in-advance",
+      "skill": "Listening",
+      "phrase": "in advance",
+      "category": "安排与流程",
+      "meaningZh": "提前",
+      "frame": "book/pay + in advance",
+      "usageZh": "与预订、付款和通知期限高频搭配。",
+      "exampleEn": "Group visits must be booked at least a week in advance.",
+      "exampleZh": "团体参观必须至少提前一周预订。",
+      "occurrenceCount": 6,
+      "documentFrequency": 6,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "cambridge_derived": 4,
+        "third_party_prediction": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-get-used-to",
+      "skill": "Listening",
+      "phrase": "get used to",
+      "category": "学习与活动",
+      "meaningZh": "习惯于……",
+      "frame": "get used to + noun/-ing",
+      "usageZh": "描述适应过程，to 后接名词或动名词。",
+      "exampleEn": "It took her a month to get used to studying alone.",
+      "exampleZh": "她花了一个月才习惯独自学习。",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 3,
+      "sourceMix": {
+        "cambridge_derived": 3,
+        "third_party_prediction": 2,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-located-in",
+      "skill": "Listening",
+      "phrase": "located in",
+      "category": "安排与流程",
+      "meaningZh": "位于……",
+      "frame": "be located in + area/building",
+      "usageZh": "地点说明中定位设施所在区域。",
+      "exampleEn": "The language lab is located in the west wing.",
+      "exampleZh": "语言实验室位于西翼。",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-take-place",
+      "skill": "Listening",
+      "phrase": "take place",
+      "category": "安排与流程",
+      "meaningZh": "举行；发生",
+      "frame": "event + take place + time/place",
+      "usageZh": "活动安排题中，时间或地点常紧随其后。",
+      "exampleEn": "The induction session will take place in the main hall.",
+      "exampleZh": "入门说明会将在主大厅举行。",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "cambridge_derived": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-at-home",
+      "skill": "Listening",
+      "phrase": "at home",
+      "category": "时间与方位",
+      "meaningZh": "在家",
+      "frame": "study/work/use + at home",
+      "usageZh": "常与现场、学校或办公室形成地点对比。",
+      "exampleEn": "You can complete the online module at home.",
+      "exampleZh": "你可以在家完成在线模块。",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 2
+      },
+      "confidence": "medium",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-can-you-tell-me",
+      "skill": "Listening",
+      "phrase": "can you tell me",
+      "category": "互动与澄清",
+      "meaningZh": "你能告诉我……吗",
+      "frame": "Can you tell me + detail",
+      "usageZh": "后面通常出现姓名、地址、时间或偏好等关键信息。",
+      "exampleEn": "Can you tell me which date you prefer?",
+      "exampleZh": "你能告诉我你更喜欢哪个日期吗？",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 4,
+        "third_party_prediction": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-deal-with",
+      "skill": "Listening",
+      "phrase": "deal with",
+      "category": "安排与流程",
+      "meaningZh": "处理；应对",
+      "frame": "deal with + issue/request",
+      "usageZh": "常用于职责、问题和服务流程说明。",
+      "exampleEn": "The accommodation office will deal with urgent repairs.",
+      "exampleZh": "住宿办公室会处理紧急维修。",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "cambridge_derived": 3,
+        "third_party_prediction": 2
+      },
+      "confidence": "medium",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-apply-for",
+      "skill": "Listening",
+      "phrase": "apply for",
+      "category": "安排与流程",
+      "meaningZh": "申请……",
+      "frame": "apply for + course/job/funding",
+      "usageZh": "后面通常是申请对象，注意与 apply to 的区别。",
+      "exampleEn": "Students can apply for travel funding in September.",
+      "exampleZh": "学生可以在九月申请旅行资助。",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "cambridge_derived": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-on-your-left",
+      "skill": "Listening",
+      "phrase": "on your left",
+      "category": "时间与方位",
+      "meaningZh": "在你的左侧",
+      "frame": "on your left as you + move",
+      "usageZh": "地图题中常与 entrance、turn、go past 连用。",
+      "exampleEn": "The lockers are on your left after the stairs.",
+      "exampleZh": "经过楼梯后，储物柜在你的左侧。",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-public-library",
+      "skill": "Listening",
+      "phrase": "public library",
+      "category": "服务与设施",
+      "meaningZh": "公共图书馆",
+      "frame": "the public library",
+      "usageZh": "地点题和设施清单中的高辨识度名词词块。",
+      "exampleEn": "The public library also provides free computer access.",
+      "exampleZh": "公共图书馆还提供免费电脑使用服务。",
+      "occurrenceCount": 3,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 3
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-i-d-rather",
+      "skill": "Listening",
+      "phrase": "i'd rather",
+      "category": "意向与选择",
+      "meaningZh": "我宁愿……",
+      "frame": "I'd rather + verb",
+      "usageZh": "强烈提示前一个选项被否定、后一个选项被选择。",
+      "exampleEn": "I'd rather travel in the morning if possible.",
+      "exampleZh": "如果可以，我宁愿早上出发。",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-next-door-to",
+      "skill": "Listening",
+      "phrase": "next door to",
+      "category": "时间与方位",
+      "meaningZh": "就在……隔壁",
+      "frame": "be next door to + place",
+      "usageZh": "表示直接相邻的房间或建筑。",
+      "exampleEn": "The seminar room is next door to the library.",
+      "exampleZh": "研讨室就在图书馆隔壁。",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-sign-up-for",
+      "skill": "Listening",
+      "phrase": "sign up for",
+      "category": "学习与活动",
+      "meaningZh": "报名参加",
+      "frame": "sign up for + course/event",
+      "usageZh": "提示课程或活动的最终选择。",
+      "exampleEn": "You can sign up for the workshop at reception.",
+      "exampleZh": "你可以在前台报名参加工作坊。",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-straight-on",
+      "skill": "Listening",
+      "phrase": "straight on",
+      "category": "时间与方位",
+      "meaningZh": "一直向前",
+      "frame": "go/carry straight on",
+      "usageZh": "地图题的移动指令，听到后保持原方向。",
+      "exampleEn": "Go straight on until you reach the courtyard.",
+      "exampleZh": "一直向前走，直到到达庭院。",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-time-management",
+      "skill": "Listening",
+      "phrase": "time management",
+      "category": "学习与活动",
+      "meaningZh": "时间管理",
+      "frame": "time-management + skills",
+      "usageZh": "课程咨询和学习体验中的常见能力词块。",
+      "exampleEn": "The course helped him improve his time-management skills.",
+      "exampleZh": "这门课帮助他提高了时间管理能力。",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-on-your-right",
+      "skill": "Listening",
+      "phrase": "on your right",
+      "category": "时间与方位",
+      "meaningZh": "在你的右侧",
+      "frame": "on your right as you + move",
+      "usageZh": "注意移动方向改变后左右关系也会改变。",
+      "exampleEn": "The café is on your right as you enter the hall.",
+      "exampleZh": "进入大厅时，咖啡馆在你的右侧。",
+      "occurrenceCount": 2,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-could-you-explain",
+      "skill": "Listening",
+      "phrase": "could you explain",
+      "category": "互动与澄清",
+      "meaningZh": "你能解释一下吗",
+      "frame": "Could you explain + noun/clause",
+      "usageZh": "提示说话人将改述或补充细节。",
+      "exampleEn": "Could you explain what the basic package includes?",
+      "exampleZh": "你能解释一下基础套餐包含什么吗？",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-depends-on",
+      "skill": "Listening",
+      "phrase": "depends on",
+      "category": "意向与选择",
+      "meaningZh": "取决于",
+      "frame": "depend on + factor",
+      "usageZh": "提示答案受条件限制，注意后面的决定因素。",
+      "exampleEn": "The final price depends on the size of the group.",
+      "exampleZh": "最终价格取决于团体人数。",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-get-involved-in",
+      "skill": "Listening",
+      "phrase": "get involved in",
+      "category": "学习与活动",
+      "meaningZh": "参与……",
+      "frame": "get involved in + activity",
+      "usageZh": "常出现在社团、志愿活动和社区场景。",
+      "exampleEn": "Students can get involved in several local projects.",
+      "exampleZh": "学生可以参与多个本地项目。",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-opposite-this",
+      "skill": "Listening",
+      "phrase": "opposite this",
+      "category": "时间与方位",
+      "meaningZh": "在它对面",
+      "frame": "opposite this/that + landmark",
+      "usageZh": "this 指代刚提到的地标，要及时在图上定位。",
+      "exampleEn": "The ticket office is opposite this building.",
+      "exampleZh": "售票处在这栋楼对面。",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "listening-pay-by",
+      "skill": "Listening",
+      "phrase": "pay by",
+      "category": "服务与设施",
+      "meaningZh": "用……支付",
+      "frame": "pay by + card/cheque",
+      "usageZh": "付款方式题中关注 by 后面的名词。",
+      "exampleEn": "You can pay by card when you collect the pass.",
+      "exampleZh": "领取通行证时可以刷卡付款。",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-based-on",
+      "skill": "Reading",
+      "phrase": "based on",
+      "category": "关系与论证",
+      "meaningZh": "基于；以……为依据",
+      "frame": "be based on + evidence/data",
+      "usageZh": "说明结论、分类或判断所依据的证据。",
+      "exampleEn": "The recommendation is based on evidence from several long-term studies.",
+      "exampleZh": "这项建议以多项长期研究的证据为依据。",
+      "occurrenceCount": 94,
+      "documentFrequency": 26,
+      "documentCoverage": 0.742857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 88,
+        "official_public": 6
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-because-of",
+      "skill": "Reading",
+      "phrase": "because of",
+      "category": "关系与论证",
+      "meaningZh": "因为；由于",
+      "frame": "because of + noun phrase",
+      "usageZh": "后接名词短语，不能直接接完整句子。",
+      "exampleEn": "The species declined because of rapid habitat loss.",
+      "exampleZh": "该物种因栖息地迅速减少而衰退。",
+      "occurrenceCount": 35,
+      "documentFrequency": 21,
+      "documentCoverage": 0.6,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 31,
+        "official_public": 4
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-according-to",
+      "skill": "Reading",
+      "phrase": "according to",
+      "category": "研究与证据",
+      "meaningZh": "根据；按照",
+      "frame": "according to + source",
+      "usageZh": "标出观点或数据的来源，而非作者本人的断言。",
+      "exampleEn": "According to the report, demand has doubled since 2010.",
+      "exampleZh": "根据该报告，需求自 2010 年以来翻了一番。",
+      "occurrenceCount": 52,
+      "documentFrequency": 19,
+      "documentCoverage": 0.542857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 50,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-number-of",
+      "skill": "Reading",
+      "phrase": "number of",
+      "category": "范围与数量",
+      "meaningZh": "……的数量；若干",
+      "frame": "the/a number of + plural noun",
+      "usageZh": "the number of 强调数量；a number of 表示若干。",
+      "exampleEn": "The number of recorded species increased after the survey.",
+      "exampleZh": "调查后记录到的物种数量增加了。",
+      "occurrenceCount": 30,
+      "documentFrequency": 19,
+      "documentCoverage": 0.542857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 27,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-able-to",
+      "skill": "Reading",
+      "phrase": "able to",
+      "category": "结构与过程",
+      "meaningZh": "能够……",
+      "frame": "be able to + verb",
+      "usageZh": "关注主语具备的能力、条件或最终结果。",
+      "exampleEn": "The insects are able to survive long periods without water.",
+      "exampleZh": "这些昆虫能够在长期缺水的情况下存活。",
+      "occurrenceCount": 29,
+      "documentFrequency": 16,
+      "documentCoverage": 0.457143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 26,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-rather-than",
+      "skill": "Reading",
+      "phrase": "rather than",
+      "category": "关系与论证",
+      "meaningZh": "而不是",
+      "frame": "A rather than B",
+      "usageZh": "突出作者选择的解释、方法或对象。",
+      "exampleEn": "The change reflects social pressure rather than biological need.",
+      "exampleZh": "这种变化反映的是社会压力，而非生理需求。",
+      "occurrenceCount": 27,
+      "documentFrequency": 15,
+      "documentCoverage": 0.428571,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 25,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-found-in",
+      "skill": "Reading",
+      "phrase": "found in",
+      "category": "研究与证据",
+      "meaningZh": "存在于；在……中发现",
+      "frame": "be found in + place/group",
+      "usageZh": "用于描述分布、位置或样本中的发现。",
+      "exampleEn": "The compound is found in several coastal plants.",
+      "exampleZh": "这种化合物存在于几种海岸植物中。",
+      "occurrenceCount": 25,
+      "documentFrequency": 15,
+      "documentCoverage": 0.428571,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 22,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-use-of",
+      "skill": "Reading",
+      "phrase": "use of",
+      "category": "结构与过程",
+      "meaningZh": "……的使用",
+      "frame": "the use of + method/material",
+      "usageZh": "名词化表达，常承载段落主题。",
+      "exampleEn": "The use of recycled glass reduced production costs.",
+      "exampleZh": "使用再生玻璃降低了生产成本。",
+      "occurrenceCount": 21,
+      "documentFrequency": 15,
+      "documentCoverage": 0.428571,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 15,
+        "official_public": 6
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-found-that",
+      "skill": "Reading",
+      "phrase": "found that",
+      "category": "研究与证据",
+      "meaningZh": "发现……",
+      "frame": "researchers found that + clause",
+      "usageZh": "快速识别研究结果句，that 后通常是核心发现。",
+      "exampleEn": "Researchers found that regular breaks improved recall.",
+      "exampleZh": "研究人员发现定期休息能改善记忆。",
+      "occurrenceCount": 36,
+      "documentFrequency": 13,
+      "documentCoverage": 0.371429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 31,
+        "official_public": 5
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-result-of",
+      "skill": "Reading",
+      "phrase": "result of",
+      "category": "范围与数量",
+      "meaningZh": "……的结果",
+      "frame": "the result of + cause/process",
+      "usageZh": "把观察到的现象连接到其来源或过程。",
+      "exampleEn": "The pattern may be the result of seasonal migration.",
+      "exampleZh": "这种模式可能是季节性迁徙的结果。",
+      "occurrenceCount": 16,
+      "documentFrequency": 13,
+      "documentCoverage": 0.371429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 14,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-known-as",
+      "skill": "Reading",
+      "phrase": "known as",
+      "category": "研究与证据",
+      "meaningZh": "被称为",
+      "frame": "be known as + name/term",
+      "usageZh": "常用于术语定义、别名和历史称谓。",
+      "exampleEn": "This stage is known as the consolidation period.",
+      "exampleZh": "这一阶段被称为巩固期。",
+      "occurrenceCount": 25,
+      "documentFrequency": 12,
+      "documentCoverage": 0.342857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 19,
+        "official_public": 6
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-likely-to",
+      "skill": "Reading",
+      "phrase": "likely to",
+      "category": "结构与过程",
+      "meaningZh": "可能会；很可能",
+      "frame": "be likely to + verb",
+      "usageZh": "表示概率判断，不等同于确定发生。",
+      "exampleEn": "Older structures are more likely to fail under repeated stress.",
+      "exampleZh": "较旧的结构在反复受力下更可能失效。",
+      "occurrenceCount": 22,
+      "documentFrequency": 12,
+      "documentCoverage": 0.342857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 20,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-used-in",
+      "skill": "Reading",
+      "phrase": "used in",
+      "category": "结构与过程",
+      "meaningZh": "用于……；在……中使用",
+      "frame": "be used in + field/process",
+      "usageZh": "用于识别工具、材料与应用领域。",
+      "exampleEn": "The technique is used in both medicine and archaeology.",
+      "exampleZh": "该技术用于医学和考古学。",
+      "occurrenceCount": 14,
+      "documentFrequency": 11,
+      "documentCoverage": 0.314286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 11,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-range-of",
+      "skill": "Reading",
+      "phrase": "range of",
+      "category": "范围与数量",
+      "meaningZh": "一系列；范围",
+      "frame": "a wide/broad range of + plural noun",
+      "usageZh": "用于概括多个类别、速度或方法。",
+      "exampleEn": "The device can operate across a wide range of temperatures.",
+      "exampleZh": "该设备可在很宽的温度范围内运行。",
+      "occurrenceCount": 13,
+      "documentFrequency": 11,
+      "documentCoverage": 0.314286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 10,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-development-of",
+      "skill": "Reading",
+      "phrase": "development of",
+      "category": "结构与过程",
+      "meaningZh": "……的发展；形成",
+      "frame": "the development of + system/idea",
+      "usageZh": "可能表示历史发展，也可能表示生物或技术形成过程。",
+      "exampleEn": "The development of railways changed the regional economy.",
+      "exampleZh": "铁路的发展改变了区域经济。",
+      "occurrenceCount": 17,
+      "documentFrequency": 10,
+      "documentCoverage": 0.285714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 12,
+        "official_public": 5
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-suggest-that",
+      "skill": "Reading",
+      "phrase": "suggest that",
+      "category": "研究与证据",
+      "meaningZh": "表明；暗示……",
+      "frame": "evidence suggests that + clause",
+      "usageZh": "语气弱于 prove，表示证据支持而非绝对证明。",
+      "exampleEn": "The results suggest that sleep affects decision-making.",
+      "exampleZh": "结果表明睡眠会影响决策。",
+      "occurrenceCount": 16,
+      "documentFrequency": 10,
+      "documentCoverage": 0.285714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 12,
+        "official_public": 4
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-amount-of",
+      "skill": "Reading",
+      "phrase": "amount of",
+      "category": "范围与数量",
+      "meaningZh": "……的量",
+      "frame": "the amount of + uncountable noun",
+      "usageZh": "后接不可数名词，如 water、energy、evidence。",
+      "exampleEn": "The amount of energy required falls as efficiency improves.",
+      "exampleZh": "随着效率提高，所需能量会减少。",
+      "occurrenceCount": 15,
+      "documentFrequency": 9,
+      "documentCoverage": 0.257143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 13,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-shows-that",
+      "skill": "Reading",
+      "phrase": "shows that",
+      "category": "研究与证据",
+      "meaningZh": "显示；说明……",
+      "frame": "the data shows that + clause",
+      "usageZh": "用于引出图表、实验或观察支持的结论。",
+      "exampleEn": "The survey shows that cost remains the main barrier.",
+      "exampleZh": "调查显示成本仍是主要障碍。",
+      "occurrenceCount": 12,
+      "documentFrequency": 8,
+      "documentCoverage": 0.228571,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 10,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-attached-to",
+      "skill": "Reading",
+      "phrase": "attached to",
+      "category": "结构与过程",
+      "meaningZh": "附着于；连接到",
+      "frame": "be attached to + object",
+      "usageZh": "阅读结构说明和生物描写中的高价值定位词块。",
+      "exampleEn": "A lightweight sensor is attached to the outer shell.",
+      "exampleZh": "一个轻型传感器连接在外壳上。",
+      "occurrenceCount": 10,
+      "documentFrequency": 7,
+      "documentCoverage": 0.2,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 6,
+        "third_party_prediction": 4
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-similar-to",
+      "skill": "Reading",
+      "phrase": "similar to",
+      "category": "关系与论证",
+      "meaningZh": "与……相似",
+      "frame": "be similar to + noun",
+      "usageZh": "用于定位比较对象和共同特征。",
+      "exampleEn": "The new material is similar to natural bone in structure.",
+      "exampleZh": "这种新材料在结构上与天然骨骼相似。",
+      "occurrenceCount": 9,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 6,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-led-to",
+      "skill": "Reading",
+      "phrase": "led to",
+      "category": "关系与论证",
+      "meaningZh": "导致；促成",
+      "frame": "event + led to + consequence",
+      "usageZh": "用于过去发生的因果链。",
+      "exampleEn": "The discovery led to a new method of treatment.",
+      "exampleZh": "这一发现促成了一种新的治疗方法。",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-result-in",
+      "skill": "Reading",
+      "phrase": "result in",
+      "category": "关系与论证",
+      "meaningZh": "导致",
+      "frame": "cause + result in + outcome",
+      "usageZh": "主语是原因，后面接结果。",
+      "exampleEn": "Poor ventilation can result in a sharp rise in indoor pollution.",
+      "exampleZh": "通风不良会导致室内污染大幅上升。",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-compared-to",
+      "skill": "Reading",
+      "phrase": "compared to",
+      "category": "关系与论证",
+      "meaningZh": "与……相比",
+      "frame": "compared to + comparison group",
+      "usageZh": "常把基准组放在句首或句末。",
+      "exampleEn": "Compared to adults, younger learners adapted more quickly.",
+      "exampleZh": "与成年人相比，年轻学习者适应得更快。",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-research-into",
+      "skill": "Reading",
+      "phrase": "research into",
+      "category": "研究与证据",
+      "meaningZh": "对……的研究",
+      "frame": "research into + topic",
+      "usageZh": "into 后接研究对象或问题。",
+      "exampleEn": "Research into migration patterns has challenged the earlier theory.",
+      "exampleZh": "对迁徙模式的研究挑战了早期理论。",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-as-a-result-of",
+      "skill": "Reading",
+      "phrase": "as a result of",
+      "category": "关系与论证",
+      "meaningZh": "由于……的结果",
+      "frame": "as a result of + cause",
+      "usageZh": "把原因放在词块之后，常用于长句衔接。",
+      "exampleEn": "As a result of repeated flooding, the settlement was moved inland.",
+      "exampleZh": "由于反复洪水，该聚落被迁往内陆。",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "本站原创例句"
+    },
+    {
+      "id": "reading-closely-related",
+      "skill": "Reading",
+      "phrase": "closely related",
+      "category": "研究与证据",
+      "meaningZh": "密切相关",
+      "frame": "be closely related to + factor",
+      "usageZh": "表示相关关系，不自动等于因果关系。",
+      "exampleEn": "Language use is closely related to social identity.",
+      "exampleZh": "语言使用与社会身份密切相关。",
+      "occurrenceCount": 3,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 2,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "本站原创例句"
+    }
+  ]
+}

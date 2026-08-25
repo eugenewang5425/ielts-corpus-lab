@@ -1029,3 +1029,352 @@
     grid-template-columns: 1fr;
   }
 }
+
+.chunk-library {
+  margin-top: 18px;
+  padding-top: 24px;
+}
+
+.chunk-library > .section-head {
+  padding-top: 58px;
+}
+
+.chunk-notice {
+  margin-bottom: 18px;
+}
+
+.chunk-toolbar {
+  margin-bottom: 12px;
+  padding: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  background: #fffdf8;
+  border: 1px solid #d8ded8;
+}
+
+.chunk-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.chunk-category-tabs button {
+  padding: 9px 12px;
+  border: 1px solid #c2cdc8;
+  border-radius: 999px;
+  background: transparent;
+  color: #4f5e59;
+  cursor: pointer;
+}
+
+.chunk-category-tabs button.active {
+  border-color: #0e6655;
+  background: #e2efea;
+  color: #094b3f;
+  font-weight: 800;
+}
+
+.chunk-summary {
+  margin-bottom: 16px;
+  padding: 15px 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background: #17201f;
+  color: #cbd5d2;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.chunk-summary p {
+  margin: 0;
+}
+
+.chunk-summary b,
+.chunk-summary span {
+  display: block;
+}
+
+.chunk-summary b {
+  margin-bottom: 3px;
+  color: #f2b357;
+  font-size: 14px;
+}
+
+.chunk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+.chunk-card {
+  min-width: 0;
+  background: #fffdf8;
+  border: 1px solid #d8ded8;
+  scroll-margin-top: 92px;
+  transition: border-color 180ms ease, box-shadow 220ms ease;
+}
+
+.chunk-card:hover {
+  border-color: #9db7ad;
+}
+
+.chunk-card.expanded {
+  grid-column: 1 / -1;
+  border-color: #0e6655;
+  box-shadow: 0 24px 65px rgb(23 32 31 / 10%);
+}
+
+.chunk-toggle {
+  width: 100%;
+  min-height: 255px;
+  padding: 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  background: transparent;
+  color: #17201f;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chunk-card.expanded .chunk-toggle {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) minmax(220px, .8fr) minmax(270px, 1fr) auto;
+  column-gap: 28px;
+  align-items: center;
+}
+
+.chunk-rank {
+  color: #0e6655;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.chunk-toggle > strong {
+  margin: 24px 0 9px;
+  font: 500 clamp(29px, 3vw, 39px) Georgia, serif;
+  letter-spacing: -.025em;
+}
+
+.chunk-card.expanded .chunk-toggle > strong {
+  margin: 7px 0 0;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.chunk-toggle > span:not(.chunk-rank) {
+  color: #61706c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.chunk-card.expanded .chunk-toggle > span:not(.chunk-rank) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.chunk-evidence {
+  margin-top: auto;
+  padding-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, auto) 1fr;
+  gap: 14px;
+  align-items: end;
+  border-top: 1px solid #d8ded8;
+}
+
+.chunk-card.expanded .chunk-evidence {
+  margin-top: 0;
+  padding-top: 0;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  border-top: 0;
+}
+
+.chunk-evidence b {
+  color: #17201f;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.chunk-evidence small {
+  margin-top: 3px;
+  display: block;
+  color: #89948f;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.chunk-evidence em {
+  justify-self: end;
+  align-self: center;
+  font-style: normal;
+}
+
+.chunk-toggle > i {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: #0e6655;
+  font-size: 22px;
+  font-style: normal;
+}
+
+.chunk-card.expanded .chunk-toggle > i {
+  position: static;
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+.chunk-detail {
+  padding: 0 22px 26px;
+  display: grid;
+  grid-template-columns: minmax(220px, .85fr) minmax(260px, 1fr) minmax(340px, 1.5fr);
+  gap: 14px;
+  border-top: 1px solid #d8ded8;
+}
+
+.chunk-detail section {
+  margin-top: 22px;
+  padding: 20px;
+  background: #edf3ef;
+}
+
+.chunk-detail small {
+  color: #0e6655;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.chunk-detail p,
+.chunk-detail blockquote {
+  margin: 12px 0 0;
+  color: #4f5e59;
+  line-height: 1.75;
+}
+
+.chunk-frame {
+  color: #17201f !important;
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+.chunk-example {
+  background: #fff6e7 !important;
+}
+
+.chunk-example blockquote {
+  padding: 0;
+  color: #3f3a32;
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.chunk-example p {
+  color: #7a6d5d;
+  font-size: 12px;
+}
+
+@media (max-width: 980px) {
+  .chunk-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chunk-card.expanded .chunk-toggle {
+    grid-template-columns: 1fr 1fr auto;
+  }
+
+  .chunk-card.expanded .chunk-evidence {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #d8ded8;
+  }
+
+  .chunk-card.expanded .chunk-toggle > i {
+    grid-column: 3;
+  }
+
+  .chunk-detail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chunk-example {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .chunk-library > .section-head {
+    padding-top: 42px;
+  }
+
+  .chunk-toolbar,
+  .chunk-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .chunk-toolbar {
+    display: grid;
+  }
+
+  .chunk-category-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .chunk-category-tabs button {
+    flex: 0 0 auto;
+  }
+
+  .chunk-grid,
+  .chunk-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .chunk-card.expanded {
+    grid-column: 1;
+  }
+
+  .chunk-toggle,
+  .chunk-card.expanded .chunk-toggle {
+    min-height: 0;
+    padding: 19px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .chunk-card.expanded .chunk-toggle > strong {
+    margin: 22px 0 8px;
+  }
+
+  .chunk-card.expanded .chunk-evidence {
+    margin-top: 24px;
+    padding-top: 18px;
+  }
+
+  .chunk-card.expanded .chunk-toggle > i {
+    position: absolute;
+  }
+
+  .chunk-detail {
+    padding: 0 14px 18px;
+  }
+
+  .chunk-detail section,
+  .chunk-example {
+    grid-column: 1;
+  }
+}
