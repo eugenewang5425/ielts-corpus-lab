@@ -1055,9 +1055,16 @@
 }
 
 .chunk-category-tabs {
+  flex: 1 0 100%;
+  padding-top: 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
+  border-top: 1px solid #e2e6e3;
+}
+
+.chunk-toolbar .inline-search {
+  margin-left: auto;
 }
 
 .chunk-category-tabs button {
@@ -1120,6 +1127,10 @@
 
 .chunk-card:hover {
   border-color: #9db7ad;
+}
+
+.chunk-card.expansion {
+  border-top-color: #c6a96f;
 }
 
 .chunk-card.expanded {
@@ -1285,6 +1296,30 @@
   font-size: 12px;
 }
 
+.chunk-source-mix {
+  margin-top: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.chunk-source-mix span {
+  padding: 7px 9px;
+  background: #fff;
+  border: 1px solid #c8d2ce;
+  color: #315149;
+  font-size: 11px;
+}
+
+.chunk-empty {
+  grid-column: 1 / -1;
+  padding: 40px;
+  background: #fffdf8;
+  border: 1px solid #d8ded8;
+  color: #61706c;
+  text-align: center;
+}
+
 @media (max-width: 980px) {
   .chunk-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1329,7 +1364,14 @@
     display: grid;
   }
 
+  .chunk-toolbar .inline-search {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+  }
+
   .chunk-category-tabs {
+    width: 100%;
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 4px;

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-25T08:26:56.365823+00:00",
+  "generatedAt": "2026-08-25T08:48:25.522228+00:00",
   "meta": {
     "titleZh": "阅读与听力词块库",
     "contentLabel": "统计证据 + 本站原创学习内容",
@@ -10,13 +10,16 @@
       "cambridge_derived",
       "third_party_prediction"
     ],
-    "chunkCount": 64,
-    "copyrightNoteZh": "词块次数来自去重语料；释义、搭配骨架和例句由本站原创整理，不复制原题长句。"
+    "chunkCount": 317,
+    "coreChunkCount": 64,
+    "expansionChunkCount": 253,
+    "copyrightNoteZh": "核心精学含原创搭配讲解与双语例句；扩展索引提供人工整理释义和语料证据。两层均不复制原题长句。"
   },
   "methodology": {
     "countUnitZh": "按大小写归一后的连续词序列精确计数；同一统计单元内可重复出现。",
     "coverageZh": "文档覆盖表示至少出现一次该词块的统计单元占比。",
-    "confidenceZh": "高可信需覆盖约 12% 的统计单元且跨至少两个来源集合；覆盖 3 个及以上但未跨来源为中，其余为探索。完整原题与派生资料分层统计。"
+    "confidenceZh": "高可信需覆盖约 12% 的统计单元且跨至少两个来源集合；覆盖 3 个及以上但未跨来源为中，其余为探索。完整原题与派生资料分层统计。",
+    "tierZh": "核心精学包含逐条搭配骨架、使用提示和原创例句；扩展索引提供人工整理的中文释义、功能分类和语料证据。"
   },
   "skillStats": [
     {
@@ -28,7 +31,9 @@
         "official_public",
         "third_party_prediction"
       ],
-      "chunkCount": 26,
+      "chunkCount": 161,
+      "coreChunkCount": 26,
+      "expansionChunkCount": 135,
       "categories": [
         {
           "name": "关系与论证",
@@ -45,6 +50,26 @@
         {
           "name": "结构与过程",
           "count": 6
+        },
+        {
+          "name": "逻辑与衔接",
+          "count": 32
+        },
+        {
+          "name": "数量与变化",
+          "count": 15
+        },
+        {
+          "name": "研究与分析",
+          "count": 28
+        },
+        {
+          "name": "环境与科学",
+          "count": 27
+        },
+        {
+          "name": "社会与发展",
+          "count": 33
         }
       ]
     },
@@ -58,7 +83,9 @@
         "official_public",
         "third_party_prediction"
       ],
-      "chunkCount": 38,
+      "chunkCount": 156,
+      "coreChunkCount": 38,
+      "expansionChunkCount": 118,
       "categories": [
         {
           "name": "互动与澄清",
@@ -83,11 +110,62 @@
         {
           "name": "服务与设施",
           "count": 2
+        },
+        {
+          "name": "互动与回应",
+          "count": 24
+        },
+        {
+          "name": "功能与动作",
+          "count": 27
+        },
+        {
+          "name": "时间与安排",
+          "count": 14
+        },
+        {
+          "name": "地点与方位",
+          "count": 14
+        },
+        {
+          "name": "手续与信息",
+          "count": 16
+        },
+        {
+          "name": "学习与工作",
+          "count": 12
+        },
+        {
+          "name": "设施与场景",
+          "count": 11
         }
       ]
     }
   ],
   "chunks": [
+    {
+      "id": "listening-a-number-of",
+      "skill": "Listening",
+      "phrase": "a number of",
+      "category": "功能与动作",
+      "meaningZh": "若干；……的数量",
+      "frame": "a number of",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 45,
+      "documentFrequency": 23,
+      "documentCoverage": 0.547619,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 43,
+        "official_public": 1,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
     {
       "id": "listening-i-d-like-to",
       "skill": "Listening",
@@ -107,7 +185,8 @@
         "official_public": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-interested-in",
@@ -128,7 +207,118 @@
         "official_public": 6
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-used-to",
+      "skill": "Listening",
+      "phrase": "used to",
+      "category": "功能与动作",
+      "meaningZh": "过去常常；曾用于",
+      "frame": "used to",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 41,
+      "documentFrequency": 21,
+      "documentCoverage": 0.5,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 32,
+        "cambridge_derived": 8,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-be-able-to",
+      "skill": "Listening",
+      "phrase": "be able to",
+      "category": "功能与动作",
+      "meaningZh": "能够",
+      "frame": "be able to",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 43,
+      "documentFrequency": 20,
+      "documentCoverage": 0.47619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 42,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-at-the-end-of",
+      "skill": "Listening",
+      "phrase": "at the end of",
+      "category": "地点与方位",
+      "meaningZh": "在……尽头",
+      "frame": "at the end of",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 22,
+      "documentFrequency": 18,
+      "documentCoverage": 0.428571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 22
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-i-m-afraid",
+      "skill": "Listening",
+      "phrase": "i'm afraid",
+      "category": "互动与回应",
+      "meaningZh": "恐怕",
+      "frame": "i'm afraid",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 30,
+      "documentFrequency": 17,
+      "documentCoverage": 0.404762,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 30
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-talk-about",
+      "skill": "Listening",
+      "phrase": "talk about",
+      "category": "功能与动作",
+      "meaningZh": "谈论",
+      "frame": "talk about",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 23,
+      "documentFrequency": 16,
+      "documentCoverage": 0.380952,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 21,
+        "official_public": 1,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-first-of-all",
@@ -149,7 +339,8 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-make-sure",
@@ -170,7 +361,8 @@
         "cambridge_derived": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-as-well-as",
@@ -192,7 +384,8 @@
         "cambridge_derived": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-due-to",
@@ -213,7 +406,73 @@
         "cambridge_derived": 4
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-find-out",
+      "skill": "Listening",
+      "phrase": "find out",
+      "category": "功能与动作",
+      "meaningZh": "查明；了解",
+      "frame": "find out",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 20,
+      "documentFrequency": 13,
+      "documentCoverage": 0.309524,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 20
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-range-of",
+      "skill": "Listening",
+      "phrase": "range of",
+      "category": "功能与动作",
+      "meaningZh": "一系列；范围",
+      "frame": "range of",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 21,
+      "documentFrequency": 12,
+      "documentCoverage": 0.285714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 19,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-what-about",
+      "skill": "Listening",
+      "phrase": "what about",
+      "category": "互动与回应",
+      "meaningZh": "……怎么样",
+      "frame": "what about",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 19,
+      "documentFrequency": 12,
+      "documentCoverage": 0.285714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 18,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-next-week",
@@ -234,7 +493,29 @@
         "official_public": 4
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-a-couple-of",
+      "skill": "Listening",
+      "phrase": "a couple of",
+      "category": "功能与动作",
+      "meaningZh": "几个；一对",
+      "frame": "a couple of",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 14,
+      "documentFrequency": 12,
+      "documentCoverage": 0.285714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 14
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-next-to",
@@ -256,7 +537,95 @@
         "cambridge_derived": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-at-least",
+      "skill": "Listening",
+      "phrase": "at least",
+      "category": "功能与动作",
+      "meaningZh": "至少",
+      "frame": "at least",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 15,
+      "documentFrequency": 10,
+      "documentCoverage": 0.238095,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 13,
+        "cambridge_derived": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-that-s-right",
+      "skill": "Listening",
+      "phrase": "that's right",
+      "category": "互动与回应",
+      "meaningZh": "没错",
+      "frame": "that's right",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 14,
+      "documentFrequency": 10,
+      "documentCoverage": 0.238095,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 11,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-i-don-t-think",
+      "skill": "Listening",
+      "phrase": "i don't think",
+      "category": "互动与回应",
+      "meaningZh": "我认为不是；我不觉得",
+      "frame": "i don't think",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 13,
+      "documentFrequency": 10,
+      "documentCoverage": 0.238095,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 13
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-not-sure",
+      "skill": "Listening",
+      "phrase": "not sure",
+      "category": "互动与回应",
+      "meaningZh": "不确定",
+      "frame": "not sure",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 12,
+      "documentFrequency": 10,
+      "documentCoverage": 0.238095,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 10,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-focus-on",
@@ -278,7 +647,52 @@
         "official_public": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-in-front-of",
+      "skill": "Listening",
+      "phrase": "in front of",
+      "category": "地点与方位",
+      "meaningZh": "在……前面",
+      "frame": "in front of",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 11,
+      "documentFrequency": 10,
+      "documentCoverage": 0.238095,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 10,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-anything-else",
+      "skill": "Listening",
+      "phrase": "anything else",
+      "category": "互动与回应",
+      "meaningZh": "还有别的吗",
+      "frame": "anything else",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 12,
+      "documentFrequency": 9,
+      "documentCoverage": 0.214286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 11,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-would-you-like",
@@ -299,7 +713,8 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-a-variety-of",
@@ -320,7 +735,8 @@
         "cambridge_derived": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-responsible-for",
@@ -341,7 +757,29 @@
         "cambridge_derived": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-that-s-fine",
+      "skill": "Listening",
+      "phrase": "that's fine",
+      "category": "互动与回应",
+      "meaningZh": "那可以；没问题",
+      "frame": "that's fine",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 10,
+      "documentFrequency": 9,
+      "documentCoverage": 0.214286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 10
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-can-i-help-you",
@@ -362,7 +800,120 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-pick-up",
+      "skill": "Listening",
+      "phrase": "pick up",
+      "category": "功能与动作",
+      "meaningZh": "领取；接人",
+      "frame": "pick up",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 9,
+      "documentFrequency": 8,
+      "documentCoverage": 0.190476,
+      "sourceCount": 3,
+      "sourceMix": {
+        "cambridge_derived": 4,
+        "third_party_prediction": 4,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-that-s-all",
+      "skill": "Listening",
+      "phrase": "that's all",
+      "category": "互动与回应",
+      "meaningZh": "就这些",
+      "frame": "that's all",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 9,
+      "documentFrequency": 8,
+      "documentCoverage": 0.190476,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 9
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-think-about",
+      "skill": "Listening",
+      "phrase": "think about",
+      "category": "功能与动作",
+      "meaningZh": "考虑",
+      "frame": "think about",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 8,
+      "documentCoverage": 0.190476,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 6,
+        "official_public": 1,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-according-to",
+      "skill": "Listening",
+      "phrase": "according to",
+      "category": "功能与动作",
+      "meaningZh": "根据",
+      "frame": "according to",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 14,
+      "documentFrequency": 7,
+      "documentCoverage": 0.166667,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 11,
+        "cambridge_derived": 2,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-at-the-moment",
+      "skill": "Listening",
+      "phrase": "at the moment",
+      "category": "时间与安排",
+      "meaningZh": "目前",
+      "frame": "at the moment",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 7,
+      "documentCoverage": 0.166667,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 7,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-go-for",
@@ -383,7 +934,29 @@
         "official_public": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-sounds-great",
+      "skill": "Listening",
+      "phrase": "sounds great",
+      "category": "互动与回应",
+      "meaningZh": "听起来很棒",
+      "frame": "sounds great",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 7,
+      "documentCoverage": 0.166667,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 8
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-hoping-to",
@@ -404,7 +977,8 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-made-up-of",
@@ -426,7 +1000,93 @@
         "official_public": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-swimming-pool",
+      "skill": "Listening",
+      "phrase": "swimming pool",
+      "category": "设施与场景",
+      "meaningZh": "游泳池",
+      "frame": "swimming pool",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 17,
+      "documentFrequency": 6,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 14,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-pay-for",
+      "skill": "Listening",
+      "phrase": "pay for",
+      "category": "功能与动作",
+      "meaningZh": "为……付款",
+      "frame": "pay for",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 12,
+      "documentFrequency": 6,
+      "documentCoverage": 0.142857,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 12
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-background-information",
+      "skill": "Listening",
+      "phrase": "background information",
+      "category": "手续与信息",
+      "meaningZh": "背景信息",
+      "frame": "background information",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.142857,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 7
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-looking-forward-to",
+      "skill": "Listening",
+      "phrase": "looking forward to",
+      "category": "互动与回应",
+      "meaningZh": "期待",
+      "frame": "looking forward to",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.142857,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 7
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-a-bit-about",
@@ -447,7 +1107,52 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-air-conditioning",
+      "skill": "Listening",
+      "phrase": "air conditioning",
+      "category": "设施与场景",
+      "meaningZh": "空调",
+      "frame": "air conditioning",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 6,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-be-used-to",
+      "skill": "Listening",
+      "phrase": "be used to",
+      "category": "功能与动作",
+      "meaningZh": "习惯于；被用来",
+      "frame": "be used to",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 6,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "cambridge_derived": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-in-advance",
@@ -468,7 +1173,115 @@
         "third_party_prediction": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-don-t-worry",
+      "skill": "Listening",
+      "phrase": "don't worry",
+      "category": "互动与回应",
+      "meaningZh": "别担心",
+      "frame": "don't worry",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 9,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 9
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-a-range-of",
+      "skill": "Listening",
+      "phrase": "a range of",
+      "category": "功能与动作",
+      "meaningZh": "一系列",
+      "frame": "a range of",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 8
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-i-m-sorry",
+      "skill": "Listening",
+      "phrase": "i'm sorry",
+      "category": "互动与回应",
+      "meaningZh": "抱歉",
+      "frame": "i'm sorry",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 7
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-a-great-deal-of",
+      "skill": "Listening",
+      "phrase": "a great deal of",
+      "category": "功能与动作",
+      "meaningZh": "大量的",
+      "frame": "a great deal of",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 3,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "cambridge_derived": 2,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-able-to-find",
+      "skill": "Listening",
+      "phrase": "able to find",
+      "category": "互动与回应",
+      "meaningZh": "能够找到",
+      "frame": "able to find",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-get-used-to",
@@ -490,7 +1303,29 @@
         "official_public": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-let-s-begin",
+      "skill": "Listening",
+      "phrase": "let's begin",
+      "category": "互动与回应",
+      "meaningZh": "我们开始吧",
+      "frame": "let's begin",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-located-in",
@@ -511,7 +1346,50 @@
         "cambridge_derived": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-need-to-ask",
+      "skill": "Listening",
+      "phrase": "need to ask",
+      "category": "互动与回应",
+      "meaningZh": "需要询问",
+      "frame": "need to ask",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-state-of-the-art",
+      "skill": "Listening",
+      "phrase": "state of the art",
+      "category": "学习与工作",
+      "meaningZh": "最先进的",
+      "frame": "state of the art",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-take-place",
@@ -532,7 +1410,308 @@
         "cambridge_derived": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-by-the-end-of",
+      "skill": "Listening",
+      "phrase": "by the end of",
+      "category": "时间与安排",
+      "meaningZh": "到……末为止",
+      "frame": "by the end of",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-credit-card",
+      "skill": "Listening",
+      "phrase": "credit card",
+      "category": "手续与信息",
+      "meaningZh": "信用卡",
+      "frame": "credit card",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-few-days",
+      "skill": "Listening",
+      "phrase": "few days",
+      "category": "时间与安排",
+      "meaningZh": "几天",
+      "frame": "few days",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-gift-shop",
+      "skill": "Listening",
+      "phrase": "gift shop",
+      "category": "设施与场景",
+      "meaningZh": "礼品店",
+      "frame": "gift shop",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-how-about",
+      "skill": "Listening",
+      "phrase": "how about",
+      "category": "互动与回应",
+      "meaningZh": "……怎么样",
+      "frame": "how about",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-long-term",
+      "skill": "Listening",
+      "phrase": "long term",
+      "category": "时间与安排",
+      "meaningZh": "长期的",
+      "frame": "long term",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 2,
+      "sourceMix": {
+        "cambridge_derived": 4,
+        "third_party_prediction": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-natural-habitat",
+      "skill": "Listening",
+      "phrase": "natural habitat",
+      "category": "学习与工作",
+      "meaningZh": "自然栖息地",
+      "frame": "natural habitat",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-phone-number",
+      "skill": "Listening",
+      "phrase": "phone number",
+      "category": "手续与信息",
+      "meaningZh": "电话号码",
+      "frame": "phone number",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.119048,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-city-centre",
+      "skill": "Listening",
+      "phrase": "city centre",
+      "category": "地点与方位",
+      "meaningZh": "市中心",
+      "frame": "city centre",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 10,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 7,
+        "official_public": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-research-project",
+      "skill": "Listening",
+      "phrase": "research project",
+      "category": "学习与工作",
+      "meaningZh": "研究项目",
+      "frame": "research project",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 10,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 10
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-rural-areas",
+      "skill": "Listening",
+      "phrase": "rural areas",
+      "category": "地点与方位",
+      "meaningZh": "农村地区",
+      "frame": "rural areas",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 8
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-on-the-left",
+      "skill": "Listening",
+      "phrase": "on the left",
+      "category": "地点与方位",
+      "meaningZh": "在左侧",
+      "frame": "on the left",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "official_public": 2
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-public-transport",
+      "skill": "Listening",
+      "phrase": "public transport",
+      "category": "设施与场景",
+      "meaningZh": "公共交通",
+      "frame": "public transport",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-ask-about",
+      "skill": "Listening",
+      "phrase": "ask about",
+      "category": "功能与动作",
+      "meaningZh": "询问关于……",
+      "frame": "ask about",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-at-home",
@@ -553,7 +1732,8 @@
         "official_public": 2
       },
       "confidence": "medium",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-can-you-tell-me",
@@ -574,7 +1754,29 @@
         "third_party_prediction": 1
       },
       "confidence": "medium",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-case-study",
+      "skill": "Listening",
+      "phrase": "case study",
+      "category": "学习与工作",
+      "meaningZh": "案例研究",
+      "frame": "case study",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-deal-with",
@@ -595,7 +1797,74 @@
         "third_party_prediction": 2
       },
       "confidence": "medium",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-part-time",
+      "skill": "Listening",
+      "phrase": "part time",
+      "category": "时间与安排",
+      "meaningZh": "兼职；非全日制",
+      "frame": "part time",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "official_public": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-practical-experience",
+      "skill": "Listening",
+      "phrase": "practical experience",
+      "category": "学习与工作",
+      "meaningZh": "实践经验",
+      "frame": "practical experience",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "cambridge_derived": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-a-bit-more",
+      "skill": "Listening",
+      "phrase": "a bit more",
+      "category": "功能与动作",
+      "meaningZh": "再多一点",
+      "frame": "a bit more",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-apply-for",
@@ -616,7 +1885,8 @@
         "cambridge_derived": 1
       },
       "confidence": "medium",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-on-your-left",
@@ -637,7 +1907,565 @@
         "official_public": 1
       },
       "confidence": "medium",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-past-experience",
+      "skill": "Listening",
+      "phrase": "past experience",
+      "category": "学习与工作",
+      "meaningZh": "以往经验",
+      "frame": "past experience",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "cambridge_derived": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-take-part-in",
+      "skill": "Listening",
+      "phrase": "take part in",
+      "category": "功能与动作",
+      "meaningZh": "参加",
+      "frame": "take part in",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.095238,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-information-desk",
+      "skill": "Listening",
+      "phrase": "information desk",
+      "category": "设施与场景",
+      "meaningZh": "服务台；信息台",
+      "frame": "information desk",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 7
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-look-for",
+      "skill": "Listening",
+      "phrase": "look for",
+      "category": "功能与动作",
+      "meaningZh": "寻找",
+      "frame": "look for",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "cambridge_derived": 6,
+        "third_party_prediction": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-city-council",
+      "skill": "Listening",
+      "phrase": "city council",
+      "category": "学习与工作",
+      "meaningZh": "市议会",
+      "frame": "city council",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 3,
+      "sourceMix": {
+        "cambridge_derived": 2,
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-online-system",
+      "skill": "Listening",
+      "phrase": "online system",
+      "category": "手续与信息",
+      "meaningZh": "在线系统",
+      "frame": "online system",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-personal-details",
+      "skill": "Listening",
+      "phrase": "personal details",
+      "category": "手续与信息",
+      "meaningZh": "个人信息",
+      "frame": "personal details",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-primary-school",
+      "skill": "Listening",
+      "phrase": "primary school",
+      "category": "学习与工作",
+      "meaningZh": "小学",
+      "frame": "primary school",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-reference-number",
+      "skill": "Listening",
+      "phrase": "reference number",
+      "category": "手续与信息",
+      "meaningZh": "参考编号",
+      "frame": "reference number",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-sign-up",
+      "skill": "Listening",
+      "phrase": "sign up",
+      "category": "功能与动作",
+      "meaningZh": "报名",
+      "frame": "sign up",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 3,
+      "sourceMix": {
+        "cambridge_derived": 2,
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-ticket-prices",
+      "skill": "Listening",
+      "phrase": "ticket prices",
+      "category": "手续与信息",
+      "meaningZh": "票价",
+      "frame": "ticket prices",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-wide-range-of",
+      "skill": "Listening",
+      "phrase": "wide range of",
+      "category": "功能与动作",
+      "meaningZh": "广泛的；多种",
+      "frame": "wide range of",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-agree-with",
+      "skill": "Listening",
+      "phrase": "agree with",
+      "category": "功能与动作",
+      "meaningZh": "同意；与……一致",
+      "frame": "agree with",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 2,
+        "cambridge_derived": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-all-kinds-of",
+      "skill": "Listening",
+      "phrase": "all kinds of",
+      "category": "功能与动作",
+      "meaningZh": "各种各样的",
+      "frame": "all kinds of",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-at-the-beginning-of",
+      "skill": "Listening",
+      "phrase": "at the beginning of",
+      "category": "时间与安排",
+      "meaningZh": "在……开始时",
+      "frame": "at the beginning of",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-basic-information",
+      "skill": "Listening",
+      "phrase": "basic information",
+      "category": "手续与信息",
+      "meaningZh": "基本信息",
+      "frame": "basic information",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-card-details",
+      "skill": "Listening",
+      "phrase": "card details",
+      "category": "手续与信息",
+      "meaningZh": "银行卡信息",
+      "frame": "card details",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-dining-room",
+      "skill": "Listening",
+      "phrase": "dining room",
+      "category": "设施与场景",
+      "meaningZh": "餐厅",
+      "frame": "dining room",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-fill-in",
+      "skill": "Listening",
+      "phrase": "fill in",
+      "category": "功能与动作",
+      "meaningZh": "填写",
+      "frame": "fill in",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-for-the-first-time",
+      "skill": "Listening",
+      "phrase": "for the first time",
+      "category": "时间与安排",
+      "meaningZh": "第一次",
+      "frame": "for the first time",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "cambridge_derived": 2,
+        "third_party_prediction": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-full-time",
+      "skill": "Listening",
+      "phrase": "full time",
+      "category": "时间与安排",
+      "meaningZh": "全职；全日制",
+      "frame": "full time",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 2,
+        "official_public": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-let-me-see",
+      "skill": "Listening",
+      "phrase": "let me see",
+      "category": "互动与回应",
+      "meaningZh": "让我看看",
+      "frame": "let me see",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-local-community",
+      "skill": "Listening",
+      "phrase": "local community",
+      "category": "学习与工作",
+      "meaningZh": "当地社区",
+      "frame": "local community",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 3,
+      "sourceMix": {
+        "official_public": 1,
+        "cambridge_derived": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-prepare-for",
+      "skill": "Listening",
+      "phrase": "prepare for",
+      "category": "功能与动作",
+      "meaningZh": "为……做准备",
+      "frame": "prepare for",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.071429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-membership-fee",
+      "skill": "Listening",
+      "phrase": "membership fee",
+      "category": "手续与信息",
+      "meaningZh": "会员费",
+      "frame": "membership fee",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 8
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-ground-floor",
+      "skill": "Listening",
+      "phrase": "ground floor",
+      "category": "地点与方位",
+      "meaningZh": "底层；一楼",
+      "frame": "ground floor",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-public-library",
@@ -657,7 +2485,92 @@
         "official_public": 3
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-could-you-tell-me",
+      "skill": "Listening",
+      "phrase": "could you tell me",
+      "category": "互动与回应",
+      "meaningZh": "你能告诉我吗",
+      "frame": "could you tell me",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-do-you-mean",
+      "skill": "Listening",
+      "phrase": "do you mean",
+      "category": "互动与回应",
+      "meaningZh": "你的意思是……吗",
+      "frame": "do you mean",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-entrance-fee",
+      "skill": "Listening",
+      "phrase": "entrance fee",
+      "category": "手续与信息",
+      "meaningZh": "入场费",
+      "frame": "entrance fee",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-i-think-so",
+      "skill": "Listening",
+      "phrase": "i think so",
+      "category": "互动与回应",
+      "meaningZh": "我想是的",
+      "frame": "i think so",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-i-d-rather",
@@ -678,7 +2591,30 @@
         "third_party_prediction": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-in-relation-to",
+      "skill": "Listening",
+      "phrase": "in relation to",
+      "category": "功能与动作",
+      "meaningZh": "关于；与……相关",
+      "frame": "in relation to",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-next-door-to",
@@ -699,7 +2635,51 @@
         "third_party_prediction": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-on-the-right",
+      "skill": "Listening",
+      "phrase": "on the right",
+      "category": "地点与方位",
+      "meaningZh": "在右侧",
+      "frame": "on the right",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-postal-code",
+      "skill": "Listening",
+      "phrase": "postal code",
+      "category": "手续与信息",
+      "meaningZh": "邮政编码",
+      "frame": "postal code",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-sign-up-for",
@@ -720,7 +2700,51 @@
         "third_party_prediction": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-sounds-good",
+      "skill": "Listening",
+      "phrase": "sounds good",
+      "category": "互动与回应",
+      "meaningZh": "听起来不错",
+      "frame": "sounds good",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-sports-centre",
+      "skill": "Listening",
+      "phrase": "sports centre",
+      "category": "设施与场景",
+      "meaningZh": "体育中心",
+      "frame": "sports centre",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-straight-on",
@@ -741,7 +2765,30 @@
         "third_party_prediction": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-take-time-off",
+      "skill": "Listening",
+      "phrase": "take time off",
+      "category": "时间与安排",
+      "meaningZh": "请假；休息一段时间",
+      "frame": "take time off",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-time-management",
@@ -762,7 +2809,71 @@
         "third_party_prediction": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-would-you-mind",
+      "skill": "Listening",
+      "phrase": "would you mind",
+      "category": "互动与回应",
+      "meaningZh": "你介意……吗",
+      "frame": "would you mind",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.047619,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-customer-service",
+      "skill": "Listening",
+      "phrase": "customer service",
+      "category": "手续与信息",
+      "meaningZh": "客户服务",
+      "frame": "customer service",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 23,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 23
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-arts-centre",
+      "skill": "Listening",
+      "phrase": "arts centre",
+      "category": "设施与场景",
+      "meaningZh": "艺术中心",
+      "frame": "arts centre",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 4
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-on-your-right",
@@ -782,7 +2893,113 @@
         "official_public": 2
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-train-station",
+      "skill": "Listening",
+      "phrase": "train station",
+      "category": "地点与方位",
+      "meaningZh": "火车站",
+      "frame": "train station",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-accommodation-office",
+      "skill": "Listening",
+      "phrase": "accommodation office",
+      "category": "设施与场景",
+      "meaningZh": "住宿办公室",
+      "frame": "accommodation office",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-as-soon-as",
+      "skill": "Listening",
+      "phrase": "as soon as",
+      "category": "时间与安排",
+      "meaningZh": "一……就……",
+      "frame": "as soon as",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-book-in-advance",
+      "skill": "Listening",
+      "phrase": "book in advance",
+      "category": "时间与安排",
+      "meaningZh": "提前预订",
+      "frame": "book in advance",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "cambridge_derived": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-closing-time",
+      "skill": "Listening",
+      "phrase": "closing time",
+      "category": "时间与安排",
+      "meaningZh": "关闭时间",
+      "frame": "closing time",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-could-you-explain",
@@ -802,7 +3019,29 @@
         "official_public": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-date-of-birth",
+      "skill": "Listening",
+      "phrase": "date of birth",
+      "category": "手续与信息",
+      "meaningZh": "出生日期",
+      "frame": "date of birth",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-depends-on",
@@ -822,7 +3061,92 @@
         "official_public": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-drop-off",
+      "skill": "Listening",
+      "phrase": "drop off",
+      "category": "功能与动作",
+      "meaningZh": "送到；放下",
+      "frame": "drop off",
+      "usageZh": "重点听词块之后的对象、动作或选项。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-entrance-ticket",
+      "skill": "Listening",
+      "phrase": "entrance ticket",
+      "category": "手续与信息",
+      "meaningZh": "入场票",
+      "frame": "entrance ticket",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-from-time-to-time",
+      "skill": "Listening",
+      "phrase": "from time to time",
+      "category": "时间与安排",
+      "meaningZh": "不时；偶尔",
+      "frame": "from time to time",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-full-name",
+      "skill": "Listening",
+      "phrase": "full name",
+      "category": "手续与信息",
+      "meaningZh": "全名",
+      "frame": "full name",
+      "usageZh": "用于表格填空、预订、付款和个人信息场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-get-involved-in",
@@ -842,7 +3166,134 @@
         "official_public": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-it-depends",
+      "skill": "Listening",
+      "phrase": "it depends",
+      "category": "互动与回应",
+      "meaningZh": "视情况而定",
+      "frame": "it depends",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-just-past",
+      "skill": "Listening",
+      "phrase": "just past",
+      "category": "地点与方位",
+      "meaningZh": "刚过……",
+      "frame": "just past",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-let-me-check",
+      "skill": "Listening",
+      "phrase": "let me check",
+      "category": "互动与回应",
+      "meaningZh": "让我核对一下",
+      "frame": "let me check",
+      "usageZh": "用于识别确认、否定、犹豫、澄清和话轮转折。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-local-area",
+      "skill": "Listening",
+      "phrase": "local area",
+      "category": "地点与方位",
+      "meaningZh": "当地地区",
+      "frame": "local area",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-main-entrance",
+      "skill": "Listening",
+      "phrase": "main entrance",
+      "category": "地点与方位",
+      "meaningZh": "主入口",
+      "frame": "main entrance",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-opening-hours",
+      "skill": "Listening",
+      "phrase": "opening hours",
+      "category": "时间与安排",
+      "meaningZh": "营业时间",
+      "frame": "opening hours",
+      "usageZh": "用于捕捉日期、截止时间、频率和安排变化。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "listening-opposite-this",
@@ -862,7 +3313,8 @@
         "official_public": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "listening-pay-by",
@@ -882,7 +3334,176 @@
         "official_public": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "listening-private-accommodation",
+      "skill": "Listening",
+      "phrase": "private accommodation",
+      "category": "学习与工作",
+      "meaningZh": "私人住宿",
+      "frame": "private accommodation",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-reception-desk",
+      "skill": "Listening",
+      "phrase": "reception desk",
+      "category": "设施与场景",
+      "meaningZh": "接待台",
+      "frame": "reception desk",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-seminar-room",
+      "skill": "Listening",
+      "phrase": "seminar room",
+      "category": "设施与场景",
+      "meaningZh": "研讨室",
+      "frame": "seminar room",
+      "usageZh": "用于快速预测地点、设施和服务类答案。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-shopping-centre",
+      "skill": "Listening",
+      "phrase": "shopping centre",
+      "category": "地点与方位",
+      "meaningZh": "购物中心",
+      "frame": "shopping centre",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-student-accommodation",
+      "skill": "Listening",
+      "phrase": "student accommodation",
+      "category": "学习与工作",
+      "meaningZh": "学生宿舍",
+      "frame": "student accommodation",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-study-skills",
+      "skill": "Listening",
+      "phrase": "study skills",
+      "category": "学习与工作",
+      "meaningZh": "学习技能",
+      "frame": "study skills",
+      "usageZh": "用于课程咨询、校园讨论、研究和职业场景。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-tourist-information",
+      "skill": "Listening",
+      "phrase": "tourist information",
+      "category": "地点与方位",
+      "meaningZh": "游客信息；旅游咨询",
+      "frame": "tourist information",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "listening-turn-right",
+      "skill": "Listening",
+      "phrase": "turn right",
+      "category": "地点与方位",
+      "meaningZh": "向右转",
+      "frame": "turn right",
+      "usageZh": "用于地图题和设施介绍中的位置关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.02381,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-based-on",
@@ -903,7 +3524,52 @@
         "official_public": 6
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-for-example",
+      "skill": "Reading",
+      "phrase": "for example",
+      "category": "逻辑与衔接",
+      "meaningZh": "例如",
+      "frame": "for example",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 47,
+      "documentFrequency": 23,
+      "documentCoverage": 0.657143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 43,
+        "official_public": 4
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-such-as",
+      "skill": "Reading",
+      "phrase": "such as",
+      "category": "逻辑与衔接",
+      "meaningZh": "例如；诸如",
+      "frame": "such as",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 73,
+      "documentFrequency": 22,
+      "documentCoverage": 0.628571,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 70,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-because-of",
@@ -924,7 +3590,8 @@
         "official_public": 4
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-according-to",
@@ -945,7 +3612,8 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-number-of",
@@ -966,7 +3634,8 @@
         "official_public": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-able-to",
@@ -987,7 +3656,8 @@
         "official_public": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-rather-than",
@@ -1008,7 +3678,29 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-due-to",
+      "skill": "Reading",
+      "phrase": "due to",
+      "category": "逻辑与衔接",
+      "meaningZh": "由于",
+      "frame": "due to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 25,
+      "documentFrequency": 15,
+      "documentCoverage": 0.428571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 25
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-found-in",
@@ -1029,7 +3721,8 @@
         "official_public": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-use-of",
@@ -1050,7 +3743,8 @@
         "official_public": 6
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-found-that",
@@ -1071,7 +3765,72 @@
         "official_public": 5
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-years-ago",
+      "skill": "Reading",
+      "phrase": "years ago",
+      "category": "数量与变化",
+      "meaningZh": "……年前",
+      "frame": "years ago",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 27,
+      "documentFrequency": 13,
+      "documentCoverage": 0.371429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 26,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-as-well-as",
+      "skill": "Reading",
+      "phrase": "as well as",
+      "category": "逻辑与衔接",
+      "meaningZh": "以及；并且",
+      "frame": "as well as",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 21,
+      "documentFrequency": 13,
+      "documentCoverage": 0.371429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 21
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-one-of-the-most",
+      "skill": "Reading",
+      "phrase": "one of the most",
+      "category": "逻辑与衔接",
+      "meaningZh": "最……的之一",
+      "frame": "one of the most",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 17,
+      "documentFrequency": 13,
+      "documentCoverage": 0.371429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 17
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-result-of",
@@ -1092,7 +3851,8 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-known-as",
@@ -1113,7 +3873,8 @@
         "official_public": 6
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-likely-to",
@@ -1134,7 +3895,74 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-in-fact",
+      "skill": "Reading",
+      "phrase": "in fact",
+      "category": "逻辑与衔接",
+      "meaningZh": "事实上",
+      "frame": "in fact",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 14,
+      "documentFrequency": 12,
+      "documentCoverage": 0.342857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 11,
+        "official_public": 3
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-in-order-to",
+      "skill": "Reading",
+      "phrase": "in order to",
+      "category": "逻辑与衔接",
+      "meaningZh": "为了",
+      "frame": "in order to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 18,
+      "documentFrequency": 11,
+      "documentCoverage": 0.314286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 17,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-form-of",
+      "skill": "Reading",
+      "phrase": "form of",
+      "category": "研究与分析",
+      "meaningZh": "……的形式",
+      "frame": "form of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 15,
+      "documentFrequency": 11,
+      "documentCoverage": 0.314286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 14,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-used-in",
@@ -1155,7 +3983,52 @@
         "official_public": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-changes-in",
+      "skill": "Reading",
+      "phrase": "changes in",
+      "category": "研究与分析",
+      "meaningZh": "……的变化",
+      "frame": "changes in",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 13,
+      "documentFrequency": 11,
+      "documentCoverage": 0.314286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 11,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-instead-of",
+      "skill": "Reading",
+      "phrase": "instead of",
+      "category": "逻辑与衔接",
+      "meaningZh": "而不是；代替",
+      "frame": "instead of",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 13,
+      "documentFrequency": 11,
+      "documentCoverage": 0.314286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 12,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-range-of",
@@ -1176,7 +4049,30 @@
         "official_public": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-types-of",
+      "skill": "Reading",
+      "phrase": "types of",
+      "category": "研究与分析",
+      "meaningZh": "……的多种类型",
+      "frame": "types of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 20,
+      "documentFrequency": 10,
+      "documentCoverage": 0.285714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 19,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-development-of",
@@ -1197,7 +4093,8 @@
         "official_public": 5
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-suggest-that",
@@ -1218,7 +4115,51 @@
         "official_public": 4
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-associated-with",
+      "skill": "Reading",
+      "phrase": "associated with",
+      "category": "逻辑与衔接",
+      "meaningZh": "与……相关",
+      "frame": "associated with",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 14,
+      "documentFrequency": 10,
+      "documentCoverage": 0.285714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 14
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-type-of",
+      "skill": "Reading",
+      "phrase": "type of",
+      "category": "研究与分析",
+      "meaningZh": "……的类型",
+      "frame": "type of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 14,
+      "documentFrequency": 10,
+      "documentCoverage": 0.285714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 12,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-amount-of",
@@ -1239,7 +4180,74 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-source-of",
+      "skill": "Reading",
+      "phrase": "source of",
+      "category": "研究与分析",
+      "meaningZh": "……的来源",
+      "frame": "source of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 13,
+      "documentFrequency": 9,
+      "documentCoverage": 0.257143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 12,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-in-addition",
+      "skill": "Reading",
+      "phrase": "in addition",
+      "category": "逻辑与衔接",
+      "meaningZh": "此外",
+      "frame": "in addition",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 10,
+      "documentFrequency": 9,
+      "documentCoverage": 0.257143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 9,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-as-a-result",
+      "skill": "Reading",
+      "phrase": "as a result",
+      "category": "逻辑与衔接",
+      "meaningZh": "因此；结果",
+      "frame": "as a result",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 9,
+      "documentFrequency": 9,
+      "documentCoverage": 0.257143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 8,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-shows-that",
@@ -1260,7 +4268,52 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-a-variety-of",
+      "skill": "Reading",
+      "phrase": "a variety of",
+      "category": "逻辑与衔接",
+      "meaningZh": "各种各样的",
+      "frame": "a variety of",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 8,
+      "documentCoverage": 0.228571,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 7,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-over-time",
+      "skill": "Reading",
+      "phrase": "over time",
+      "category": "逻辑与衔接",
+      "meaningZh": "随着时间推移",
+      "frame": "over time",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 8,
+      "documentCoverage": 0.228571,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 7,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-attached-to",
@@ -1281,7 +4334,52 @@
         "third_party_prediction": 4
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-impact-of",
+      "skill": "Reading",
+      "phrase": "impact of",
+      "category": "研究与分析",
+      "meaningZh": "……的影响",
+      "frame": "impact of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 7,
+      "documentCoverage": 0.2,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-related-to",
+      "skill": "Reading",
+      "phrase": "related to",
+      "category": "逻辑与衔接",
+      "meaningZh": "与……有关",
+      "frame": "related to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 11,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 10,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-similar-to",
@@ -1302,7 +4400,51 @@
         "official_public": 3
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-different-types",
+      "skill": "Reading",
+      "phrase": "different types",
+      "category": "研究与分析",
+      "meaningZh": "不同类型",
+      "frame": "different types",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 6,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-in-terms-of",
+      "skill": "Reading",
+      "phrase": "in terms of",
+      "category": "逻辑与衔接",
+      "meaningZh": "就……而言",
+      "frame": "in terms of",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 7
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-led-to",
@@ -1323,7 +4465,29 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-more-likely-to",
+      "skill": "Reading",
+      "phrase": "more likely to",
+      "category": "逻辑与衔接",
+      "meaningZh": "更有可能",
+      "frame": "more likely to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 7
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-result-in",
@@ -1344,7 +4508,202 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-results-of",
+      "skill": "Reading",
+      "phrase": "results of",
+      "category": "研究与分析",
+      "meaningZh": "……的结果",
+      "frame": "results of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-the-majority-of",
+      "skill": "Reading",
+      "phrase": "the majority of",
+      "category": "数量与变化",
+      "meaningZh": "大多数",
+      "frame": "the majority of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 6,
+      "documentCoverage": 0.171429,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 7
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-million-years",
+      "skill": "Reading",
+      "phrase": "million years",
+      "category": "数量与变化",
+      "meaningZh": "数百万年",
+      "frame": "million years",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 12,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 11,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-around-the-world",
+      "skill": "Reading",
+      "phrase": "around the world",
+      "category": "社会与发展",
+      "meaningZh": "世界各地",
+      "frame": "around the world",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 8,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 8
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-a-large-number-of",
+      "skill": "Reading",
+      "phrase": "a large number of",
+      "category": "数量与变化",
+      "meaningZh": "大量的",
+      "frame": "a large number of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 7
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-compared-with",
+      "skill": "Reading",
+      "phrase": "compared with",
+      "category": "逻辑与衔接",
+      "meaningZh": "与……相比",
+      "frame": "compared with",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 6,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-effects-of",
+      "skill": "Reading",
+      "phrase": "effects of",
+      "category": "研究与分析",
+      "meaningZh": "……的多种影响",
+      "frame": "effects of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-less-likely-to",
+      "skill": "Reading",
+      "phrase": "less likely to",
+      "category": "逻辑与衔接",
+      "meaningZh": "较不可能",
+      "frame": "less likely to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 5,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-process-of",
+      "skill": "Reading",
+      "phrase": "process of",
+      "category": "研究与分析",
+      "meaningZh": "……的过程",
+      "frame": "process of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-compared-to",
@@ -1365,7 +4724,93 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-long-term",
+      "skill": "Reading",
+      "phrase": "long term",
+      "category": "社会与发展",
+      "meaningZh": "长期的",
+      "frame": "long term",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-method-of",
+      "skill": "Reading",
+      "phrase": "method of",
+      "category": "研究与分析",
+      "meaningZh": "……的方法",
+      "frame": "method of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 5,
+      "documentCoverage": 0.142857,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 2
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-young-children",
+      "skill": "Reading",
+      "phrase": "young children",
+      "category": "社会与发展",
+      "meaningZh": "幼儿",
+      "frame": "young children",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-middle-class",
+      "skill": "Reading",
+      "phrase": "middle class",
+      "category": "社会与发展",
+      "meaningZh": "中产阶级",
+      "frame": "middle class",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-research-into",
@@ -1386,7 +4831,8 @@
         "official_public": 2
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
     },
     {
       "id": "reading-as-a-result-of",
@@ -1407,7 +4853,1382 @@
         "official_public": 1
       },
       "confidence": "high",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-contribute-to",
+      "skill": "Reading",
+      "phrase": "contribute to",
+      "category": "逻辑与衔接",
+      "meaningZh": "促成；有助于",
+      "frame": "contribute to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-human-beings",
+      "skill": "Reading",
+      "phrase": "human beings",
+      "category": "环境与科学",
+      "meaningZh": "人类",
+      "frame": "human beings",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-important-role",
+      "skill": "Reading",
+      "phrase": "important role",
+      "category": "研究与分析",
+      "meaningZh": "重要作用",
+      "frame": "important role",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-in-response-to",
+      "skill": "Reading",
+      "phrase": "in response to",
+      "category": "逻辑与衔接",
+      "meaningZh": "作为对……的回应",
+      "frame": "in response to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 3,
+        "official_public": 1
+      },
+      "confidence": "high",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-in-the-form-of",
+      "skill": "Reading",
+      "phrase": "in the form of",
+      "category": "逻辑与衔接",
+      "meaningZh": "以……的形式",
+      "frame": "in the form of",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-point-of-view",
+      "skill": "Reading",
+      "phrase": "point of view",
+      "category": "研究与分析",
+      "meaningZh": "观点；角度",
+      "frame": "point of view",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-research-shows",
+      "skill": "Reading",
+      "phrase": "research shows",
+      "category": "研究与分析",
+      "meaningZh": "研究显示",
+      "frame": "research shows",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-scientific-research",
+      "skill": "Reading",
+      "phrase": "scientific research",
+      "category": "研究与分析",
+      "meaningZh": "科学研究",
+      "frame": "scientific research",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-the-proportion-of",
+      "skill": "Reading",
+      "phrase": "the proportion of",
+      "category": "数量与变化",
+      "meaningZh": "……的比例",
+      "frame": "the proportion of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 4,
+      "documentCoverage": 0.114286,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-endangered-species",
+      "skill": "Reading",
+      "phrase": "endangered species",
+      "category": "环境与科学",
+      "meaningZh": "濒危物种",
+      "frame": "endangered species",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 15,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 15
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-industrial-revolution",
+      "skill": "Reading",
+      "phrase": "industrial revolution",
+      "category": "社会与发展",
+      "meaningZh": "工业革命",
+      "frame": "industrial revolution",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 12,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 12
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-middle-ages",
+      "skill": "Reading",
+      "phrase": "middle ages",
+      "category": "社会与发展",
+      "meaningZh": "中世纪",
+      "frame": "middle ages",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 11,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 11
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-radiocarbon-dating",
+      "skill": "Reading",
+      "phrase": "radiocarbon dating",
+      "category": "环境与科学",
+      "meaningZh": "放射性碳测年",
+      "frame": "radiocarbon dating",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 10,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 10
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-role-of",
+      "skill": "Reading",
+      "phrase": "role of",
+      "category": "研究与分析",
+      "meaningZh": "……的作用",
+      "frame": "role of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 9,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 9
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-at-the-same-time",
+      "skill": "Reading",
+      "phrase": "at the same time",
+      "category": "逻辑与衔接",
+      "meaningZh": "与此同时",
+      "frame": "at the same time",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 6,
+        "official_public": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-chaos-theory",
+      "skill": "Reading",
+      "phrase": "chaos theory",
+      "category": "环境与科学",
+      "meaningZh": "混沌理论",
+      "frame": "chaos theory",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 4,
+        "official_public": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-nobel-prize",
+      "skill": "Reading",
+      "phrase": "nobel prize",
+      "category": "社会与发展",
+      "meaningZh": "诺贝尔奖",
+      "frame": "nobel prize",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 6,
+        "third_party_prediction": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-brain-activity",
+      "skill": "Reading",
+      "phrase": "brain activity",
+      "category": "环境与科学",
+      "meaningZh": "大脑活动",
+      "frame": "brain activity",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-immune-system",
+      "skill": "Reading",
+      "phrase": "immune system",
+      "category": "环境与科学",
+      "meaningZh": "免疫系统",
+      "frame": "immune system",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-blood-pressure",
+      "skill": "Reading",
+      "phrase": "blood pressure",
+      "category": "环境与科学",
+      "meaningZh": "血压",
+      "frame": "blood pressure",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-developing-countries",
+      "skill": "Reading",
+      "phrase": "developing countries",
+      "category": "社会与发展",
+      "meaningZh": "发展中国家",
+      "frame": "developing countries",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-water-resources",
+      "skill": "Reading",
+      "phrase": "water resources",
+      "category": "环境与科学",
+      "meaningZh": "水资源",
+      "frame": "water resources",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-animal-species",
+      "skill": "Reading",
+      "phrase": "animal species",
+      "category": "环境与科学",
+      "meaningZh": "动物物种",
+      "frame": "animal species",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-difference-between",
+      "skill": "Reading",
+      "phrase": "difference between",
+      "category": "研究与分析",
+      "meaningZh": "……之间的差异",
+      "frame": "difference between",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-illegal-trade",
+      "skill": "Reading",
+      "phrase": "illegal trade",
+      "category": "社会与发展",
+      "meaningZh": "非法贸易",
+      "frame": "illegal trade",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-on-the-other-hand",
+      "skill": "Reading",
+      "phrase": "on the other hand",
+      "category": "逻辑与衔接",
+      "meaningZh": "另一方面",
+      "frame": "on the other hand",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-recent-research",
+      "skill": "Reading",
+      "phrase": "recent research",
+      "category": "研究与分析",
+      "meaningZh": "近期研究",
+      "frame": "recent research",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-a-great-deal-of",
+      "skill": "Reading",
+      "phrase": "a great deal of",
+      "category": "数量与变化",
+      "meaningZh": "大量的",
+      "frame": "a great deal of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-ability-to-adapt",
+      "skill": "Reading",
+      "phrase": "ability to adapt",
+      "category": "研究与分析",
+      "meaningZh": "适应能力",
+      "frame": "ability to adapt",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-can-be-found",
+      "skill": "Reading",
+      "phrase": "can be found",
+      "category": "逻辑与衔接",
+      "meaningZh": "可以在……找到",
+      "frame": "can be found",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-children-s-development",
+      "skill": "Reading",
+      "phrase": "children's development",
+      "category": "社会与发展",
+      "meaningZh": "儿童发展",
+      "frame": "children's development",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-drinking-water",
+      "skill": "Reading",
+      "phrase": "drinking water",
+      "category": "环境与科学",
+      "meaningZh": "饮用水",
+      "frame": "drinking water",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-early-stages",
+      "skill": "Reading",
+      "phrase": "early stages",
+      "category": "社会与发展",
+      "meaningZh": "早期阶段",
+      "frame": "early stages",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-eating-habits",
+      "skill": "Reading",
+      "phrase": "eating habits",
+      "category": "环境与科学",
+      "meaningZh": "饮食习惯",
+      "frame": "eating habits",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-exposure-to-sunlight",
+      "skill": "Reading",
+      "phrase": "exposure to sunlight",
+      "category": "环境与科学",
+      "meaningZh": "暴露于阳光",
+      "frame": "exposure to sunlight",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-food-intake",
+      "skill": "Reading",
+      "phrase": "food intake",
+      "category": "环境与科学",
+      "meaningZh": "食物摄入量",
+      "frame": "food intake",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 2,
+        "official_public": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-full-time-work",
+      "skill": "Reading",
+      "phrase": "full time work",
+      "category": "社会与发展",
+      "meaningZh": "全职工作",
+      "frame": "full time work",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 2,
+        "official_public": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-heart-rate",
+      "skill": "Reading",
+      "phrase": "heart rate",
+      "category": "环境与科学",
+      "meaningZh": "心率",
+      "frame": "heart rate",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-highly-efficient",
+      "skill": "Reading",
+      "phrase": "highly efficient",
+      "category": "环境与科学",
+      "meaningZh": "高效的",
+      "frame": "highly efficient",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-human-activities",
+      "skill": "Reading",
+      "phrase": "human activities",
+      "category": "环境与科学",
+      "meaningZh": "多种人类活动",
+      "frame": "human activities",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-human-brain",
+      "skill": "Reading",
+      "phrase": "human brain",
+      "category": "环境与科学",
+      "meaningZh": "人脑",
+      "frame": "human brain",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-job-market",
+      "skill": "Reading",
+      "phrase": "job market",
+      "category": "社会与发展",
+      "meaningZh": "就业市场",
+      "frame": "job market",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 2,
+        "official_public": 1
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-large-numbers",
+      "skill": "Reading",
+      "phrase": "large numbers",
+      "category": "数量与变化",
+      "meaningZh": "大量；大批",
+      "frame": "large numbers",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-large-scale",
+      "skill": "Reading",
+      "phrase": "large scale",
+      "category": "社会与发展",
+      "meaningZh": "大规模的",
+      "frame": "large scale",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-local-people",
+      "skill": "Reading",
+      "phrase": "local people",
+      "category": "社会与发展",
+      "meaningZh": "当地居民",
+      "frame": "local people",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-medical-school",
+      "skill": "Reading",
+      "phrase": "medical school",
+      "category": "社会与发展",
+      "meaningZh": "医学院",
+      "frame": "medical school",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-prehistoric-ancestors",
+      "skill": "Reading",
+      "phrase": "prehistoric ancestors",
+      "category": "社会与发展",
+      "meaningZh": "史前祖先",
+      "frame": "prehistoric ancestors",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-referred-to",
+      "skill": "Reading",
+      "phrase": "referred to",
+      "category": "逻辑与衔接",
+      "meaningZh": "被称作；被提及为",
+      "frame": "referred to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-relationship-between",
+      "skill": "Reading",
+      "phrase": "relationship between",
+      "category": "研究与分析",
+      "meaningZh": "……之间的关系",
+      "frame": "relationship between",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-research-team",
+      "skill": "Reading",
+      "phrase": "research team",
+      "category": "研究与分析",
+      "meaningZh": "研究团队",
+      "frame": "research team",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-rural-areas",
+      "skill": "Reading",
+      "phrase": "rural areas",
+      "category": "社会与发展",
+      "meaningZh": "农村地区",
+      "frame": "rural areas",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-system-of",
+      "skill": "Reading",
+      "phrase": "system of",
+      "category": "研究与分析",
+      "meaningZh": "……的体系",
+      "frame": "system of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-the-level-of",
+      "skill": "Reading",
+      "phrase": "the level of",
+      "category": "数量与变化",
+      "meaningZh": "……的水平",
+      "frame": "the level of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-throughout-history",
+      "skill": "Reading",
+      "phrase": "throughout history",
+      "category": "社会与发展",
+      "meaningZh": "纵观历史",
+      "frame": "throughout history",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-trade-routes",
+      "skill": "Reading",
+      "phrase": "trade routes",
+      "category": "社会与发展",
+      "meaningZh": "贸易路线",
+      "frame": "trade routes",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-urban-areas",
+      "skill": "Reading",
+      "phrase": "urban areas",
+      "category": "社会与发展",
+      "meaningZh": "城市地区",
+      "frame": "urban areas",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-valuable-information",
+      "skill": "Reading",
+      "phrase": "valuable information",
+      "category": "研究与分析",
+      "meaningZh": "有价值的信息",
+      "frame": "valuable information",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-wind-speed",
+      "skill": "Reading",
+      "phrase": "wind speed",
+      "category": "环境与科学",
+      "meaningZh": "风速",
+      "frame": "wind speed",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 3,
+      "documentCoverage": 0.085714,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "medium",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-climate-change",
+      "skill": "Reading",
+      "phrase": "climate change",
+      "category": "环境与科学",
+      "meaningZh": "气候变化",
+      "frame": "climate change",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 12,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 12
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-depends-on",
+      "skill": "Reading",
+      "phrase": "depends on",
+      "category": "逻辑与衔接",
+      "meaningZh": "取决于",
+      "frame": "depends on",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 7,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "third_party_prediction": 6,
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-body-temperature",
+      "skill": "Reading",
+      "phrase": "body temperature",
+      "category": "环境与科学",
+      "meaningZh": "体温",
+      "frame": "body temperature",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-child-labour",
+      "skill": "Reading",
+      "phrase": "child labour",
+      "category": "社会与发展",
+      "meaningZh": "童工",
+      "frame": "child labour",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-water-vapour",
+      "skill": "Reading",
+      "phrase": "water vapour",
+      "category": "环境与科学",
+      "meaningZh": "水蒸气",
+      "frame": "water vapour",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 6,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 6
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-a-series-of",
+      "skill": "Reading",
+      "phrase": "a series of",
+      "category": "数量与变化",
+      "meaningZh": "一系列",
+      "frame": "a series of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 5,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 5
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-high-quality",
+      "skill": "Reading",
+      "phrase": "high quality",
+      "category": "研究与分析",
+      "meaningZh": "高质量的",
+      "frame": "high quality",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 4,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 4
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     },
     {
       "id": "reading-closely-related",
@@ -1428,7 +6249,702 @@
         "third_party_prediction": 1
       },
       "confidence": "exploratory",
-      "contentLabel": "本站原创例句"
+      "contentLabel": "本站原创例句",
+      "tier": "core"
+    },
+    {
+      "id": "reading-scientific-community",
+      "skill": "Reading",
+      "phrase": "scientific community",
+      "category": "环境与科学",
+      "meaningZh": "科学界",
+      "frame": "scientific community",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 3
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-the-rate-of",
+      "skill": "Reading",
+      "phrase": "the rate of",
+      "category": "数量与变化",
+      "meaningZh": "……的比率",
+      "frame": "the rate of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 3,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 3
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-a-wide-range-of",
+      "skill": "Reading",
+      "phrase": "a wide range of",
+      "category": "数量与变化",
+      "meaningZh": "广泛的；多种",
+      "frame": "a wide range of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-consists-of",
+      "skill": "Reading",
+      "phrase": "consists of",
+      "category": "逻辑与衔接",
+      "meaningZh": "由……组成",
+      "frame": "consists of",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-data-from",
+      "skill": "Reading",
+      "phrase": "data from",
+      "category": "研究与分析",
+      "meaningZh": "来自……的数据",
+      "frame": "data from",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-effect-of",
+      "skill": "Reading",
+      "phrase": "effect of",
+      "category": "研究与分析",
+      "meaningZh": "……的影响",
+      "frame": "effect of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 2,
+      "sourceMix": {
+        "official_public": 1,
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-in-addition-to",
+      "skill": "Reading",
+      "phrase": "in addition to",
+      "category": "逻辑与衔接",
+      "meaningZh": "除……之外还",
+      "frame": "in addition to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-in-contrast",
+      "skill": "Reading",
+      "phrase": "in contrast",
+      "category": "逻辑与衔接",
+      "meaningZh": "相比之下",
+      "frame": "in contrast",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-in-recent-years",
+      "skill": "Reading",
+      "phrase": "in recent years",
+      "category": "逻辑与衔接",
+      "meaningZh": "近年来",
+      "frame": "in recent years",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-is-believed-to",
+      "skill": "Reading",
+      "phrase": "is believed to",
+      "category": "逻辑与衔接",
+      "meaningZh": "据信；被认为",
+      "frame": "is believed to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-modern-society",
+      "skill": "Reading",
+      "phrase": "modern society",
+      "category": "社会与发展",
+      "meaningZh": "现代社会",
+      "frame": "modern society",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-wide-range",
+      "skill": "Reading",
+      "phrase": "wide range",
+      "category": "数量与变化",
+      "meaningZh": "广泛范围",
+      "frame": "wide range",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 2,
+      "documentCoverage": 0.057143,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-global-warming",
+      "skill": "Reading",
+      "phrase": "global warming",
+      "category": "环境与科学",
+      "meaningZh": "全球变暖",
+      "frame": "global warming",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-human-activity",
+      "skill": "Reading",
+      "phrase": "human activity",
+      "category": "环境与科学",
+      "meaningZh": "人类活动",
+      "frame": "human activity",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-natural-resources",
+      "skill": "Reading",
+      "phrase": "natural resources",
+      "category": "环境与科学",
+      "meaningZh": "自然资源",
+      "frame": "natural resources",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 2,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 2
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-a-combination-of",
+      "skill": "Reading",
+      "phrase": "a combination of",
+      "category": "数量与变化",
+      "meaningZh": "……的组合",
+      "frame": "a combination of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-a-small-number-of",
+      "skill": "Reading",
+      "phrase": "a small number of",
+      "category": "数量与变化",
+      "meaningZh": "少量的",
+      "frame": "a small number of",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-an-increase-in",
+      "skill": "Reading",
+      "phrase": "an increase in",
+      "category": "数量与变化",
+      "meaningZh": "……的增长",
+      "frame": "an increase in",
+      "usageZh": "用于识别数量、比例、范围和时间尺度。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-analysis-of",
+      "skill": "Reading",
+      "phrase": "analysis of",
+      "category": "研究与分析",
+      "meaningZh": "对……的分析",
+      "frame": "analysis of",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-decision-making",
+      "skill": "Reading",
+      "phrase": "decision making",
+      "category": "社会与发展",
+      "meaningZh": "决策",
+      "frame": "decision making",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-economic-growth",
+      "skill": "Reading",
+      "phrase": "economic growth",
+      "category": "社会与发展",
+      "meaningZh": "经济增长",
+      "frame": "economic growth",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-health-problems",
+      "skill": "Reading",
+      "phrase": "health problems",
+      "category": "社会与发展",
+      "meaningZh": "健康问题",
+      "frame": "health problems",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-is-thought-to",
+      "skill": "Reading",
+      "phrase": "is thought to",
+      "category": "逻辑与衔接",
+      "meaningZh": "被认为会",
+      "frame": "is thought to",
+      "usageZh": "用于追踪作者的举例、因果、转折、比较和补充关系。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-living-conditions",
+      "skill": "Reading",
+      "phrase": "living conditions",
+      "category": "社会与发展",
+      "meaningZh": "生活条件",
+      "frame": "living conditions",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-natural-environment",
+      "skill": "Reading",
+      "phrase": "natural environment",
+      "category": "环境与科学",
+      "meaningZh": "自然环境",
+      "frame": "natural environment",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-population-growth",
+      "skill": "Reading",
+      "phrase": "population growth",
+      "category": "社会与发展",
+      "meaningZh": "人口增长",
+      "frame": "population growth",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-primary-school",
+      "skill": "Reading",
+      "phrase": "primary school",
+      "category": "社会与发展",
+      "meaningZh": "小学",
+      "frame": "primary school",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-problem-solving",
+      "skill": "Reading",
+      "phrase": "problem solving",
+      "category": "社会与发展",
+      "meaningZh": "解决问题",
+      "frame": "problem solving",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-sea-level",
+      "skill": "Reading",
+      "phrase": "sea level",
+      "category": "环境与科学",
+      "meaningZh": "海平面",
+      "frame": "sea level",
+      "usageZh": "常见于自然科学、环境、生物和健康类文章。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-social-development",
+      "skill": "Reading",
+      "phrase": "social development",
+      "category": "社会与发展",
+      "meaningZh": "社会发展",
+      "frame": "social development",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-social-interaction",
+      "skill": "Reading",
+      "phrase": "social interaction",
+      "category": "社会与发展",
+      "meaningZh": "社会互动",
+      "frame": "social interaction",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "third_party_prediction": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-study-found",
+      "skill": "Reading",
+      "phrase": "study found",
+      "category": "研究与分析",
+      "meaningZh": "研究发现",
+      "frame": "study found",
+      "usageZh": "用于定位研究方法、证据、结果和作者判断。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
+    },
+    {
+      "id": "reading-technological-development",
+      "skill": "Reading",
+      "phrase": "technological development",
+      "category": "社会与发展",
+      "meaningZh": "技术发展",
+      "frame": "technological development",
+      "usageZh": "常见于历史、教育、工作、城市和社会发展主题。",
+      "exampleEn": "",
+      "exampleZh": "",
+      "occurrenceCount": 1,
+      "documentFrequency": 1,
+      "documentCoverage": 0.028571,
+      "sourceCount": 1,
+      "sourceMix": {
+        "official_public": 1
+      },
+      "confidence": "exploratory",
+      "contentLabel": "语料扩展索引",
+      "tier": "expansion"
     }
   ]
 }

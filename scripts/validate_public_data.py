@@ -85,9 +85,15 @@ def main() -> None:
         assert chunk["meaningZh"].strip()
         assert chunk["frame"].strip()
         assert chunk["usageZh"].strip()
-        assert chunk["exampleEn"].strip()
-        assert chunk["exampleZh"].strip()
-        assert chunk["contentLabel"] == "本站原创例句"
+        assert chunk["tier"] in {"core", "expansion"}
+        if chunk["tier"] == "core":
+            assert chunk["exampleEn"].strip()
+            assert chunk["exampleZh"].strip()
+            assert chunk["contentLabel"] == "本站原创例句"
+        else:
+            assert chunk["exampleEn"] == ""
+            assert chunk["exampleZh"] == ""
+            assert chunk["contentLabel"] == "语料扩展索引"
         assert chunk["occurrenceCount"] >= chunk["documentFrequency"] >= 1
         assert 0 < chunk["documentCoverage"] <= 1
         assert sum(chunk["sourceMix"].values()) == chunk["occurrenceCount"]
@@ -95,6 +101,8 @@ def main() -> None:
         assert chunk["confidence"] in {"high", "medium", "exploratory"}
     assert len(chunk_ids) == len(set(chunk_ids)), "duplicate chunk id"
     assert chunks["meta"]["chunkCount"] == len(chunk_ids)
+    assert chunks["meta"]["coreChunkCount"] == sum(chunk["tier"] == "core" for chunk in chunks["chunks"])
+    assert chunks["meta"]["expansionChunkCount"] == sum(chunk["tier"] == "expansion" for chunk in chunks["chunks"])
     assert {stat["skill"] for stat in chunks["skillStats"]} == {"Reading", "Listening"}
     assert sum(stat["chunkCount"] for stat in chunks["skillStats"]) == len(chunk_ids)
     coverage_by_skill = {row["skill"]: row for row in corpus["coverage"]}
@@ -104,6 +112,7 @@ def main() -> None:
         assert stat["filteredTokenCount"] == coverage["filteredTokens"]
         assert stat["sourceCount"] == coverage["sources"]
         assert stat["sourceGroups"] == coverage["sourceGroups"]
+        assert stat["coreChunkCount"] + stat["expansionChunkCount"] == stat["chunkCount"]
     assert manifest["counts"]["topics"] == len(topic_ids)
     assert manifest["counts"]["sourceQuestions"] == len(source_question_ids)
     assert manifest["counts"]["practiceQuestions"] == len(question_ids)

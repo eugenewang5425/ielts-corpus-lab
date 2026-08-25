@@ -11,6 +11,8 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
+from lr_chunk_catalog import CATEGORY_TIPS, LISTENING_EXPANSION, READING_EXPANSION
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CORPUS = ROOT.parent / "雅思语料研究" / "outputs" / "data" / "corpus_dedup.csv"
@@ -179,6 +181,7 @@ def build(corpus_path: Path, materials_path: Path) -> dict:
             raise ValueError(f"{skill} source drift: extracted {len(documents)} documents, expected {expected}")
     chunks = []
     category_counts: dict[str, Counter] = {"Reading": Counter(), "Listening": Counter()}
+    seen_phrases: dict[str, set[str]] = {"Reading": set(), "Listening": set()}
 
     for skill, entries in (("Reading", READING), ("Listening", LISTENING)):
         documents = by_skill[skill]
@@ -195,6 +198,7 @@ def build(corpus_path: Path, materials_path: Path) -> dict:
             if occurrence_count == 0:
                 raise ValueError(f"Phrase is absent from {skill} corpus: {phrase}")
             category_counts[skill][category] += 1
+            seen_phrases[skill].add(phrase)
             chunks.append({
                 "id": f"{skill.lower()}-{re.sub(r'[^a-z]+', '-', phrase).strip('-')}",
                 "skill": skill,
@@ -212,6 +216,45 @@ def build(corpus_path: Path, materials_path: Path) -> dict:
                 "sourceMix": dict(source_mix.most_common()),
                 "confidence": confidence(document_frequency, len(matching_sources), len(documents)),
                 "contentLabel": "本站原创例句",
+                "tier": "core",
+            })
+
+    for skill, entries in (("Reading", READING_EXPANSION), ("Listening", LISTENING_EXPANSION)):
+        documents = by_skill[skill]
+        tokenized = [tokenize(row["text"]) for row in documents]
+        for phrase, category, meaning in entries:
+            if phrase in seen_phrases[skill]:
+                continue
+            per_document = [count_phrase(tokens, phrase) for tokens in tokenized]
+            occurrence_count = sum(per_document)
+            document_frequency = sum(count > 0 for count in per_document)
+            if occurrence_count == 0:
+                continue
+            matching_sources = {documents[index]["sourceName"] for index, count in enumerate(per_document) if count}
+            source_mix = Counter()
+            for index, count in enumerate(per_document):
+                if count:
+                    source_mix[documents[index]["sourceGroup"]] += count
+            category_counts[skill][category] += 1
+            seen_phrases[skill].add(phrase)
+            chunks.append({
+                "id": f"{skill.lower()}-{re.sub(r'[^a-z]+', '-', phrase).strip('-')}",
+                "skill": skill,
+                "phrase": phrase,
+                "category": category,
+                "meaningZh": meaning,
+                "frame": phrase,
+                "usageZh": CATEGORY_TIPS[category],
+                "exampleEn": "",
+                "exampleZh": "",
+                "occurrenceCount": occurrence_count,
+                "documentFrequency": document_frequency,
+                "documentCoverage": round(document_frequency / len(documents), 6),
+                "sourceCount": len(matching_sources),
+                "sourceMix": dict(source_mix.most_common()),
+                "confidence": confidence(document_frequency, len(matching_sources), len(documents)),
+                "contentLabel": "语料扩展索引",
+                "tier": "expansion",
             })
 
     chunks.sort(key=lambda item: (item["skill"], -item["documentFrequency"], -item["occurrenceCount"], item["phrase"]))
@@ -227,6 +270,8 @@ def build(corpus_path: Path, materials_path: Path) -> dict:
             "filteredTokenCount": coverage["filteredTokens"],
             "sourceGroups": coverage["sourceGroups"],
             "chunkCount": len(selected),
+            "coreChunkCount": sum(item["tier"] == "core" for item in selected),
+            "expansionChunkCount": sum(item["tier"] == "expansion" for item in selected),
             "categories": [{"name": name, "count": count} for name, count in category_counts[skill].items()],
         })
 
@@ -239,12 +284,15 @@ def build(corpus_path: Path, materials_path: Path) -> dict:
             "sourceFile": "corpus_dedup.csv + 本地资料去重 PDF",
             "sourceLayers": ["official_public", "cambridge_derived", "third_party_prediction"],
             "chunkCount": len(chunks),
-            "copyrightNoteZh": "词块次数来自去重语料；释义、搭配骨架和例句由本站原创整理，不复制原题长句。",
+            "coreChunkCount": sum(item["tier"] == "core" for item in chunks),
+            "expansionChunkCount": sum(item["tier"] == "expansion" for item in chunks),
+            "copyrightNoteZh": "核心精学含原创搭配讲解与双语例句；扩展索引提供人工整理释义和语料证据。两层均不复制原题长句。",
         },
         "methodology": {
             "countUnitZh": "按大小写归一后的连续词序列精确计数；同一统计单元内可重复出现。",
             "coverageZh": "文档覆盖表示至少出现一次该词块的统计单元占比。",
             "confidenceZh": "高可信需覆盖约 12% 的统计单元且跨至少两个来源集合；覆盖 3 个及以上但未跨来源为中，其余为探索。完整原题与派生资料分层统计。",
+            "tierZh": "核心精学包含逐条搭配骨架、使用提示和原创例句；扩展索引提供人工整理的中文释义、功能分类和语料证据。",
         },
         "skillStats": skill_stats,
         "chunks": chunks,
