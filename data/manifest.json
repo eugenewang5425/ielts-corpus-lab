@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "dataVersion": "20260828-101036",
-  "generatedAt": "2026-08-28T10:10:36.716506+00:00",
+  "dataVersion": "20260828-114531",
+  "generatedAt": "2026-08-28T11:45:31.079513+00:00",
   "files": {
     "corpus": "data/corpus.json",
     "speaking": "data/speaking.json",
@@ -11,7 +11,7 @@
   },
   "counts": {
     "documents": 16154,
-    "words": 27855,
+    "words": 37699,
     "topics": 55,
     "sourceQuestions": 10294,
     "sourceQuestionOccurrences": 11085,

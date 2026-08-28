@@ -132,18 +132,24 @@ def main() -> None:
     word_groups = {}
     for row in corpus["words"]:
         word_groups.setdefault((row["skill"], row["scope"]), []).append(row)
+        assert 1 <= len(row["topSkills"]) <= 2
+        assert len(row["topSkills"]) == len(set(row["topSkills"]))
+        assert set(row["topSkills"]).issubset({"Listening", "Speaking", "Reading", "Writing"})
     assert set(word_groups) == {
         (skill, scope)
-        for skill in {"Listening", "Speaking", "Reading", "Writing"}
+        for skill in {"All", "Listening", "Speaking", "Reading", "Writing"}
         for scope in {"overall", "recent_5y"}
     }
     for rows in word_groups.values():
         rows.sort(key=lambda row: row["rank"])
         assert [row["rank"] for row in rows] == list(range(1, len(rows) + 1))
-    assert all(len(word_groups[(skill, "overall")]) > 750 for skill in {"Listening", "Speaking", "Reading", "Writing"})
+    assert all(len(word_groups[(skill, "overall")]) > 750 for skill in {"All", "Listening", "Speaking", "Reading", "Writing"})
     scope_coverage_keys = {(row["skill"], row["scope"]) for row in corpus["wordScopeCoverage"]}
     assert scope_coverage_keys == set(word_groups)
     overall_scope = {row["skill"]: row for row in corpus["wordScopeCoverage"] if row["scope"] == "overall"}
+    assert overall_scope["All"]["documents"] == corpus["meta"]["documentCount"]
+    assert overall_scope["All"]["filteredTokens"] == corpus["meta"]["filteredTokenCount"]
+    assert overall_scope["All"]["sources"] == corpus["meta"]["sourceCount"]
     for skill, coverage in coverage_by_skill.items():
         assert overall_scope[skill]["documents"] == coverage["documents"]
         assert overall_scope[skill]["filteredTokens"] == coverage["filteredTokens"]

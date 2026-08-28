@@ -15,15 +15,20 @@
   <meta property="og:image" content="https://eugenewang5425.github.io/ielts-corpus-lab/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css?v=10">
-  <link rel="stylesheet" href="overrides.css?v=11">
-  <script src="app.js?v=12" defer></script>
+  <link rel="stylesheet" href="overrides.css?v=13">
+  <script src="app.js?v=14" defer></script>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#home"><span class="brand-mark">I</span><span>IELTS Corpus Lab</span></a>
-    <nav aria-label="主导航">
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="打开主导航" aria-controls="primary-nav" aria-expanded="false">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+    <nav id="primary-nav" aria-label="主导航">
+      <a class="mobile-home-link" href="#home">首页</a>
       <a href="#words">四科词频</a><a href="#speaking">口语题库</a><a href="#writing">写作题库</a>
       <a href="#coverage">阅读·听力</a><a href="#sources">来源审计</a><a href="#method">方法</a>
+      <span class="mobile-nav-status" id="mobile-data-status">正在读取在线数据</span>
     </nav>
     <span class="status" id="data-status">正在读取在线数据</span>
   </header>
@@ -42,6 +47,7 @@
       </div>
       <div class="section-head"><div><p class="eyebrow">Coverage</p><h2>四科统计体量</h2></div><p>预测题、派生笔记与官方样题不会混成同一个“官方”标签。</p></div>
       <div id="home-coverage" class="metric-grid"></div>
+      <div class="coverage-unit-note"><b>为什么听力和阅读的数字看起来较小？</b><p>卡片大数字表示“去重统计单元”，不是题目数量。听力的一段 Part、阅读的一篇 Passage（旧扫描无法可靠切分时为完整页）各算 1 个长文本单元；口语通常每道独立问题算 1 个短单元。不同科目比较语料体量时，请优先看学习词 token。</p></div>
     </section>
 
     <section class="view page" data-view="words" hidden>
@@ -51,8 +57,9 @@
         <div id="scope-tabs" class="tabs small"></div>
         <form id="word-search" class="inline-search"><input placeholder="输入单词" aria-label="输入单词"><button>搜索</button></form>
       </div>
+      <div id="word-summary" class="word-summary"></div>
       <div id="word-note" class="note"></div>
-      <div class="table-wrap"><table><thead><tr><th>排名 / 单词</th><th>出现</th><th>覆盖文档</th><th>每万词</th><th>来源</th><th>可信度</th></tr></thead><tbody id="word-body"></tbody></table></div>
+      <div class="table-wrap"><table><thead><tr><th>排名 / 单词 / 常见科目</th><th>出现</th><th>覆盖文档</th><th>每万词</th><th>来源</th><th>可信度</th></tr></thead><tbody id="word-body"></tbody></table></div>
       <div id="word-pages" class="pager"></div>
     </section>
 

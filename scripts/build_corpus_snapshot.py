@@ -261,6 +261,7 @@ for sid, meta in source_blueprints.items():
 
 
 def compute_word_stats(scope: str, scoped_docs: list[dict[str, object]]) -> list[dict[str, object]]:
+    skills = ("Listening", "Speaking", "Reading", "Writing")
     occurrences = defaultdict(Counter)
     doc_frequency = defaultdict(lambda: defaultdict(set))
     source_frequency = defaultdict(lambda: defaultdict(set))
@@ -270,19 +271,33 @@ def compute_word_stats(scope: str, scoped_docs: list[dict[str, object]]) -> list
     for document in scoped_docs:
         skill = str(document["skill"])
         tokens = list(document["tokens"])
-        doc_counts[skill] += 1
-        totals[skill] += len(tokens)
         counts = Counter(tokens)
-        occurrences[skill].update(counts)
         group = str(source_blueprints[str(document["sourceId"])]["sourceGroup"])
-        for word, count in counts.items():
-            doc_frequency[skill][word].add(document["id"])
-            source_frequency[skill][word].add(document["sourceId"])
-            group_occurrence[skill][word][group] += count
+        for bucket in (skill, "All"):
+            doc_counts[bucket] += 1
+            totals[bucket] += len(tokens)
+            occurrences[bucket].update(counts)
+            for word, count in counts.items():
+                doc_frequency[bucket][word].add(document["id"])
+                source_frequency[bucket][word].add(document["sourceId"])
+                group_occurrence[bucket][word][group] += count
+
+    top_skills = {}
+    for word in occurrences["All"]:
+        ranked = []
+        for skill in skills:
+            count = occurrences[skill][word]
+            if not count:
+                continue
+            per_10k = count * 10000 / max(1, totals[skill])
+            ranked.append((per_10k, count, skill))
+        ranked.sort(key=lambda item: (-item[0], -item[1], item[2]))
+        top_skills[word] = [skill for _, _, skill in ranked[:2]]
+
     rows = []
-    for skill in ("Listening", "Speaking", "Reading", "Writing"):
+    for skill in ("All", *skills):
         candidates = []
-        minimum_docs = 2 if skill in {"Listening", "Reading"} else 5
+        minimum_docs = 5 if skill == "All" else (2 if skill in {"Listening", "Reading"} else 5)
         for word, count in occurrences[skill].items():
             df = len(doc_frequency[skill][word])
             if df < minimum_docs:
@@ -298,7 +313,7 @@ def compute_word_stats(scope: str, scoped_docs: list[dict[str, object]]) -> list
         # threshold.  Pagination belongs in the UI; truncating the data here
         # made a full-corpus build look like a top-750 sample.
         for rank, (count, df, word, source_count, coverage, per_10k, confidence, mix) in enumerate(candidates, 1):
-            rows.append({"skill": skill, "scope": scope, "lemma": word, "display": word, "rank": rank, "occurrenceCount": count, "documentFrequency": df, "documentCoverage": round(coverage, 5), "normalizedPer10k": round(per_10k, 2), "sourceCount": source_count, "confidence": confidence, "sourceMix": dict(mix.most_common())})
+            rows.append({"skill": skill, "scope": scope, "lemma": word, "display": word, "rank": rank, "occurrenceCount": count, "documentFrequency": df, "documentCoverage": round(coverage, 5), "normalizedPer10k": round(per_10k, 2), "sourceCount": source_count, "confidence": confidence, "sourceMix": dict(mix.most_common()), "topSkills": top_skills.get(word, [])})
     return rows
 
 
@@ -309,8 +324,8 @@ word_rows += compute_word_stats("recent_5y", recent_documents)
 
 def scope_coverage(scope: str, scoped_docs: list[dict[str, object]]) -> list[dict[str, object]]:
     rows = []
-    for skill in ("Listening", "Speaking", "Reading", "Writing"):
-        skill_docs = [document for document in scoped_docs if document["skill"] == skill]
+    for skill in ("All", "Listening", "Speaking", "Reading", "Writing"):
+        skill_docs = scoped_docs if skill == "All" else [document for document in scoped_docs if document["skill"] == skill]
         rows.append({
             "skill": skill,
             "scope": scope,
