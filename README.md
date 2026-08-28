@@ -97,3 +97,18 @@ The Reading and Listening chunk build retains curated core and manually indexed 
 ## Validation and deployment
 
 `scripts/validate_public_data.py` checks snapshot version consistency, question-bank structure, source references, chunk-quality rules, copyright boundaries, and required fields. After a push to `main`, GitHub Actions validates the data and deploys the site to GitHub Pages.
+
+---
+
+## 支持项目 / Support the project
+
+如果这个项目对你有帮助，可以自愿通过微信赞赏支持语料整理、数据核验和网站维护。<br>
+If this project helps you, you may voluntarily support its corpus curation, data verification, and maintenance through WeChat.
+
+<p align="center">
+  <a href="assets/wechat-reward.jpg">
+    <img src="assets/wechat-reward.jpg" alt="微信赞赏码 / WeChat reward code" width="380">
+  </a>
+</p>
+
+<p align="center">微信扫码赞赏 · 点击图片查看原图 · 感谢支持 / Scan with WeChat · Open the image for full size · Thank you</p>

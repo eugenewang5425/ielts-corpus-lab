@@ -1420,3 +1420,91 @@
     grid-column: 1;
   }
 }
+
+.support-project {
+  padding: clamp(48px, 8vw, 96px) clamp(20px, 9vw, 140px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 410px);
+  gap: clamp(40px, 9vw, 130px);
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgb(255 255 255 / 4%) 1px, transparent 1px),
+    #094b3f;
+  background-size: 100% 44px;
+  color: #f7faf8;
+  border-top: 5px solid #d89435;
+}
+
+.support-copy {
+  max-width: 720px;
+}
+
+.support-copy .eyebrow {
+  color: #9ad4c6;
+}
+
+.support-copy h2 {
+  margin: 0;
+  font: 500 clamp(42px, 6vw, 76px) / 1.02 Georgia, "Noto Serif SC", serif;
+  letter-spacing: -.045em;
+}
+
+.support-copy > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 28px 0 18px;
+  color: #d4e1dd;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.support-copy > span {
+  color: #9ad4c6;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.support-qr {
+  width: 100%;
+  margin: 0;
+  padding: 13px;
+  justify-self: end;
+  background: #fff;
+  border: 1px solid rgb(255 255 255 / 28%);
+  box-shadow: 24px 24px 0 rgb(0 0 0 / 13%);
+}
+
+.support-qr img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.support-qr > a {
+  display: block;
+}
+
+.support-qr figcaption {
+  padding: 13px 8px 4px;
+  color: #315149;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .support-project {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .support-copy h2 br {
+    display: none;
+  }
+
+  .support-qr {
+    width: min(100%, 400px);
+    justify-self: center;
+    box-shadow: 14px 14px 0 rgb(0 0 0 / 13%);
+  }
+}
