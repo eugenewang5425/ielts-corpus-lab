@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "dataVersion": "20260825-164825",
-  "generatedAt": "2026-08-25T08:48:25.522228+00:00",
+  "dataVersion": "20260828-101036",
+  "generatedAt": "2026-08-28T10:10:36.716506+00:00",
   "files": {
     "corpus": "data/corpus.json",
     "speaking": "data/speaking.json",
@@ -10,13 +10,14 @@
     "chunks": "data/chunks.json"
   },
   "counts": {
-    "documents": 13824,
+    "documents": 16154,
+    "words": 27855,
     "topics": 55,
-    "sourceQuestions": 9544,
-    "sourceQuestionOccurrences": 9688,
+    "sourceQuestions": 10294,
+    "sourceQuestionOccurrences": 11085,
     "practiceQuestions": 383,
     "writingExercises": 14,
-    "chunks": 317
+    "chunks": 1037
   },
   "repository": "https://github.com/eugenewang5425/ielts-corpus-lab",
   "updateModel": "Versioned public JSON snapshot on GitHub Pages. The client fetches the manifest without cache and then loads matching data files."

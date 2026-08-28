@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 
@@ -36,6 +37,9 @@ def main() -> None:
             assert all(ref in speaking["sources"] for ref in question["sourceRefs"])
     assert len(source_question_ids) == len(set(source_question_ids)), "duplicate source question id"
     assert speaking["meta"]["uniqueQuestionCount"] == len(source_question_ids)
+    assert speaking["meta"]["currentQuestionCount"] > 2000
+    assert speaking["meta"]["upcomingQuestionCount"] >= 70
+    assert any(source.get("phase") == "upcoming_prediction" for source in speaking["sources"].values())
 
     question_ids: list[str] = []
     for topic_id in topic_ids:
@@ -93,19 +97,57 @@ def main() -> None:
         else:
             assert chunk["exampleEn"] == ""
             assert chunk["exampleZh"] == ""
-            assert chunk["contentLabel"] == "语料扩展索引"
+            assert chunk["contentLabel"] in {"语料扩展索引", "语料自动发现"}
         assert chunk["occurrenceCount"] >= chunk["documentFrequency"] >= 1
         assert 0 < chunk["documentCoverage"] <= 1
         assert sum(chunk["sourceMix"].values()) == chunk["occurrenceCount"]
         assert chunk["sourceCount"] >= 1
         assert chunk["confidence"] in {"high", "medium", "exploratory"}
     assert len(chunk_ids) == len(set(chunk_ids)), "duplicate chunk id"
+    assert chunks["meta"]["chunkCount"] >= 900
+    assert sum(item.get("contentLabel") == "语料自动发现" for item in chunks["chunks"]) >= 500
     assert chunks["meta"]["chunkCount"] == len(chunk_ids)
     assert chunks["meta"]["coreChunkCount"] == sum(chunk["tier"] == "core" for chunk in chunks["chunks"])
     assert chunks["meta"]["expansionChunkCount"] == sum(chunk["tier"] == "expansion" for chunk in chunks["chunks"])
     assert {stat["skill"] for stat in chunks["skillStats"]} == {"Reading", "Listening"}
     assert sum(stat["chunkCount"] for stat in chunks["skillStats"]) == len(chunk_ids)
     coverage_by_skill = {row["skill"]: row for row in corpus["coverage"]}
+    assert corpus["meta"]["cambridgeVolumes"] == 18
+    assert corpus["meta"]["cambridgeSections"] >= 900
+    assert corpus["meta"]["wordListPolicy"] == "all_qualifying_no_top_n_cap"
+    assert chunks["meta"]["discoveryPolicy"] == "all_qualifying_no_top_n_cap"
+    assert len(corpus["sources"]) == 32
+    assert len({source["sourceGroup"] for source in corpus["sources"]}) == 8
+    cambridge_numbers = sorted(
+        int(match.group(1))
+        for source in corpus["sources"]
+        if source["sourceGroup"] == "cambridge_practice"
+        if (match := re.search(r"Academic (\d+)", source["name"]))
+    )
+    assert cambridge_numbers == list(range(4, 22)), cambridge_numbers
+    assert {"cambridge_practice", "local_question_bank"}.issubset({source["sourceGroup"] for source in corpus["sources"]})
+    assert all("text" not in source and "tokens" not in source for source in corpus["sources"])
+    word_keys = [(row["skill"], row["scope"], row["lemma"]) for row in corpus["words"]]
+    assert len(word_keys) == len(set(word_keys)), "duplicate word statistic"
+    word_groups = {}
+    for row in corpus["words"]:
+        word_groups.setdefault((row["skill"], row["scope"]), []).append(row)
+    assert set(word_groups) == {
+        (skill, scope)
+        for skill in {"Listening", "Speaking", "Reading", "Writing"}
+        for scope in {"overall", "recent_5y"}
+    }
+    for rows in word_groups.values():
+        rows.sort(key=lambda row: row["rank"])
+        assert [row["rank"] for row in rows] == list(range(1, len(rows) + 1))
+    assert all(len(word_groups[(skill, "overall")]) > 750 for skill in {"Listening", "Speaking", "Reading", "Writing"})
+    scope_coverage_keys = {(row["skill"], row["scope"]) for row in corpus["wordScopeCoverage"]}
+    assert scope_coverage_keys == set(word_groups)
+    overall_scope = {row["skill"]: row for row in corpus["wordScopeCoverage"] if row["scope"] == "overall"}
+    for skill, coverage in coverage_by_skill.items():
+        assert overall_scope[skill]["documents"] == coverage["documents"]
+        assert overall_scope[skill]["filteredTokens"] == coverage["filteredTokens"]
+        assert overall_scope[skill]["sources"] == coverage["sources"]
     for stat in chunks["skillStats"]:
         coverage = coverage_by_skill[stat["skill"]]
         assert stat["documents"] == coverage["documents"]
@@ -114,6 +156,7 @@ def main() -> None:
         assert stat["sourceGroups"] == coverage["sourceGroups"]
         assert stat["coreChunkCount"] + stat["expansionChunkCount"] == stat["chunkCount"]
     assert manifest["counts"]["topics"] == len(topic_ids)
+    assert manifest["counts"]["words"] == len(corpus["words"])
     assert manifest["counts"]["sourceQuestions"] == len(source_question_ids)
     assert manifest["counts"]["practiceQuestions"] == len(question_ids)
     assert manifest["counts"]["writingExercises"] == len(writing_ids)

@@ -5,7 +5,7 @@ import csv
 import hashlib
 import json
 import re
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -17,6 +17,15 @@ from lr_chunk_catalog import CATEGORY_TIPS, LISTENING_EXPANSION, READING_EXPANSI
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CORPUS = ROOT.parent / "雅思语料研究" / "outputs" / "data" / "corpus_dedup.csv"
 DEFAULT_MATERIALS = ROOT.parent / "资料"
+CAMBRIDGE_CACHE = ROOT.parent / "outputs" / "ielts-corpus-build" / "cambridge_sections.json"
+
+AUTO_EDGE = set("a an the and or but if than then of in on at to from for with by as is are was were be been being do does did have has had this that these those it its i me my mine you your yours we us our ours he him his she her hers they them their theirs there here what which who how why when where can could may might should would will not no yes about into over under between during after before more most some any each every other another also very just all both only own same too out up down again further once while because however although though well right now really okay please good quite lot something thing things one two three let's i'd i'm i've i'll you'd you're you've you'll we'd we're we've we'll they'd they're they've they'll don't doesn't didn't can't couldn't won't wouldn't shouldn't isn't aren't wasn't weren't that's it's what's there's here's".split())
+AUTO_NOISE = set("ielts test tests academic general reading listening writing speaking question questions answer answers task tasks section sections part parts passage passages page pages recording transcript candidate candidates examiner choose correct letter letters complete following below write read hear listen word words true false given match matching option options label diagram table note summary sentence instructions i ii iii iv v vi vii viii ix x zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred hundreds thousand thousands million millions billion billions".split())
+AUTO_INTERIOR_NOISE = set("i me my mine you your yours we us our ours he him his she her hers they them their theirs i'd i'm i've i'll you'd you're you've you'll we'd we're we've we'll they'd they're they've they'll don't doesn't didn't can't couldn't won't wouldn't shouldn't isn't aren't wasn't weren't that's it's what's there's here's don".split())
+BROKEN_BIGRAM_FIRST = {"need", "going", "let", "like", "time", "number", "take", "plenty", "wanted", "tell", "don", "able"}
+COMMON_VERBS_OR_GAPS = {"get", "go", "talk", "know", "take", "look", "tell", "make", "use", "see", "give", "find", "think", "say", "ask", "help", "work", "study", "different", "bring", "bit", "start", "time"}
+READING_NOISE = set("box boxes sheet spend minute minutes statement statements agree agrees contradict contradicts claims writer paragraph paragraphs heading headings list lists information impossible say says use using which your you his her she he their they our we one two three four five six seven eight nine ten".split())
+LISTENING_NOISE = set("woman man speaker narrator section test recording".split())
 
 
 READING = [
@@ -166,7 +175,105 @@ def collect_documents(corpus_path: Path, materials_path: Path) -> list[dict]:
             "sourceGroup": source_group,
             "text": text,
         })
+    cambridge = json.loads(CAMBRIDGE_CACHE.read_text(encoding="utf-8"))
+    for section in cambridge["sections"]:
+        if section["skill"] not in {"Reading", "Listening"}:
+            continue
+        documents.append({
+            "id": section["id"],
+            "skill": section["skill"],
+            "sourceName": f"Cambridge IELTS Academic {section['volume']}",
+            "sourceGroup": "cambridge_practice",
+            "text": clean_text(section["text"]),
+        })
     return documents
+
+
+def auto_category(skill: str, phrase: str) -> str:
+    value = phrase.lower()
+    if skill == "Reading":
+        if re.search(r"research|study|evidence|result|analysis|data|survey|experiment", value):
+            return "研究与分析"
+        if re.search(r"number|amount|rate|percent|increase|decrease|level|majority", value):
+            return "数量与变化"
+        if re.search(r"environment|species|animal|plant|climate|energy|water|forest", value):
+            return "环境与科学"
+        if re.search(r"people|society|social|public|government|community|economic", value):
+            return "社会与发展"
+        return "逻辑与衔接"
+    if re.search(r"thank|please|sorry|help|tell|ask|think|mean", value):
+        return "互动与回应"
+    if re.search(r"day|week|month|year|morning|afternoon|evening|minute|hour", value):
+        return "时间与安排"
+    if re.search(r"left|right|north|south|road|street|entrance|floor|corner", value):
+        return "地点与方位"
+    if re.search(r"name|address|number|phone|email|form|cost|price|book|ticket", value):
+        return "手续与信息"
+    if re.search(r"student|course|teacher|school|college|university|class|project", value):
+        return "学习与工作"
+    if re.search(r"room|centre|center|office|library|building|park|shop|hotel", value):
+        return "设施与场景"
+    return "功能与动作"
+
+
+def discover_chunks(skill: str, documents: list[dict], excluded: set[str]) -> list[dict]:
+    occurrences: Counter[str] = Counter()
+    document_frequency: Counter[str] = Counter()
+    sources: dict[str, set[str]] = defaultdict(set)
+    source_mix: dict[str, Counter[str]] = defaultdict(Counter)
+    blocked = AUTO_NOISE | (READING_NOISE if skill == "Reading" else LISTENING_NOISE)
+    for document in documents:
+        tokens = [token for token in tokenize(document["text"]) if len(token) >= 3]
+        per_document: Counter[str] = Counter()
+        for size in (2, 3):
+            for index in range(len(tokens) - size + 1):
+                gram = tokens[index:index + size]
+                if gram[0] in AUTO_EDGE or gram[-1] in AUTO_EDGE:
+                    continue
+                if size == 2 and gram[0] in BROKEN_BIGRAM_FIRST and gram[1] in COMMON_VERBS_OR_GAPS:
+                    continue
+                if any(token in blocked or token in AUTO_INTERIOR_NOISE for token in gram) or len(set(gram)) < len(gram):
+                    continue
+                phrase = " ".join(gram)
+                if phrase in excluded:
+                    continue
+                per_document[phrase] += 1
+        for phrase, count in per_document.items():
+            occurrences[phrase] += count
+            document_frequency[phrase] += 1
+            sources[phrase].add(document["sourceName"])
+            source_mix[phrase][document["sourceGroup"]] += count
+    candidates = [
+        phrase for phrase in occurrences
+        if occurrences[phrase] >= 5 and document_frequency[phrase] >= 4 and len(sources[phrase]) >= 2
+    ]
+    candidates.sort(key=lambda phrase: (-len(sources[phrase]), -document_frequency[phrase], -occurrences[phrase], -len(phrase.split()), phrase))
+    rows = []
+    # Keep the complete qualifying set.  The browser paginates the result, so
+    # a build-time top-N limit would only hide valid corpus evidence.
+    for phrase in candidates:
+        category = auto_category(skill, phrase)
+        df = document_frequency[phrase]
+        rows.append({
+            "id": f"{skill.lower()}-auto-{hashlib.sha1(phrase.encode()).hexdigest()[:16]}",
+            "skill": skill,
+            "phrase": phrase,
+            "category": category,
+            "meaningZh": f"{category}高频搭配（语料自动发现）",
+            "frame": phrase,
+            "usageZh": CATEGORY_TIPS[category] + " 本条是按跨文档、跨来源重复出现自动发现的学习索引，不冒充人工翻译。",
+            "exampleEn": "",
+            "exampleZh": "",
+            "occurrenceCount": occurrences[phrase],
+            "documentFrequency": df,
+            "documentCoverage": round(df / len(documents), 6),
+            "sourceCount": len(sources[phrase]),
+            "sourceMix": dict(source_mix[phrase].most_common()),
+            "confidence": confidence(df, len(sources[phrase]), len(documents)),
+            "contentLabel": "语料自动发现",
+            "tier": "expansion",
+        })
+    return rows
 
 
 def build(corpus_path: Path, materials_path: Path) -> dict:
@@ -257,6 +364,13 @@ def build(corpus_path: Path, materials_path: Path) -> dict:
                 "tier": "expansion",
             })
 
+    for skill in ("Reading", "Listening"):
+        discovered = discover_chunks(skill, by_skill[skill], seen_phrases[skill])
+        chunks.extend(discovered)
+        for item in discovered:
+            category_counts[skill][item["category"]] += 1
+            seen_phrases[skill].add(item["phrase"])
+
     chunks.sort(key=lambda item: (item["skill"], -item["documentFrequency"], -item["occurrenceCount"], item["phrase"]))
     skill_stats = []
     for skill in ("Reading", "Listening"):
@@ -281,18 +395,19 @@ def build(corpus_path: Path, materials_path: Path) -> dict:
         "meta": {
             "titleZh": "阅读与听力词块库",
             "contentLabel": "统计证据 + 本站原创学习内容",
-            "sourceFile": "corpus_dedup.csv + 本地资料去重 PDF",
-            "sourceLayers": ["official_public", "cambridge_derived", "third_party_prediction"],
+            "sourceFile": "corpus_dedup.csv + 本地资料去重 PDF + 剑桥雅思 4-21 私有分段缓存",
+            "sourceLayers": ["official_public", "cambridge_practice", "cambridge_derived", "third_party_prediction"],
+            "discoveryPolicy": "all_qualifying_no_top_n_cap",
             "chunkCount": len(chunks),
             "coreChunkCount": sum(item["tier"] == "core" for item in chunks),
             "expansionChunkCount": sum(item["tier"] == "expansion" for item in chunks),
-            "copyrightNoteZh": "核心精学含原创搭配讲解与双语例句；扩展索引提供人工整理释义和语料证据。两层均不复制原题长句。",
+            "copyrightNoteZh": "核心精学含原创搭配讲解与双语例句；扩展索引同时包含人工整理条目与跨来源自动发现的全部合格高频搭配，不设前 450 条上限。自动条目只给功能标签，不冒充人工翻译；所有层级均不复制原题长句。",
         },
         "methodology": {
             "countUnitZh": "按大小写归一后的连续词序列精确计数；同一统计单元内可重复出现。",
             "coverageZh": "文档覆盖表示至少出现一次该词块的统计单元占比。",
             "confidenceZh": "高可信需覆盖约 12% 的统计单元且跨至少两个来源集合；覆盖 3 个及以上但未跨来源为中，其余为探索。完整原题与派生资料分层统计。",
-            "tierZh": "核心精学包含逐条搭配骨架、使用提示和原创例句；扩展索引提供人工整理的中文释义、功能分类和语料证据。",
+            "tierZh": "核心精学包含逐条搭配骨架、使用提示和原创例句；扩展索引包含人工整理条目与跨来源自动发现条目，两者均报告功能分类和语料证据。",
         },
         "skillStats": skill_stats,
         "chunks": chunks,

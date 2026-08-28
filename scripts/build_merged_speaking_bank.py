@@ -11,6 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT.parent / "雅思语料研究" / "outputs" / "data" / "speaking_integrated_topics.csv"
+LOCAL_SOURCE = ROOT.parent / "outputs" / "ielts-corpus-build" / "local_speaking_topics.csv"
 OUTPUT = ROOT / "data" / "speaking.json"
 
 
@@ -237,7 +238,11 @@ def is_valid_question(text: str) -> bool:
     if any(marker in lowered for marker in blocked):
         return False
     normalized = re.sub(r"[^a-z]+", " ", lowered).strip()
-    return normalized not in {"why", "how", "why not", "what else"}
+    if normalized in {"why", "how", "why not", "what else", "and how", "and why", "how often", "why and how"}:
+        return False
+    if normalized.startswith("talk about ") and len(normalized.split()) < 5:
+        return False
+    return True
 
 
 def normalise_question(text: str) -> str:
@@ -280,7 +285,7 @@ def canonical_topic(row: dict[str, str], question: str) -> str:
 def source_ref(row: dict[str, str]) -> tuple[str, dict[str, object]]:
     payload = "|".join([
         row.get("source_name", ""), row.get("source_status", ""), row.get("period", ""),
-        row.get("region", ""), row.get("source_url", ""),
+        row.get("region", ""), row.get("source_url", ""), row.get("phase", ""),
     ])
     ref = stable_id("source", payload)
     status = row.get("source_status", "")
@@ -289,6 +294,7 @@ def source_ref(row: dict[str, str]) -> tuple[str, dict[str, object]]:
         "user_provided_copy_unofficial": "user_provided",
         "test_taker_recall": "test_taker_recall",
         "public_compilation_unofficial": "public_compilation",
+        "local_private_compilation": "local_question_bank",
     }.get(status, status or "unknown")
     return ref, {
         "id": ref,
@@ -298,6 +304,7 @@ def source_ref(row: dict[str, str]) -> tuple[str, dict[str, object]]:
         "period": row.get("period", "") or "时期未标注",
         "region": row.get("region", "") or "地区未标注",
         "url": row.get("source_url", ""),
+        "phase": row.get("phase", "") or "historical_or_unlabelled",
     }
 
 
@@ -306,6 +313,9 @@ def main() -> None:
         raise FileNotFoundError(f"Speaking source CSV not found: {DEFAULT_SOURCE}")
     with DEFAULT_SOURCE.open("r", encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
+    if LOCAL_SOURCE.exists():
+        with LOCAL_SOURCE.open("r", encoding="utf-8-sig", newline="") as handle:
+            rows.extend(csv.DictReader(handle))
 
     sources: dict[str, dict[str, object]] = {}
     topic_questions: dict[str, dict[str, dict[str, object]]] = defaultdict(dict)
@@ -351,7 +361,15 @@ def main() -> None:
                 str(sources[ref]["period"]),
                 str(sources[ref]["name"]),
             ), reverse=True)
-            question["current"] = any(str(sources[ref]["period"]).startswith("2026") for ref in question["sourceRefs"])
+            question["current"] = any(
+                str(sources[ref].get("phase")) == "current_2026"
+                or (
+                    str(sources[ref]["period"]).startswith("2026")
+                    and str(sources[ref].get("phase")) != "upcoming_prediction"
+                )
+                for ref in question["sourceRefs"]
+            )
+            question["upcoming"] = any(str(sources[ref].get("phase")) == "upcoming_prediction" for ref in question["sourceRefs"])
         questions.sort(key=lambda question: (
             part_order[question["part"]],
             not question["current"],
@@ -380,6 +398,7 @@ def main() -> None:
 
     unique_questions = sum(int(topic["questionCount"]) for topic in topics)
     current_questions = sum(int(topic["currentQuestionCount"]) for topic in topics)
+    upcoming_questions = sum(1 for topic in topics for question in topic["questions"] if question.get("upcoming"))
     payload = {
         "meta": {
             "schemaVersion": 1,
@@ -388,10 +407,11 @@ def main() -> None:
             "sourceQuestionOccurrences": source_occurrences,
             "uniqueQuestionCount": unique_questions,
             "currentQuestionCount": current_questions,
+            "upcomingQuestionCount": upcoming_questions,
             "mergedTopicCount": len(topics),
             "deduplicatedOccurrenceCount": source_occurrences - unique_questions,
             "method": "Split every source record into individual Part questions, assign a controlled canonical topic, normalise spelling and punctuation, then merge identical questions while retaining every source reference.",
-            "copyrightNotice": "Questions are shown as attributed source records. Source ownership is retained by the named publisher or contributor. The site does not claim that recall or compilation sources are official IELTS releases.",
+            "copyrightNotice": "Questions are shown as attributed source records. Local 2026 compilations are deduplicated and attributed; third-party answers and audio are excluded. The 9–12 month source is labelled as an upcoming prediction rather than a verified current bank. The site does not claim that recall or compilation sources are official IELTS releases.",
         },
         "sources": sources,
         "topics": topics,

@@ -210,8 +210,12 @@ def build_topic(topic: dict[str, object]) -> dict[str, object]:
 def main() -> None:
     corpus_path = DATA_DIR / "corpus.json"
     speaking_path = DATA_DIR / "speaking.json"
+    writing_path = DATA_DIR / "writing.json"
+    chunks_path = DATA_DIR / "chunks.json"
     corpus = json.loads(corpus_path.read_text(encoding="utf-8"))
     speaking = json.loads(speaking_path.read_text(encoding="utf-8"))
+    writing = json.loads(writing_path.read_text(encoding="utf-8"))
+    chunks = json.loads(chunks_path.read_text(encoding="utf-8"))
     generated_at = datetime.now(timezone.utc).isoformat()
     topics = {topic["id"]: build_topic(topic) for topic in speaking["topics"]}
     question_count = sum(len(topic["questions"]) for topic in topics.values())
@@ -232,16 +236,19 @@ def main() -> None:
     )
     version = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
     manifest = {
-        "schemaVersion": 2,
+        "schemaVersion": 4,
         "dataVersion": version,
         "generatedAt": generated_at,
-        "files": {"corpus": "data/corpus.json", "speaking": "data/speaking.json", "questions": "data/questions.json"},
+        "files": {"corpus": "data/corpus.json", "speaking": "data/speaking.json", "questions": "data/questions.json", "writing": "data/writing.json", "chunks": "data/chunks.json"},
         "counts": {
             "documents": corpus["meta"]["documentCount"],
+            "words": len(corpus["words"]),
             "topics": len(topics),
             "sourceQuestions": speaking["meta"]["uniqueQuestionCount"],
             "sourceQuestionOccurrences": speaking["meta"]["sourceQuestionOccurrences"],
             "practiceQuestions": question_count,
+            "writingExercises": writing["meta"]["exerciseCount"],
+            "chunks": chunks["meta"]["chunkCount"],
         },
         "repository": "https://github.com/eugenewang5425/ielts-corpus-lab",
         "updateModel": "Versioned public JSON snapshot on GitHub Pages. The client fetches the manifest without cache and then loads matching data files.",
