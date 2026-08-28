@@ -15,8 +15,8 @@
   <meta property="og:image" content="https://eugenewang5425.github.io/ielts-corpus-lab/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css?v=10">
-  <link rel="stylesheet" href="overrides.css?v=13">
-  <script src="app.js?v=14" defer></script>
+  <link rel="stylesheet" href="overrides.css?v=15">
+  <script src="app.js?v=16" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -39,7 +39,10 @@
         <div>
           <p class="eyebrow">Evidence-first IELTS study database</p>
           <h1>先看语料覆盖，<br>再相信“高频”。</h1>
-          <p class="lead">听说读写分开计算；官方公开题、剑桥雅思 4–21 私有分段聚合、考生回忆与预测材料分层标注。每个排名同时报告出现次数、文档频率、每万词频率与来源构成。</p>
+          <details class="mobile-disclosure hero-guide" open>
+            <summary>查看语料范围说明</summary>
+            <div class="disclosure-body"><p class="lead">听说读写分开计算；官方公开题、剑桥雅思 4–21 私有分段聚合、考生回忆与预测材料分层标注。每个排名同时报告出现次数、文档频率、每万词频率与来源构成。</p></div>
+          </details>
           <form id="hero-search" class="search"><input name="q" placeholder="搜索单词，例如 environment" aria-label="搜索单词"><button>开始查询</button></form>
           <div id="hero-stats" class="hero-stats"></div>
         </div>
@@ -47,41 +50,58 @@
       </div>
       <div class="section-head"><div><p class="eyebrow">Coverage</p><h2>四科统计体量</h2></div><p>预测题、派生笔记与官方样题不会混成同一个“官方”标签。</p></div>
       <div id="home-coverage" class="metric-grid"></div>
-      <div class="coverage-unit-note"><b>为什么听力和阅读的数字看起来较小？</b><p>卡片大数字表示“去重统计单元”，不是题目数量。听力的一段 Part、阅读的一篇 Passage（旧扫描无法可靠切分时为完整页）各算 1 个长文本单元；口语通常每道独立问题算 1 个短单元。不同科目比较语料体量时，请优先看学习词 token。</p></div>
+      <details class="mobile-disclosure compact-guide" open>
+        <summary>这些统计单元是什么意思？</summary>
+        <div class="disclosure-body coverage-unit-note"><b>为什么听力和阅读的数字看起来较小？</b><p>卡片大数字表示“去重统计单元”，不是题目数量。听力的一段 Part、阅读的一篇 Passage（旧扫描无法可靠切分时为完整页）各算 1 个长文本单元；口语通常每道独立问题算 1 个短单元。不同科目比较语料体量时，请优先看学习词 token。</p></div>
+      </details>
     </section>
 
     <section class="view page" data-view="words" hidden>
-      <header class="page-head"><p class="eyebrow">Four-skill word explorer</p><h1>听说读写词频</h1><p>文档频率防止单篇重复刷榜；每万词频率让不同大小的语料可以比较。</p></header>
+      <header class="page-head"><p class="eyebrow">Four-skill word explorer</p><h1>听说读写词频</h1><details class="mobile-disclosure page-guide" open><summary>查看页面说明</summary><div class="disclosure-body"><p>文档频率防止单篇重复刷榜；每万词频率让不同大小的语料可以比较。</p></div></details></header>
       <div class="toolbar">
         <div id="skill-tabs" class="tabs"></div>
         <div id="scope-tabs" class="tabs small"></div>
         <form id="word-search" class="inline-search"><input placeholder="输入单词" aria-label="输入单词"><button>搜索</button></form>
       </div>
-      <div id="word-summary" class="word-summary"></div>
+      <details class="mobile-disclosure content-guide word-summary-guide" open>
+        <summary>查看四科总统计</summary>
+        <div class="disclosure-body"><div id="word-summary" class="word-summary"></div></div>
+      </details>
       <div id="word-note" class="note"></div>
       <div class="table-wrap"><table><thead><tr><th>排名 / 单词 / 常见科目</th><th>出现</th><th>覆盖文档</th><th>每万词</th><th>来源</th><th>可信度</th></tr></thead><tbody id="word-body"></tbody></table></div>
       <div id="word-pages" class="pager"></div>
     </section>
 
     <section class="view page" data-view="speaking" hidden>
-      <header class="page-head"><p class="eyebrow">Part → Topic → Prepared answers</p><h1>口语合并题库</h1><p>先选择 Part，再点击主题原地展开。页面优先展示准备好的问题、思路、模板和示范回答；来源材料只作为按需核对的参考。</p></header>
-      <div class="notice"><b>使用方式</b><span>选择 Part 后，主题卡和展开内容只显示该 Part；鼠标悬停时当前主题横向放大、同排主题缩小，点击后从悬停尺寸平滑扩展为整栏，并让其他主题自然换行。</span></div>
-      <div id="data-version" class="data-version" aria-live="polite"></div>
+      <header class="page-head"><p class="eyebrow">Part → Topic → Prepared answers</p><h1>口语合并题库</h1><details class="mobile-disclosure page-guide" open><summary>查看页面说明</summary><div class="disclosure-body"><p>先选择 Part，再点击主题原地展开。页面优先展示准备好的问题、思路、模板和示范回答；来源材料只作为按需核对的参考。</p></div></details></header>
+      <details class="mobile-disclosure content-guide" open>
+        <summary>查看使用方式与数据版本</summary>
+        <div class="disclosure-body">
+          <div class="notice"><b>使用方式</b><span>选择 Part 后，主题卡和展开内容只显示该 Part；鼠标悬停时当前主题横向放大、同排主题缩小，点击后从悬停尺寸平滑扩展为整栏，并让其他主题自然换行。</span></div>
+          <div id="data-version" class="data-version" aria-live="polite"></div>
+        </div>
+      </details>
       <div class="toolbar"><div id="part-tabs" class="tabs"></div><label class="check"><input id="current-only" type="checkbox" checked> 只看 2026 年 1–8 月</label><form id="topic-search" class="inline-search"><input placeholder="Music / technology" aria-label="搜索口语主题"><button>搜索</button></form></div>
       <div id="topic-note" class="note"></div><div id="topic-grid" class="topic-grid"></div><div id="topic-pages" class="pager"></div>
     </section>
 
     <section class="view page" data-view="writing" hidden>
-      <header class="page-head"><p class="eyebrow">Writing practice + corpus evidence</p><h1>大小作文题库与范文</h1><p>先按 Task 1 / Task 2 打开题目，查看审题、段落思路、模板、常用词、原创图示和范文；下方保留总体与 2024–2026 分类统计。</p></header>
+      <header class="page-head"><p class="eyebrow">Writing practice + corpus evidence</p><h1>大小作文题库与范文</h1><details class="mobile-disclosure page-guide" open><summary>查看页面说明</summary><div class="disclosure-body"><p>先按 Task 1 / Task 2 打开题目，查看审题、段落思路、模板、常用词、原创图示和范文；下方保留总体与 2024–2026 分类统计。</p></div></details></header>
       <div id="writing-content"></div>
     </section>
 
     <section class="view page" data-view="coverage" hidden>
-      <header class="page-head"><p class="eyebrow">Reading & Listening audit</p><h1>阅读与听力语料覆盖</h1><p>剑桥雅思 4–21、官方公开样题、本地预测与派生笔记分层统计；预测题始终不等同于官方真题。</p></header>
-      <div id="lr-coverage" class="metric-grid two"></div>
+      <header class="page-head"><p class="eyebrow">Reading & Listening audit</p><h1>阅读与听力语料覆盖</h1><details class="mobile-disclosure page-guide" open><summary>查看页面说明</summary><div class="disclosure-body"><p>剑桥雅思 4–21、官方公开样题、本地预测与派生笔记分层统计；预测题始终不等同于官方真题。</p></div></details></header>
+      <details class="mobile-disclosure content-guide" open>
+        <summary>查看阅读与听力覆盖统计</summary>
+        <div class="disclosure-body"><div id="lr-coverage" class="metric-grid two"></div></div>
+      </details>
       <section class="chunk-library" aria-labelledby="chunk-title">
-        <div class="section-head"><div><p class="eyebrow">Evidence → meaning → usage</p><h2 id="chunk-title">阅读与听力词块</h2></div><p>核心精学与人工索引提供释义和用法；新语料另自动发现跨文档、跨来源重复出现的连续词块，并明确标成功能索引而非人工翻译。</p></div>
-        <div class="notice chunk-notice"><b>怎样看统计</b><span id="chunk-method"></span></div>
+        <div class="section-head"><div><p class="eyebrow">Evidence → meaning → usage</p><h2 id="chunk-title">阅读与听力词块</h2></div></div>
+        <details class="mobile-disclosure content-guide chunk-guide" open>
+          <summary>查看词块统计说明</summary>
+          <div class="disclosure-body"><p class="guide-copy">核心精学与人工索引提供释义和用法；新语料另自动发现跨文档、跨来源重复出现的连续词块，并明确标成功能索引而非人工翻译。</p><div class="notice chunk-notice"><b>怎样看统计</b><span id="chunk-method"></span></div></div>
+        </details>
         <div class="chunk-toolbar">
           <div id="chunk-skill-tabs" class="tabs" aria-label="选择阅读或听力"></div>
           <div id="chunk-tier-tabs" class="tabs small" aria-label="筛选词块学习层级"></div>
@@ -96,23 +116,25 @@
     </section>
 
     <section class="view page" data-view="sources" hidden>
-      <header class="page-head"><p class="eyebrow">Provenance ledger</p><h1>来源审计</h1><p>先按来源层汇总，再逐项记录发布方、时期、科目、规模、可靠性权重与公开权限。</p></header>
-      <div id="source-overview" class="notice"></div>
-      <div id="source-groups" class="metric-grid"></div>
+      <header class="page-head"><p class="eyebrow">Provenance ledger</p><h1>来源审计</h1><details class="mobile-disclosure page-guide" open><summary>查看页面说明</summary><div class="disclosure-body"><p>先按来源层汇总，再逐项记录发布方、时期、科目、规模、可靠性权重与公开权限。</p></div></details></header>
+      <details class="mobile-disclosure content-guide" open>
+        <summary>查看八个来源层汇总</summary>
+        <div class="disclosure-body"><div id="source-overview" class="notice"></div><div id="source-groups" class="metric-grid"></div></div>
+      </details>
       <div class="section-head"><div><p class="eyebrow">32 aggregate source cards</p><h2>逐项来源</h2></div><p>同一来源的大量单题记录不重复堆成来源卡；逐题出处仍保留在口语题目展开页。</p></div>
       <div id="source-list" class="source-list"></div>
     </section>
 
     <section class="view page prose" data-view="method" hidden>
       <header class="page-head"><p class="eyebrow">Transparent methodology</p><h1>统计方法与版权边界</h1></header>
-      <article><h2>1. 统计单元</h2><p>一篇阅读 Passage、一段听力 Part 原文、一条口语题目或一道写作题作为一个文档。剑桥雅思 4–21 按 Test / Passage / Part 切分；旧扫描中无法可靠恢复标题的部分改用完整页级统计单元，避免漏掉正文。完全相同的本地 PDF 与题目按内容哈希去重。</p></article>
-      <article><h2>2. 基础词与噪声</h2><p>剔除 a、to、the 等功能词、数字词、题目指令、听力转写标记，以及 chart / graph / describe 等题型模板词。</p></article>
-      <article><h2>3. 排名指标</h2><p>四科词表发布所有达到最低文档频次的词，不设置前 750 条或其他 Top-N 上限；总体与近五年均从对应范围内的全部已选统计单元重新计算。</p><div class="formula"><div><b>Occurrence</b><p>语料内总出现次数。</p></div><div><b>Document frequency</b><p>至少出现一次的文档数。</p></div><div><b>Per 10k</b><p>每一万学习词中的出现次数。</p></div><div><b>Confidence</b><p>综合文档覆盖与独立来源数。</p></div></div></article>
-      <article><h2>4. 阅读与听力词块</h2><p>词块按大小写归一后的连续词序列精确计数，同时报告出现次数、文档覆盖和来源集合。高可信需覆盖约 12% 的统计单元并跨至少两个来源集合；覆盖不足或只见于单一材料层的词块降为中或探索。释义、搭配骨架和例句为本站原创学习内容，不复制原题长句。</p></article>
-      <article><h2>5. 口语主题合并</h2><p>把公开来源与本地 2026 题库拆成独立的 Part 1、Part 2、Part 3 问题，再通过受控主题词典归入规范主题。文本相同的问题合并为一题，但保留全部来源引用；1–8 月作为当前准备范围，9–12 月材料明确标为前瞻预测。</p></article>
-      <article><h2>6. 练习优先与来源参考</h2><p>主题展开后默认进入“准备的问题与示范”，包含思路、模板、示范回答和常用词；“来源参考”只在需要核对出处时打开，保留来源、时期、地区和链接，但不在主题卡上突出庞大的来源题目数量。</p></article>
-      <article><h2>7. 在线数据库与更新</h2><p>公开数据以版本化 JSON 存放在 GitHub 仓库中。网页先读取最新版本清单，再加载统计库、词块库、合并口语库和练习问答库；更新 <code>main</code> 后，GitHub Pages 会向所有访客提供同一快照。</p></article>
-      <article><h2>8. 版权与准确性边界</h2><p>来源题目的所有权归标注的发布方或贡献者；本站只进行主题归类、文本去重和来源整理。剑桥文章、音频、图片及答案仍不公开复制。考生回忆与非官方汇编可能存在遗漏或措辞误差，应结合来源等级判断。</p></article>
+      <details class="method-item mobile-disclosure" open><summary>1. 统计单元</summary><div class="method-body"><p>一篇阅读 Passage、一段听力 Part 原文、一条口语题目或一道写作题作为一个文档。剑桥雅思 4–21 按 Test / Passage / Part 切分；旧扫描中无法可靠恢复标题的部分改用完整页级统计单元，避免漏掉正文。完全相同的本地 PDF 与题目按内容哈希去重。</p></div></details>
+      <details class="method-item mobile-disclosure" open><summary>2. 基础词与噪声</summary><div class="method-body"><p>剔除 a、to、the 等功能词、数字词、题目指令、听力转写标记，以及 chart / graph / describe 等题型模板词。</p></div></details>
+      <details class="method-item mobile-disclosure" open><summary>3. 排名指标</summary><div class="method-body"><p>四科词表发布所有达到最低文档频次的词，不设置前 750 条或其他 Top-N 上限；总体与近五年均从对应范围内的全部已选统计单元重新计算。</p><div class="formula"><div><b>Occurrence</b><p>语料内总出现次数。</p></div><div><b>Document frequency</b><p>至少出现一次的文档数。</p></div><div><b>Per 10k</b><p>每一万学习词中的出现次数。</p></div><div><b>Confidence</b><p>综合文档覆盖与独立来源数。</p></div></div></div></details>
+      <details class="method-item mobile-disclosure" open><summary>4. 阅读与听力词块</summary><div class="method-body"><p>词块按大小写归一后的连续词序列精确计数，同时报告出现次数、文档覆盖和来源集合。高可信需覆盖约 12% 的统计单元并跨至少两个来源集合；覆盖不足或只见于单一材料层的词块降为中或探索。释义、搭配骨架和例句为本站原创学习内容，不复制原题长句。</p></div></details>
+      <details class="method-item mobile-disclosure" open><summary>5. 口语主题合并</summary><div class="method-body"><p>把公开来源与本地 2026 题库拆成独立的 Part 1、Part 2、Part 3 问题，再通过受控主题词典归入规范主题。文本相同的问题合并为一题，但保留全部来源引用；1–8 月作为当前准备范围，9–12 月材料明确标为前瞻预测。</p></div></details>
+      <details class="method-item mobile-disclosure" open><summary>6. 练习优先与来源参考</summary><div class="method-body"><p>主题展开后默认进入“准备的问题与示范”，包含思路、模板、示范回答和常用词；“来源参考”只在需要核对出处时打开，保留来源、时期、地区和链接，但不在主题卡上突出庞大的来源题目数量。</p></div></details>
+      <details class="method-item mobile-disclosure" open><summary>7. 在线数据库与更新</summary><div class="method-body"><p>公开数据以版本化 JSON 存放在 GitHub 仓库中。网页先读取最新版本清单，再加载统计库、词块库、合并口语库和练习问答库；更新 <code>main</code> 后，GitHub Pages 会向所有访客提供同一快照。</p></div></details>
+      <details class="method-item mobile-disclosure" open><summary>8. 版权与准确性边界</summary><div class="method-body"><p>来源题目的所有权归标注的发布方或贡献者；本站只进行主题归类、文本去重和来源整理。剑桥文章、音频、图片及答案仍不公开复制。考生回忆与非官方汇编可能存在遗漏或措辞误差，应结合来源等级判断。</p></div></details>
     </section>
   </main>
   <section class="support-project" aria-labelledby="support-title">
