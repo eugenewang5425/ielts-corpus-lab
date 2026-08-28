@@ -15,8 +15,8 @@
   <meta property="og:image" content="https://eugenewang5425.github.io/ielts-corpus-lab/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css?v=10">
-  <link rel="stylesheet" href="overrides.css?v=15">
-  <script src="app.js?v=16" defer></script>
+  <link rel="stylesheet" href="overrides.css?v=17">
+  <script src="app.js?v=17" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -92,8 +92,9 @@
 
     <section class="view page" data-view="coverage" hidden>
       <header class="page-head"><p class="eyebrow">Reading & Listening audit</p><h1>阅读与听力语料覆盖</h1><details class="mobile-disclosure page-guide" open><summary>查看页面说明</summary><div class="disclosure-body"><p>剑桥雅思 4–21、官方公开样题、本地预测与派生笔记分层统计；预测题始终不等同于官方真题。</p></div></details></header>
+      <div id="lr-coverage-compact" class="compact-result-row" aria-live="polite"></div>
       <details class="mobile-disclosure content-guide" open>
-        <summary>查看阅读与听力覆盖统计</summary>
+        <summary>查看详细覆盖统计</summary>
         <div class="disclosure-body"><div id="lr-coverage" class="metric-grid two"></div></div>
       </details>
       <section class="chunk-library" aria-labelledby="chunk-title">
@@ -117,9 +118,10 @@
 
     <section class="view page" data-view="sources" hidden>
       <header class="page-head"><p class="eyebrow">Provenance ledger</p><h1>来源审计</h1><details class="mobile-disclosure page-guide" open><summary>查看页面说明</summary><div class="disclosure-body"><p>先按来源层汇总，再逐项记录发布方、时期、科目、规模、可靠性权重与公开权限。</p></div></details></header>
+      <div id="source-overview" class="notice source-overview-result"></div>
       <details class="mobile-disclosure content-guide" open>
-        <summary>查看八个来源层汇总</summary>
-        <div class="disclosure-body"><div id="source-overview" class="notice"></div><div id="source-groups" class="metric-grid"></div></div>
+        <summary>查看八个来源层详情</summary>
+        <div class="disclosure-body"><div id="source-groups" class="metric-grid"></div></div>
       </details>
       <div class="section-head"><div><p class="eyebrow">32 aggregate source cards</p><h2>逐项来源</h2></div><p>同一来源的大量单题记录不重复堆成来源卡；逐题出处仍保留在口语题目展开页。</p></div>
       <div id="source-list" class="source-list"></div>
